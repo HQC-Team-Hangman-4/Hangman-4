@@ -40,8 +40,6 @@
         public ScoreBoardPosition(string name, int mistakes)
         {
             this.name = name;
-
-
             this.mistakes = mistakes;
         }
 
