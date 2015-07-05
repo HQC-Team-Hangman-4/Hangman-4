@@ -1,48 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace HangMan
+﻿namespace HangMan
 {
-    class ScoreBoardPosition : IComparable<ScoreBoardPosition>
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
+    public class ScoreBoardPosition : IComparable<ScoreBoardPosition>
     {
         private string name;
+
         public string Name
         {
-            get 
+            get
             {
                 return name;
             }
-            set 
+
+            set
             {
-
-
                 name = value;
             }
         }
+
         private int mistakes;
-        public int Mistakes 
+
+        public int Mistakes
         {
-            get 
+            get
             {
-
-
                 return mistakes;
             }
+
             set
             {
                 mistakes = value;
             }
         }
-        public ScoreBoardPosition(string name, int mistakes) 
+
+        public ScoreBoardPosition(string name, int mistakes)
         {
             this.name = name;
 
 
             this.mistakes = mistakes;
         }
-        public ScoreBoardPosition() : this(string.Empty, 0) { }
+
+        public ScoreBoardPosition()
+            : this(string.Empty, 0)
+        {
+        }
+
         public int CompareTo(ScoreBoardPosition other)
         {
             return this.Mistakes.CompareTo(other.Mistakes);
