@@ -13,23 +13,23 @@
         {
             Hangman game = new Hangman();
             Console.WriteLine("Welcome to Hangman");
-            Console.WriteLine("Use 'top' to view the top scoreboard," + 
+            Console.WriteLine("Use 'top' to view the top scoreboard," +
             "'restart' to start a new game, \n'help' to cheat and 'exit' to quit the game.");
-            game.printWord();
+            game.PrintWord();
             Console.Write("enter a letter or command: ");
             string input = Console.ReadLine();
 
-            while (input!="exit")
+            while (input != "exit")
             {
-                if (input.Length == 1) 
+                if (input.Length == 1)
                 {
                     bool flag;
-                    flag=game.Guess(input[0]);
+                    flag = game.Guess(input[0]);
 
-                    if (flag == true) 
+                    if (flag == true)
                     {
                         game.End();
-                        game.restart();
+                        game.Restart();
                     }
                 }
                 else
@@ -41,27 +41,30 @@
                                 game.ShowScoreboard();
                                 break;
                             }
+
                         case "help":
                             {
-                                game.help();
+                                game.Help();
                                 break;
                             }
-                        case "restart": 
+
+                        case "restart":
                             {
-                                game.restart();
+                                game.Restart();
                                 break;
                             }
+
                         default:
                             {
                                 Console.WriteLine("invalid command");
                                 break;
                             }
-                    }                
+                    }
                 }
 
                 Console.WriteLine("Use 'top' to view the top scoreboard," +
                     "'restart' to start a new game, \n'help' to cheat and 'exit' to quit the game.");
-                game.printWord();
+                game.PrintWord();
                 Console.Write("enter a letter or command: ");
                 input = Console.ReadLine();
             }
