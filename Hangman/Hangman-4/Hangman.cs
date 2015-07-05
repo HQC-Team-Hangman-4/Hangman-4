@@ -5,13 +5,13 @@
     using System.Linq;
     using System.Text;
 
-    internal class Hangman
+    public class Hangman
     {
         private static ScoreBoardPosition[] scoreBoard = new ScoreBoardPosition[5];
         private static Random random = new Random();
         private static string[] words = { "computer", "programmer", "software", "debugger", "compiler", "developer", "algorithm", "array", "method", "variable" };
         private string currentWord;
-        private char[] PlayersWord;
+        private char[] playersWord;
         private bool cheated;
         private int mistakes;
         private int lettersLeft;
@@ -20,14 +20,14 @@
         {
             int wordNumber = random.Next(0, 10);
             this.currentWord = words[wordNumber];
-            this.PlayersWord = new char[currentWord.Length];
+            this.playersWord = new char[this.currentWord.Length];
             this.cheated = false;
             this.mistakes = 0;
-            this.lettersLeft = PlayersWord.Length;
+            this.lettersLeft = this.playersWord.Length;
 
-            for (int i = 0; i < PlayersWord.Length; i++)
+            for (int i = 0; i < this.playersWord.Length; i++)
             {
-                PlayersWord[i] = '_';
+                this.playersWord[i] = '_';
             }
 
             for (int i = 0; i < 5; i++)
@@ -36,12 +36,12 @@
             }
         }
 
-        public void printWord()
+        public void PrintWord()
         {
             Console.WriteLine();
             Console.Write("The secret word is:");
 
-            foreach (var letter in PlayersWord)
+            foreach (var letter in this.playersWord)
             {
                 Console.Write(letter + " ");
             }
@@ -49,11 +49,11 @@
             Console.WriteLine();
         }
 
-        public void help()
+        public void Help()
         {
             int toBeRevealed;
-            toBeRevealed = Array.IndexOf(PlayersWord, '_');
-            PlayersWord[toBeRevealed] = currentWord[toBeRevealed];
+            toBeRevealed = Array.IndexOf(this.playersWord, '_');
+            this.playersWord[toBeRevealed] = this.currentWord[toBeRevealed];
             this.cheated = true;
         }
 
@@ -61,12 +61,12 @@
         {
             int guessed = 0;
 
-            for (int i = 0; i < currentWord.Length; i++)
+            for (int i = 0; i < this.currentWord.Length; i++)
             {
-                if (currentWord[i] == letter && PlayersWord[i] == '_')
+                if (this.currentWord[i] == letter && this.playersWord[i] == '_')
                 {
                     guessed++;
-                    PlayersWord[i] = letter;
+                    this.playersWord[i] = letter;
                 }
             }
 
@@ -139,20 +139,20 @@
             Console.WriteLine();
         }
 
-        public void restart()
+        public void Restart()
         {
             int wordNumber = random.Next(0, 11);
             this.currentWord = words[wordNumber];
-            this.PlayersWord = new char[currentWord.Length];
+            this.playersWord = new char[this.currentWord.Length];
 
-            for (int i = 0; i < PlayersWord.Length; i++)
+            for (int i = 0; i < this.playersWord.Length; i++)
             {
-                PlayersWord[i] = '_';
+                this.playersWord[i] = '_';
             }
 
             this.cheated = false;
             this.mistakes = 0;
-            this.lettersLeft = PlayersWord.Length;
+            this.lettersLeft = this.playersWord.Length;
         }
     }
 }
