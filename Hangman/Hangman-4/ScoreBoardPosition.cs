@@ -7,35 +7,8 @@
 
     public class ScoreBoardPosition : IComparable<ScoreBoardPosition>
     {
-        private string name;
-
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-
-            set
-            {
-                name = value;
-            }
-        }
-
         private int mistakes;
-
-        public int Mistakes
-        {
-            get
-            {
-                return mistakes;
-            }
-
-            set
-            {
-                mistakes = value;
-            }
-        }
+        private string name;   
 
         public ScoreBoardPosition(string name, int mistakes)
         {
@@ -46,6 +19,32 @@
         public ScoreBoardPosition()
             : this(string.Empty, 0)
         {
+        }
+
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+
+            set
+            {
+                this.name = value;
+            }
+        }
+
+        public int Mistakes
+        {
+            get
+            {
+                return this.mistakes;
+            }
+
+            set
+            {
+                this.mistakes = value;
+            }
         }
 
         public int CompareTo(ScoreBoardPosition other)
