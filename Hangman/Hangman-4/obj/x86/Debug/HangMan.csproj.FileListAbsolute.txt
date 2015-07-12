@@ -1,0 +1,5 @@
+C:\Users\dnl\Desktop\Hangman4\Hangman-4\Hangman\Hangman-4\bin\Debug\HangMan.exe
+C:\Users\dnl\Desktop\Hangman4\Hangman-4\Hangman\Hangman-4\bin\Debug\HangMan.pdb
+C:\Users\dnl\Desktop\Hangman4\Hangman-4\Hangman\Hangman-4\obj\x86\Debug\HangMan.csprojResolveAssemblyReference.cache
+C:\Users\dnl\Desktop\Hangman4\Hangman-4\Hangman\Hangman-4\obj\x86\Debug\HangMan.exe
+C:\Users\dnl\Desktop\Hangman4\Hangman-4\Hangman\Hangman-4\obj\x86\Debug\HangMan.pdb
