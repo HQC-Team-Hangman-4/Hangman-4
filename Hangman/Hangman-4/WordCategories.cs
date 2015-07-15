@@ -2,7 +2,7 @@
 {
     public enum Categories
     {
-        Giography,
+        Geography,
         Space,
         Lifestyle,
         IT
