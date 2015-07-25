@@ -1,5 +1,10 @@
-C:\Users\dnl\Desktop\Hangman4\Hangman-4\Hangman\Hangman-4\bin\Debug\HangMan.exe
-C:\Users\dnl\Desktop\Hangman4\Hangman-4\Hangman\Hangman-4\bin\Debug\HangMan.pdb
-C:\Users\dnl\Desktop\Hangman4\Hangman-4\Hangman\Hangman-4\obj\x86\Debug\HangMan.csprojResolveAssemblyReference.cache
-C:\Users\dnl\Desktop\Hangman4\Hangman-4\Hangman\Hangman-4\obj\x86\Debug\HangMan.exe
-C:\Users\dnl\Desktop\Hangman4\Hangman-4\Hangman\Hangman-4\obj\x86\Debug\HangMan.pdb
+E:\downloads\Teo\TEAM_WORK_HQC\Hangman-4\Hangman\Hangman-4\obj\x86\Debug\HangMan.csprojResolveAssemblyReference.cache
+E:\downloads\Teo\TEAM_WORK_HQC\Hangman-4\Hangman\Hangman-4\bin\Debug\HangMan.exe
+E:\downloads\Teo\TEAM_WORK_HQC\Hangman-4\Hangman\Hangman-4\bin\Debug\HangMan.pdb
+E:\downloads\Teo\TEAM_WORK_HQC\Hangman-4\Hangman\Hangman-4\obj\x86\Debug\HangMan.exe
+E:\downloads\Teo\TEAM_WORK_HQC\Hangman-4\Hangman\Hangman-4\obj\x86\Debug\HangMan.pdb
+C:\Users\softwareacademy\Downloads\HANGMAN\Hangman-4-teo\Hangman\Hangman-4\obj\x86\Debug\HangMan.exe
+C:\Users\softwareacademy\Downloads\HANGMAN\Hangman-4-teo\Hangman\Hangman-4\obj\x86\Debug\HangMan.pdb
+C:\Users\softwareacademy\Downloads\HANGMAN\Hangman-4-teo\Hangman\Hangman-4\obj\x86\Debug\HangMan.csprojResolveAssemblyReference.cache
+C:\Users\softwareacademy\Downloads\HANGMAN\Hangman-4-teo\Hangman\Hangman-4\bin\Debug\HangMan.exe
+C:\Users\softwareacademy\Downloads\HANGMAN\Hangman-4-teo\Hangman\Hangman-4\bin\Debug\HangMan.pdb
