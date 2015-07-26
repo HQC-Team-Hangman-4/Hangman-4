@@ -1,9 +1,13 @@
-﻿namespace HangMan.Interfaces
+﻿using System.Collections.Generic;
+namespace HangMan.Interfaces
 {
     public interface IRenderer
     {
-        void RenderStartScreen(string screen);
+        void PrintInitialScreen();
 
+        void PrintWord(IWord word);
+
+        void RenderScoreboard(IEnumerable<IPlayer> scoreBoardInfo);
 
     }
 }

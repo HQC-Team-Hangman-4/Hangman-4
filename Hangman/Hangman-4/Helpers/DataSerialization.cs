@@ -1,9 +1,11 @@
 ﻿namespace HangMan.Helpers
 {
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.IO;
+    using HangMan.GameObjects;
+using HangMan.Interfaces;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 
     public static class DataSerialization
     {
@@ -19,9 +21,15 @@
             return textLines;
         }
 
-        public static void WriteToFile()
+        public static void WriteToFile(IEnumerable<IPlayer> scoreBoardPlayers, FileNames fileName)
         {
-
+            using (StreamWriter writer = new StreamWriter(string.Format("../../Files/{0}.txt", fileName)))
+            {
+                foreach (var player in scoreBoardPlayers)
+                {
+                    writer.WriteLine(string.Format("{0} {1}", player.Name, player.Score));
+                }
+            }
         }
     }
 }

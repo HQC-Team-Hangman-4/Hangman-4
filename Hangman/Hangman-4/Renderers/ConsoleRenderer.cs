@@ -8,11 +8,6 @@ namespace HangMan.Renderers
 {
     public class ConsoleRenderer: IRenderer
     {
-        public void RenderStartScreen(string screen)
-        {
-            throw new NotImplementedException();
-        }
-
         public void PrintInitialScreen()
         {
             Console.WriteLine("Welcome to Hangman");
@@ -23,7 +18,7 @@ namespace HangMan.Renderers
         public void PrintWord(IWord word)
         {
             Console.WriteLine();
-            Console.Write("The secret word is:");
+            Console.Write("The secret word is: ");
 
             foreach (var letter in word.Content)
             {
@@ -41,11 +36,11 @@ namespace HangMan.Renderers
         }
 
 
-        internal void RenderScoreboard(IEnumerable<string> scoreBoardInfo)
+        public void RenderScoreboard(IEnumerable<IPlayer> scoreBoardInfo)
         {
-            foreach (var element in scoreBoardInfo)
+            foreach (var player in scoreBoardInfo)
             {
-                Console.WriteLine(element);
+                Console.WriteLine("NickName: {0} --> Score: {1}", player.Name, player.Score);
             }
         }
     }

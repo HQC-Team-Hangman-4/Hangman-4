@@ -1,6 +1,8 @@
 ﻿namespace HangMan.Interfaces
 {
-    public interface ILetter
+    using System.Collections.Generic;
+
+    public interface ILetter : IEqualityComparer<ILetter>
     {
         string Value { get; }
 

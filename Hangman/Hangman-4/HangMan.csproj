@@ -51,6 +51,7 @@
     <Compile Include="Hangman.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Helpers\Categories.cs" />
+    <Compile Include="Helpers\ConsoleInputProvider.cs" />
     <Compile Include="Helpers\DataSerialization.cs" />
     <Compile Include="Helpers\FileNames.cs" />
     <Compile Include="Interfaces\IInputProvider.cs" />

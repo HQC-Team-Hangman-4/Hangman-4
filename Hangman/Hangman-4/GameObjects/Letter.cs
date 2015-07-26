@@ -1,8 +1,9 @@
-﻿using HangMan.Interfaces;
-
-namespace HangMan.GameObjects
+﻿namespace HangMan.GameObjects
 {
-    public class Letter :ILetter
+    using HangMan.Interfaces;
+    using System.Collections.Generic;
+
+    public class Letter : ILetter, IEqualityComparer<ILetter>
     {
         private string value;
         private bool state;
@@ -36,6 +37,21 @@ namespace HangMan.GameObjects
                 //TODO:Validation
                 this.state = value;
             }
+        }
+
+        public bool Equals(ILetter x, ILetter y)
+        {
+            if (x.Value.Equals(y.Value))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public int GetHashCode(ILetter obj)
+        {
+            return obj.Value.GetHashCode();
         }
     }
 }

@@ -8,8 +8,13 @@ namespace HangMan.GameObjects
 {
     public class GameInfo
     {
+        public GameInfo()
+        {
+            this.UsedLetters = new HashSet<ILetter>();
+        }
+
         public int Mistakes { get; set; }
 
-        public IList<ILetter> UsedLetters { get; set; }
+        public HashSet<ILetter> UsedLetters { get; set; }
     }
 }

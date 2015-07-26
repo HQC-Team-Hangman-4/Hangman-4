@@ -5,6 +5,6 @@ using System.Text;
 
 namespace HangMan.Interfaces
 {
-    public interface IInpitProvider
+    public interface IInputProvider
     { }
 }

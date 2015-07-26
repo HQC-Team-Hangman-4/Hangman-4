@@ -1,6 +1,8 @@
 ﻿namespace HangMan
 {
     using HangMan.GameObjects;
+    using HangMan.Helpers;
+    using HangMan.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -12,7 +14,9 @@
 
         private static void Main()
         {
-            Engine.Engine engine = new Engine.Engine();
+            IRenderer renderer = new Renderers.ConsoleRenderer();
+            IInputProvider provider = new ConsoleInputProvider();
+            Engine.Engine engine = new Engine.Engine(renderer, provider);
             engine.StartGame();
         }
     }
