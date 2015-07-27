@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace HangMan.Interfaces
+﻿namespace HangMan.Interfaces
 {
+    using System.Collections.Generic;
+
     public interface IScoreBoard
-    { }
+    {
+        void AddPlayerToScoreBoard(IPlayer player);
+
+        ICollection<IPlayer> GetScoreBoard();
+    }
 }

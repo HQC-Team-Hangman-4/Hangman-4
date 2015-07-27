@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
-namespace HangMan.Interfaces
+﻿namespace HangMan.Interfaces
 {
+    using System.Collections.Generic;
+
     public interface IRenderer
     {
         void PrintInitialScreen();
@@ -9,5 +10,8 @@ namespace HangMan.Interfaces
 
         void RenderScoreboard(IEnumerable<IPlayer> scoreBoardInfo);
 
+        void PrintEndScreen();
+
+        void PrintUsedLettersAndMistakes(IEnumerable<ILetter> usedLetters, int numberOfMistakes);
     }
 }

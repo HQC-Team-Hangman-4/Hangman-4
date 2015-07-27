@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public interface ILetter : IEqualityComparer<ILetter>
+    public interface ILetter 
     {
         string Value { get; }
 

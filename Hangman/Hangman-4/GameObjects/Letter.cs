@@ -3,7 +3,7 @@
     using HangMan.Interfaces;
     using System.Collections.Generic;
 
-    public class Letter : ILetter, IEqualityComparer<ILetter>
+    public class Letter : ILetter
     {
         private string value;
         private bool state;
@@ -39,19 +39,21 @@
             }
         }
 
-        public bool Equals(ILetter x, ILetter y)
+        //Need to compare Letter, becauce GameInfo use HashSet
+        public override bool Equals(object obj)
         {
-            if (x.Value.Equals(y.Value))
+            if (obj == null || !(obj is ILetter))
             {
-                return true;
+                return false;
             }
+            return this.Value == ((ILetter)obj).Value;
 
-            return false;
         }
 
-        public int GetHashCode(ILetter obj)
+        public override int GetHashCode()
         {
-            return obj.Value.GetHashCode();
+            return this.Value.ToString().GetHashCode();
         }
+        
     }
 }

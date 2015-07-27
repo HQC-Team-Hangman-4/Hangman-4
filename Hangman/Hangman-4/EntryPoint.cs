@@ -1,7 +1,7 @@
 ﻿namespace HangMan
 {
     using HangMan.GameObjects;
-    using HangMan.Helpers;
+    using HangMan.InputProviders;
     using HangMan.Interfaces;
     using System;
     using System.Collections.Generic;

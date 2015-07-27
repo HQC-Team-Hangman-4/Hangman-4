@@ -48,10 +48,9 @@
     <Compile Include="GameObjects\Letter.cs" />
     <Compile Include="GameObjects\Player.cs" />
     <Compile Include="GameObjects\Word.cs" />
-    <Compile Include="Hangman.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Helpers\Categories.cs" />
-    <Compile Include="Helpers\ConsoleInputProvider.cs" />
+    <Compile Include="InputProviders\ConsoleInputProvider.cs" />
     <Compile Include="Helpers\DataSerialization.cs" />
     <Compile Include="Helpers\FileNames.cs" />
     <Compile Include="Interfaces\IInputProvider.cs" />

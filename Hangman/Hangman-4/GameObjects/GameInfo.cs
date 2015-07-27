@@ -1,11 +1,8 @@
-﻿using HangMan.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace HangMan.GameObjects
+﻿namespace HangMan.GameObjects
 {
+    using HangMan.Interfaces;
+    using System.Collections.Generic;
+
     public class GameInfo
     {
         public GameInfo()

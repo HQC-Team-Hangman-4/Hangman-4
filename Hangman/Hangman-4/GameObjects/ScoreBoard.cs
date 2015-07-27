@@ -1,15 +1,15 @@
 ﻿namespace HangMan.GameObjects
 {
-    using HangMan.Helpers;
+    using HangMan.InputProviders;
     using HangMan.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    public static class ScoreBoard
+    public class ScoreBoard
     {
 
-        public static void AddPlayerToScoreBoard(IPlayer player)
+        public void AddPlayerToScoreBoard(IPlayer player)
         {
             ICollection<IPlayer> currentScoreBoard = new HashSet<IPlayer>();
             currentScoreBoard = GetScoreBoard();
@@ -36,7 +36,7 @@
             DataSerialization.WriteToFile(sortedScoreBoard, FileNames.scoreboard);
         }
 
-        public static ICollection<IPlayer> GetScoreBoard()
+        public ICollection<IPlayer> GetScoreBoard()
         {
             ICollection<IPlayer> result = new List<IPlayer>();
             IEnumerable<string> scoreBoardInfo = DataSerialization.ReadFromFile(FileNames.scoreboard);

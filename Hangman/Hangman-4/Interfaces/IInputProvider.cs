@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace HangMan.Interfaces
+﻿namespace HangMan.Interfaces
 {
     public interface IInputProvider
-    { }
+    {
+        string Command { get; set; }
+    }
 }

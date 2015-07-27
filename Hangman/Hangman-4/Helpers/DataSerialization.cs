@@ -1,4 +1,4 @@
-﻿namespace HangMan.Helpers
+﻿namespace HangMan.InputProviders
 {
     using HangMan.GameObjects;
 using HangMan.Interfaces;
@@ -23,6 +23,7 @@ using System.IO;
 
         public static void WriteToFile(IEnumerable<IPlayer> scoreBoardPlayers, FileNames fileName)
         {
+
             using (StreamWriter writer = new StreamWriter(string.Format("../../Files/{0}.txt", fileName)))
             {
                 foreach (var player in scoreBoardPlayers)

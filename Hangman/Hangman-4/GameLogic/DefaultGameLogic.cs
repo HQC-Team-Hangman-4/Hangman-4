@@ -4,7 +4,7 @@
     using System.Collections.Generic;
 
     using HangMan.Interfaces;
-    using HangMan.Helpers;
+    using HangMan.InputProviders;
     using HangMan.GameObjects;
 
     public class DefaultGameLogic

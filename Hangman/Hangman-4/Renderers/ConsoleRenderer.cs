@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HangMan.Renderers
 {
-    public class ConsoleRenderer: IRenderer
+    public class ConsoleRenderer : IRenderer
     {
         public void PrintInitialScreen()
         {
@@ -33,8 +33,14 @@ namespace HangMan.Renderers
             }
 
             Console.WriteLine();
+            Console.Write("enter a letter or command: ");
         }
 
+        public void PrintEndScreen()
+        {
+            Console.WriteLine("Congratulations! You made the scoreboard");
+            Console.Write("Enter your name: ");
+        }
 
         public void RenderScoreboard(IEnumerable<IPlayer> scoreBoardInfo)
         {
@@ -42,6 +48,17 @@ namespace HangMan.Renderers
             {
                 Console.WriteLine("NickName: {0} --> Score: {1}", player.Name, player.Score);
             }
+        }
+
+        public void PrintUsedLettersAndMistakes(IEnumerable<ILetter> usedLetters, int numberOfMistakes)
+        {
+            Console.Write("Used Letters --> ");
+            foreach (var letter in usedLetters)
+            {
+                Console.Write("{0} ", letter.Value);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Mistakes: {0}", numberOfMistakes);
         }
     }
 }
