@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 namespace HangMan.Interfaces
 {
-    public interface IWord
+    public interface IWord : IRendarable
     {
         IEnumerable<ILetter> Content { get; }
 
-        bool IsRevealed { get; set; }
+        bool IsRevealed { get; }
     }
 }

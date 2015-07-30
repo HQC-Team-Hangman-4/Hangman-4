@@ -8,6 +8,7 @@
         public GameInfo()
         {
             this.UsedLetters = new HashSet<ILetter>();
+            this.Mistakes = 0;
         }
 
         public int Mistakes { get; set; }

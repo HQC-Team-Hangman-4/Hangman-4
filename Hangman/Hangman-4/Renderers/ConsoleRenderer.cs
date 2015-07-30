@@ -15,23 +15,11 @@ namespace HangMan.Renderers
             "'restart' to start a new game, \n'help' to cheat and 'exit' to quit the game.");
         }
 
-        public void PrintWord(IWord word)
+        public void PrintWord(IRendarable word)
         {
             Console.WriteLine();
             Console.Write("The secret word is: ");
-
-            foreach (var letter in word.Content)
-            {
-                if (letter.IsFound)
-                {
-                    Console.Write(letter.Value + " ");
-                }
-                else
-                {
-                    Console.Write("_ ");
-                }
-            }
-
+            Console.WriteLine(word.GetBody());
             Console.WriteLine();
             Console.Write("enter a letter or command: ");
         }
@@ -42,22 +30,26 @@ namespace HangMan.Renderers
             Console.Write("Enter your name: ");
         }
 
-        public void RenderScoreboard(IEnumerable<IPlayer> scoreBoardInfo)
+        public void RenderScoreboard(IEnumerable<IRendarable> scoreBoardInfo)
         {
             foreach (var player in scoreBoardInfo)
             {
-                Console.WriteLine("NickName: {0} --> Score: {1}", player.Name, player.Score);
+                Console.WriteLine(player.GetBody());
             }
         }
 
-        public void PrintUsedLettersAndMistakes(IEnumerable<ILetter> usedLetters, int numberOfMistakes)
+        public void PrintUsedLetters(IEnumerable<IRendarable> usedLetters)
         {
             Console.Write("Used Letters --> ");
             foreach (var letter in usedLetters)
             {
-                Console.Write("{0} ", letter.Value);
+                Console.Write("{0} ", letter.GetBody());
             }
             Console.WriteLine();
+        }
+
+        public void PrintMistakes(int numberOfMistakes)
+        {
             Console.WriteLine("Mistakes: {0}", numberOfMistakes);
         }
     }

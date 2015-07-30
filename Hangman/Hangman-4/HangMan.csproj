@@ -50,12 +50,14 @@
     <Compile Include="GameObjects\Word.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Helpers\Categories.cs" />
+    <Compile Include="Helpers\GameState.cs" />
     <Compile Include="InputProviders\ConsoleInputProvider.cs" />
     <Compile Include="Helpers\DataSerialization.cs" />
     <Compile Include="Helpers\FileNames.cs" />
     <Compile Include="Interfaces\IInputProvider.cs" />
     <Compile Include="Interfaces\ILetter.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
+    <Compile Include="Interfaces\IRendarable.cs" />
     <Compile Include="Interfaces\IRenderer.cs" />
     <Compile Include="Interfaces\IScoreBoard.cs" />
     <Compile Include="Interfaces\IWord.cs" />

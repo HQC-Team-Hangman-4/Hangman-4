@@ -14,6 +14,7 @@ namespace HangMan.InputProviders
         {
             this.Command = default(string);
         }
+
         public string Command 
         { 
             get
@@ -22,9 +23,13 @@ namespace HangMan.InputProviders
             }
             set
             {
-                //TODO: validation
                 this.command = value;
             }
+        }
+
+        public void GetInput()
+        {
+            this.Command = Console.ReadLine();
         }
     }
 }

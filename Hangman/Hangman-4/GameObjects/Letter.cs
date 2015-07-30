@@ -3,7 +3,7 @@
     using HangMan.Interfaces;
     using System.Collections.Generic;
 
-    public class Letter : ILetter
+    public class Letter : ILetter, IRendarable
     {
         private string value;
         private bool state;
@@ -26,7 +26,7 @@
             }
         }
 
-        bool ILetter.IsFound
+        public bool IsFound
         {
             get
             {
@@ -54,6 +54,11 @@
         {
             return this.Value.ToString().GetHashCode();
         }
-        
+
+
+        public string GetBody()
+        {
+            return this.Value;
+        }
     }
 }

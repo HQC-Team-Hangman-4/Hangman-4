@@ -6,10 +6,9 @@ using System.Text;
 
 namespace HangMan.GameObjects
 {
-    public class Word : IWord
+    public class Word : IWord, IRendarable
     {
         private IEnumerable<ILetter> content;
-        private bool isRevealed;
 
         public Word(IEnumerable<ILetter> content)
         {
@@ -33,13 +32,27 @@ namespace HangMan.GameObjects
         {
             get
             {
-                return this.isRevealed;
+                return this.Content.All(l => l.IsFound == true);
             }
-            set
+        }
+
+        public string GetBody()
+        {
+            StringBuilder wordContent = new StringBuilder();
+
+            foreach (var letter in this.Content)
             {
-                //TODO: Validation
-                this.isRevealed = value;
+                if (letter.IsFound)
+                {
+                    wordContent.AppendFormat(" {0}", letter.GetBody());
+                }
+                else
+                {
+                    wordContent.AppendFormat(" _");
+                }
             }
+
+            return wordContent.ToString();
         }
     }
 }

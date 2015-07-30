@@ -6,12 +6,14 @@
     {
         void PrintInitialScreen();
 
-        void PrintWord(IWord word);
+        void PrintWord(IRendarable word);
 
-        void RenderScoreboard(IEnumerable<IPlayer> scoreBoardInfo);
+        void RenderScoreboard(IEnumerable<IRendarable> scoreBoardInfo);
 
         void PrintEndScreen();
 
-        void PrintUsedLettersAndMistakes(IEnumerable<ILetter> usedLetters, int numberOfMistakes);
+        void PrintUsedLetters(IEnumerable<IRendarable> usedLetters);
+
+        void PrintMistakes(int numberOfMistakes);
     }
 }

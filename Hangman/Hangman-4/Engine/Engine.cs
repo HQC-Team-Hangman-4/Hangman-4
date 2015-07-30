@@ -13,37 +13,25 @@
 
     public class Engine
     {
-        private readonly IEnumerable<string> ScoreBoardInfo = DataSerialization.ReadFromFile(FileNames.scoreboard);
+        //private readonly IEnumerable<string> ScoreBoardInfo = DataSerialization.ReadFromFile(FileNames.scoreboard);
+
+        //make wrapper around where do you get the word information from(Dependency inversion of the way you get information)
         private readonly IEnumerable<string> WordsInfo = DataSerialization.ReadFromFile(FileNames.words);
         private readonly DefaultGameLogic gameLogic;
-        private readonly GameInfo currentPlayerInfo;
+        private readonly IRenderer consoleRenderer;
         private readonly ScoreBoard scoreBoard;
 
-        private int lettersLeft;
-        private bool isCheated;
-        private IRenderer consoleRenderer;
-        private IPlayer player;
         private IInputProvider inputProvider;
 
         public Engine(IRenderer consoleRenderer, IInputProvider inputProvider)
         {
-            this.consoleRenderer = consoleRenderer;
-            this.inputProvider = inputProvider;
-
-            this.currentPlayerInfo = new GameInfo();
-            currentPlayerInfo.Mistakes = 0;
-
             Dictionary<Categories, ICollection<string>> words = GetWordsByCategory();
 
-            player = new Player();
-            player.PlayerGameInformation = new List<GameInfo>();
-
-            gameLogic = new DefaultGameLogic();
-            gameLogic.Word = GenerateWordFromString(GetRandomWordByCategory(words, Categories.IT));
-
+            this.inputProvider = inputProvider;
+            this.consoleRenderer = consoleRenderer;
             this.scoreBoard = new ScoreBoard();
-
-            this.isCheated = false;
+            this.gameLogic = new DefaultGameLogic();
+            this.gameLogic.Word = GenerateWordFromString(GetRandomWordByCategory(words, Categories.IT));
         }
 
         public void StartGame()
@@ -52,133 +40,39 @@
 
             while (this.inputProvider.Command != "exit")
             {
-                consoleRenderer.PrintWord(this.gameLogic.Word);
-                this.inputProvider.Command = Console.ReadLine();
 
-                if (this.inputProvider.Command.Length == 1)
+                this.consoleRenderer.PrintWord(this.gameLogic.Word);
+
+                this.inputProvider.GetInput();
+                
+                this.gameLogic.ParseCommand(this.inputProvider.Command);
+
+                this.gameLogic.PrintWhenStateGameIsChanging(consoleRenderer.PrintUsedLetters, consoleRenderer.PrintMistakes, consoleRenderer.RenderScoreboard, this.scoreBoard);
+
+                
+                //this.consoleRenderer.RenderScoreboard(scoreBoard.GetScoreBoard()); // top
+                
+                //this.consoleRenderer.PrintUsedLetters(this.gameLogic.CurrentPlayerInfo.UsedLetters); // guess letter
+
+                //this.consoleRenderer.PrintMistakes(this.gameLogic.CurrentPlayerInfo.Mistakes); // guess letter 
+                //
+
+                if(this.gameLogic.IsWordRevealed())
                 {
-                    IsLetterGuessed();
-                }
-                else
-                {
-                    this.SetGameState(this.inputProvider.Command);
-                }
-
-                consoleRenderer.PrintUsedLettersAndMistakes(currentPlayerInfo.UsedLetters, currentPlayerInfo.Mistakes);
-                if (LettersLeft(this.gameLogic.Word) == 0)
-                {
-                    EndGame();
-                    Restart();
-                }
-            }
-        }
-
-        private void IsLetterGuessed()
-        {
-            currentPlayerInfo.UsedLetters.Add(new Letter(this.inputProvider.Command));
-            int guessed = gameLogic.GuessLetter(new Letter(this.inputProvider.Command[0].ToString()));
-
-            if (guessed > 0)
-            {
-                this.lettersLeft = this.lettersLeft - guessed;
-                Console.WriteLine("you guessed {0} letters", guessed);
-                player.Score++;
-            }
-            else
-            {
-                Console.WriteLine("letter not found");
-                currentPlayerInfo.Mistakes++;
-
-                //todo delete this test
-                player.Name = "Koleto";
-            }
-        }
-
-        private void SetGameState(string command)
-        {
-            switch (command)
-            {
-                case "top":
-                    {
-                        consoleRenderer.RenderScoreboard(this.scoreBoard.GetScoreBoard());
-                        break;
-                    }
-
-                case "help":
-                    {
-                        Help();
-                        break;
-                    }
-
-                case "restart":
-                    {
-                        Restart();
-                        break;
-                    }
-
-                default:
-                    {
-                        Console.WriteLine("invalid command");
-                        break;
-                    }
-            }
-        }
-
-        private void Help()
-        {
-            foreach (var letter in gameLogic.Word.Content)
-            {
-                if (!letter.IsFound)
-                {
-                    this.isCheated = true;
-                    letter.IsFound = true;
-                    return;
+                    this.EndGame();
                 }
             }
         }
-
+        
         private void EndGame()
         {
-            if (!this.isCheated)
-            {
-                consoleRenderer.PrintEndScreen();
-
-                player.Name = Console.ReadLine();
-
-                this.scoreBoard.AddPlayerToScoreBoard(player);
-
-                consoleRenderer.RenderScoreboard(this.scoreBoard.GetScoreBoard());
-            }
-            else
-            {
-                Console.WriteLine("You cheated!");
-            }
-        }
-
-        private void Restart()
-        {
-            foreach (var letter in gameLogic.Word.Content)
-            {
-                letter.IsFound = false;
-            }
-
-            var words = GetWordsByCategory();
-            gameLogic.Word = GenerateWordFromString(GetRandomWordByCategory(words, Categories.IT));
-
-        }
-
-        private int LettersLeft(IWord word)
-        {
-            int countLeftLetters = 0;
-            foreach (var letter in word.Content)
-            {
-                if (!letter.IsFound)
-                {
-                    countLeftLetters++;
-                }
-            }
-
-            return countLeftLetters;
+            this.consoleRenderer.PrintEndScreen();
+            
+            this.gameLogic.Player.Name = Console.ReadLine(); //TODO: use inputprovider
+            
+            this.scoreBoard.AddPlayerToScoreBoard(this.gameLogic.Player);
+            
+            consoleRenderer.RenderScoreboard(this.scoreBoard.GetScoreBoard());
         }
 
         private Dictionary<Categories, ICollection<string>> GetWordsByCategory()
@@ -229,5 +123,6 @@
 
             return new Word(currentWordLetters);
         }
+
     }
 }

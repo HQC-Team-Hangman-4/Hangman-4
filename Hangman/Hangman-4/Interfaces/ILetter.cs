@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public interface ILetter 
+    public interface ILetter : IRendarable
     {
         string Value { get; }
 
