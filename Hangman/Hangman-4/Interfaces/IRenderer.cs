@@ -15,5 +15,7 @@
         void PrintUsedLetters(IEnumerable<IRendarable> usedLetters);
 
         void PrintMistakes(int numberOfMistakes);
+
+        void PrintEndScreenIfYouPlayerCheated(string message);
     }
 }

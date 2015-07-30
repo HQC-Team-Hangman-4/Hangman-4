@@ -44,35 +44,43 @@
                 this.consoleRenderer.PrintWord(this.gameLogic.Word);
 
                 this.inputProvider.GetInput();
-                
+
                 this.gameLogic.ParseCommand(this.inputProvider.Command);
 
                 this.gameLogic.PrintWhenStateGameIsChanging(consoleRenderer.PrintUsedLetters, consoleRenderer.PrintMistakes, consoleRenderer.RenderScoreboard, this.scoreBoard);
 
-                
+
                 //this.consoleRenderer.RenderScoreboard(scoreBoard.GetScoreBoard()); // top
-                
+
                 //this.consoleRenderer.PrintUsedLetters(this.gameLogic.CurrentPlayerInfo.UsedLetters); // guess letter
 
                 //this.consoleRenderer.PrintMistakes(this.gameLogic.CurrentPlayerInfo.Mistakes); // guess letter 
                 //
 
-                if(this.gameLogic.IsWordRevealed())
+                if (this.gameLogic.IsWordRevealed())
                 {
                     this.EndGame();
                 }
             }
         }
-        
+
+        //TODO: move to Gamelogic
         private void EndGame()
         {
-            this.consoleRenderer.PrintEndScreen();
-            
-            this.gameLogic.Player.Name = Console.ReadLine(); //TODO: use inputprovider
-            
-            this.scoreBoard.AddPlayerToScoreBoard(this.gameLogic.Player);
-            
-            consoleRenderer.RenderScoreboard(this.scoreBoard.GetScoreBoard());
+            if (!this.gameLogic.IsCheated)
+            {
+                this.consoleRenderer.PrintEndScreen();
+
+                this.gameLogic.Player.Name = Console.ReadLine(); //TODO: use inputprovider
+
+                this.scoreBoard.AddPlayerToScoreBoard(this.gameLogic.Player);
+
+                consoleRenderer.RenderScoreboard(this.scoreBoard.GetScoreBoard());
+            }
+            else
+            {
+                this.consoleRenderer.PrintEndScreenIfYouPlayerCheated("You cheated!!!");
+            }
         }
 
         private Dictionary<Categories, ICollection<string>> GetWordsByCategory()

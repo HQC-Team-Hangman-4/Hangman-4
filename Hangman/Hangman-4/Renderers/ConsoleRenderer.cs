@@ -52,5 +52,10 @@ namespace HangMan.Renderers
         {
             Console.WriteLine("Mistakes: {0}", numberOfMistakes);
         }
+
+        public void PrintEndScreenIfYouPlayerCheated(string message)
+        {
+            Console.WriteLine(message);
+        }
     }
 }

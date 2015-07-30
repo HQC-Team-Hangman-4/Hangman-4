@@ -6,6 +6,7 @@
        top,
        help,
        restart,
-       exit
+       exit,
+       invalidCommand
     }
 }

@@ -65,9 +65,11 @@
 
             if (guessed > 0)
             {
+                Player.Score += 5;
                 return true;
             }
 
+            Player.Score--;
             return false;
         }
 
@@ -102,21 +104,10 @@
 
                 default:
                     {
+                        this.gameState = GameState.invalidCommand;
                         Console.WriteLine("invalid command");
                         break;
                     }
-            }
-        }
-
-        private void EndGame()
-        {
-            if (!this.IsCheated)
-            {
-
-            }
-            else
-            {
-                //Console.WriteLine("You cheated!");
             }
         }
 
@@ -140,7 +131,8 @@
             //    letter.IsFound = false;
             //}
 
-            //var words = GetWordsByCategory();
+            //TODO: change method to the right class
+            //var words = engine.GetWordsByCategory(); 
             //this.Word = GenerateWordFromString(GetRandomWordByCategory(words, Categories.IT));
 
         }
@@ -180,6 +172,7 @@
             return false;
         }
 
+        //TODO
         public void PrintWhenStateGameIsChanging(Action<IEnumerable<IRendarable>> usedLetters, Action<int> mistakes, Action<IEnumerable<IRendarable>> scoreBoardInfo, ScoreBoard scoreBoard)
         {
             if (this.gameState == GameState.guessLetter)
@@ -194,6 +187,10 @@
             else if (this.gameState == GameState.help)
             {
                 
+            }
+            else if(this.gameState == GameState.restart)
+            {
+
             }
         }
     }
