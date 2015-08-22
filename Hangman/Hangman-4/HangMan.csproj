@@ -42,21 +42,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleInputProvider.cs" />
-    <Compile Include="ConsoleRenderer.cs" />
-    <Compile Include="Difficulty.cs" />
-    <Compile Include="Engine.cs" />
-    <Compile Include="Hangman.cs" />
-    <Compile Include="Interface.cs" />
-    <Compile Include="Messages.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="ScoreBoardPosition.cs" />
-    <Compile Include="StorageFactory.cs" />
-    <Compile Include="Word.cs" />
-    <Compile Include="WordCategories.cs" />
+    <Compile Include="Engine\Engine.cs" />
+    <Compile Include="GameLogic\DefaultGameLogic.cs" />
+    <Compile Include="GameObjects\GameInfo.cs" />
+    <Compile Include="GameObjects\Letter.cs" />
+    <Compile Include="GameObjects\Player.cs" />
+    <Compile Include="GameObjects\Word.cs" />
+    <Compile Include="EntryPoint.cs" />
+    <Compile Include="Helpers\Categories.cs" />
+    <Compile Include="Helpers\GameState.cs" />
+    <Compile Include="InputProviders\ConsoleInputProvider.cs" />
+    <Compile Include="Helpers\DataSerialization.cs" />
+    <Compile Include="Helpers\FileNames.cs" />
+    <Compile Include="Interfaces\IInputProvider.cs" />
+    <Compile Include="Interfaces\ILetter.cs" />
+    <Compile Include="Interfaces\IPlayer.cs" />
+    <Compile Include="Interfaces\IRendarable.cs" />
+    <Compile Include="Interfaces\IRenderer.cs" />
+    <Compile Include="Interfaces\IScoreBoard.cs" />
+    <Compile Include="Interfaces\IWord.cs" />
+    <Compile Include="Renderers\ConsoleRenderer.cs" />
+    <Compile Include="GameObjects\ScoreBoard.cs" />
+    <Compile Include="Users\User.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="HangmanClassDiagram.cd" />
+    <Content Include="Files\scoreboard.txt" />
+    <Content Include="Files\words.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
