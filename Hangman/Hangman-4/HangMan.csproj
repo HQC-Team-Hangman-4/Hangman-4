@@ -49,6 +49,7 @@
     <Compile Include="GameObjects\Player.cs" />
     <Compile Include="GameObjects\Word.cs" />
     <Compile Include="EntryPoint.cs" />
+    <Compile Include="GameObjects\WordFactory.cs" />
     <Compile Include="Helpers\Categories.cs" />
     <Compile Include="Helpers\GameState.cs" />
     <Compile Include="InputProviders\ConsoleInputProvider.cs" />
