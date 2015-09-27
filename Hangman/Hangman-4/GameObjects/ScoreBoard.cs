@@ -32,25 +32,26 @@
                 sortedScoreBoard = currentScoreBoard.OrderByDescending(pl => Convert.ToInt32(pl.Score)).ThenBy(pl => pl.Name).ToList();
             }
 
-
-            DataSerialization.WriteToFile(sortedScoreBoard, FileNames.scoreboard);
+            // Implement "ScoreBoardDataBase" class to read/write score!
+            // DataSerialization.WriteToFile(sortedScoreBoard, FileNames.scoreboard);
         }
 
         public ICollection<IPlayer> GetScoreBoard()
         {
             ICollection<IPlayer> result = new List<IPlayer>();
-            IEnumerable<string> scoreBoardInfo = DataSerialization.ReadFromFile(FileNames.scoreboard);
+            // Use abovementioned class!
+            //IEnumerable<string> scoreBoardInfo = DataSerialization.ReadFromFile(FileNames.scoreboard);
 
-            foreach (var scorBoardPlayer in scoreBoardInfo)
-            {
-                string[] currentPlayerInfo = scorBoardPlayer.Trim().Split(' ');
+            //foreach (var scorBoardPlayer in scoreBoardInfo)
+            //{
+            //    string[] currentPlayerInfo = scorBoardPlayer.Trim().Split(' ');
 
-                IPlayer player = new Player();
-                player.Name = currentPlayerInfo[0];
-                player.Score = Convert.ToInt32(currentPlayerInfo[1]);
+            //    IPlayer player = new Player();
+            //    player.Name = currentPlayerInfo[0];
+            //    player.Score = Convert.ToInt32(currentPlayerInfo[1]);
 
-                result.Add(player);
-            }
+            //    result.Add(player);
+            //}
 
             return result;
         }
