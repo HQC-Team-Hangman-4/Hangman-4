@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Linq;
-using HangMan.Interfaces;
-
-namespace HangMan.Helpers
+namespace HangMan.Helpers.Data
 {
+    using HangMan.Interfaces;
+
     public class WordDatabase : DataBase
     {
         private Random random = new Random();
 
         public WordDatabase(IDataSerialization dataSerialization)
-            :base(dataSerialization)
+            : base(dataSerialization)
         {
         }
 
@@ -22,7 +22,7 @@ namespace HangMan.Helpers
             var separator = allWords[randomIndex].IndexOf(" ", StringComparison.Ordinal) + 1;
             var word = allWords[randomIndex].Substring(separator);
 
-            return word.Trim();        
+            return word.Trim();
         }
     }
 }

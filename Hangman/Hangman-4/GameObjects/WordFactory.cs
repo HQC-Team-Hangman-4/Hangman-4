@@ -1,14 +1,12 @@
-﻿
-using System.Collections.Generic;
-using HangMan.Helpers;
-
-namespace HangMan.GameObjects
+﻿namespace HangMan.GameObjects
 {
     using System;
     using System.Linq;
 
     using HangMan.InputProviders;
     using HangMan.Interfaces;
+    using System.Collections.Generic;
+    using HangMan.Helpers.Data;
 
     public class WordFactory
     {
@@ -32,7 +30,7 @@ namespace HangMan.GameObjects
                     letters = WordAsLetters(Categories.Biology);
                     break;
                 case Categories.Geography:
-                    letters =WordAsLetters(Categories.Geography);
+                    letters = WordAsLetters(Categories.Geography);
                     break;
                 case Categories.IT:
                     letters = WordAsLetters(Categories.IT);
@@ -44,10 +42,6 @@ namespace HangMan.GameObjects
             return new Word(letters);
         }
 
-        // Helper methods
-        // Goes to Database 
-
-        //Stay here
         private List<ILetter> WordAsLetters(Categories category)
         {
             var allLetters = new List<ILetter>();

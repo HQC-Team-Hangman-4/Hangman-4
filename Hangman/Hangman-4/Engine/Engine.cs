@@ -1,6 +1,4 @@
-﻿using HangMan.Helpers;
-
-namespace HangMan.Engine
+﻿namespace HangMan.Engine
 {
     using System;
     using System.Collections.Generic;
@@ -10,6 +8,9 @@ namespace HangMan.Engine
     using HangMan.GameObjects;
     using HangMan.Interfaces;
     using HangMan.Renderers;
+    using HangMan.Helpers;
+    using HangMan.Helpers.Data;
+    using HangMan.InputProviders.Data;
 
     using InputProviders;
 

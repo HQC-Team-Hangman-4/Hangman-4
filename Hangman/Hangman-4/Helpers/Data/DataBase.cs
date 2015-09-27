@@ -1,6 +1,6 @@
 ﻿using HangMan.Interfaces;
 
-namespace HangMan.Helpers
+namespace HangMan.Helpers.Data
 {
     public abstract class DataBase
     {
