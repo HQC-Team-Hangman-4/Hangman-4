@@ -47,6 +47,7 @@
     <Compile Include="GameObjects\GameInfo.cs" />
     <Compile Include="GameObjects\Letter.cs" />
     <Compile Include="GameObjects\Player.cs" />
+    <Compile Include="GameObjects\Scoreboard.cs" />
     <Compile Include="GameObjects\Word.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="GameObjects\WordFactory.cs" />
@@ -67,7 +68,6 @@
     <Compile Include="Interfaces\IScoreBoard.cs" />
     <Compile Include="Interfaces\IWord.cs" />
     <Compile Include="Renderers\ConsoleRenderer.cs" />
-    <Compile Include="GameObjects\ScoreBoard.cs" />
     <Compile Include="Users\User.cs" />
   </ItemGroup>
   <ItemGroup>

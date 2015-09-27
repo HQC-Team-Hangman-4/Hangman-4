@@ -57,5 +57,10 @@ namespace HangMan.Renderers
         {
             Console.WriteLine(message);
         }
+
+        public void InvalidCommand()
+        {
+            Console.WriteLine("Invalid command");
+        }
     }
 }

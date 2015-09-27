@@ -6,24 +6,18 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.IO;
-
+    
     public class DataSerialization : IDataSerialization
     {
         public ICollection<string> ReadFromFile(FileNames fileName)
         {
             ICollection<string> textLines = File.ReadAllLines("../../Files/" + fileName + ".txt");
 
-            //foreach (var line in textLines)
-            //{
-            //    Console.WriteLine(line);
-            //}
-
             return textLines;
         }
 
         public void WriteToFile(IEnumerable<IPlayer> scoreBoardPlayers, FileNames fileName)
         {
-
             using (StreamWriter writer = new StreamWriter(string.Format("../../Files/{0}.txt", fileName)))
             {
                 foreach (var player in scoreBoardPlayers)

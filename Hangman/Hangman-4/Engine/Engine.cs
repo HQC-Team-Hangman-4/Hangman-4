@@ -21,7 +21,7 @@
         //make wrapper around where do you get the word information from(Dependency inversion of the way you get information)
         private readonly DefaultGameLogic gameLogic;
         private readonly IRenderer consoleRenderer;
-        private readonly ScoreBoard scoreBoard;
+        private readonly Scoreboard scoreBoard;
         //Word stuff, should be refactored.
         private IDataSerialization dataSerialization = new DataSerialization();
         private WordDatabase wordDataBase;
@@ -33,10 +33,10 @@
         {
             this.inputProvider = inputProvider;
             this.consoleRenderer = consoleRenderer;
-            this.scoreBoard = new ScoreBoard();
-            this.gameLogic = new DefaultGameLogic();
+            this.scoreBoard = Scoreboard.Instance;
             this.wordDataBase = new WordDatabase(dataSerialization);
             this.wordFactory = new WordFactory(wordDataBase);
+            this.gameLogic = new DefaultGameLogic();
             //Should generate word according to input! 
             this.gameLogic.Word = wordFactory.GetWord(Categories.IT);
         }
@@ -54,15 +54,29 @@
 
                 this.gameLogic.ParseCommand(this.inputProvider.Command);
 
-                this.gameLogic.PrintWhenStateGameIsChanging(consoleRenderer.PrintUsedLetters, consoleRenderer.PrintMistakes, consoleRenderer.RenderScoreboard, this.scoreBoard);
-
-
-                //this.consoleRenderer.RenderScoreboard(scoreBoard.GetScoreBoard()); // top
-
-                //this.consoleRenderer.PrintUsedLetters(this.gameLogic.CurrentPlayerInfo.UsedLetters); // guess letter
-
-                //this.consoleRenderer.PrintMistakes(this.gameLogic.CurrentPlayerInfo.Mistakes); // guess letter 
-                //
+                switch (this.gameLogic.gameState)
+                {
+                    case GameState.guessLetter:
+                        this.consoleRenderer.PrintUsedLetters(this.gameLogic.CurrentPlayerInfo.UsedLetters);
+                        this.consoleRenderer.PrintMistakes(this.gameLogic.CurrentPlayerInfo.Mistakes); 
+                        break;
+                    case GameState.top:
+                        this.consoleRenderer.RenderScoreboard(scoreBoard.ViewScoreboard());
+                        break;
+                    case GameState.help:
+                        this.gameLogic.Help();
+                        break;
+                    case GameState.restart:
+                        this.gameLogic.Restart();
+                        break;
+                    case GameState.exit:
+                        break;
+                    case GameState.invalidCommand:
+                        this.consoleRenderer.InvalidCommand();
+                        break;
+                    default:
+                        break;
+                }
 
                 if (this.gameLogic.IsWordRevealed())
                 {
@@ -70,19 +84,19 @@
                 }
             }
         }
-
-        //TODO: move to Gamelogic
+        
         private void EndGame()
         {
             if (!this.gameLogic.IsCheated)
             {
                 this.consoleRenderer.PrintEndScreen();
 
-                this.gameLogic.Player.Name = Console.ReadLine(); //TODO: use inputprovider
+                this.inputProvider.GetInput();
+                this.gameLogic.Player.Name = this.inputProvider.Command;
 
-                this.scoreBoard.AddPlayerToScoreBoard(this.gameLogic.Player);
+                this.scoreBoard.AddPlayerScore(this.gameLogic.Player);
 
-                consoleRenderer.RenderScoreboard(this.scoreBoard.GetScoreBoard());
+                consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
             }
             else
             {
