@@ -1,5 +1,6 @@
 ﻿
 using System.Collections.Generic;
+using HangMan.Helpers;
 
 namespace HangMan.GameObjects
 {
@@ -12,45 +13,45 @@ namespace HangMan.GameObjects
     public class WordFactory
     {
         private Random random = new Random();
+        private WordDatabase wordDataBase;
 
-        public WordFactory()
+        public WordFactory(WordDatabase wordDataBase)
         {
+            this.wordDataBase = wordDataBase;
         }
 
         public IWord GetWord(Categories category)
         {
+            var letters = new List<ILetter>();
             switch (category)
             {
                 case Categories.Astronomy:
-                    return new Word(WordAsLetters(Categories.Astronomy));
+                    letters = WordAsLetters(Categories.Astronomy);
+                    break;
                 case Categories.Biology:
-                    return new Word(WordAsLetters(Categories.Biology));
+                    letters = WordAsLetters(Categories.Biology);
+                    break;
                 case Categories.Geography:
-                    return new Word(WordAsLetters(Categories.Geography));
+                    letters =WordAsLetters(Categories.Geography);
+                    break;
                 case Categories.IT:
-                    return new Word(WordAsLetters(Categories.IT));
+                    letters = WordAsLetters(Categories.IT);
+                    break;
                 default:
                     throw new NotImplementedException();
             }
+
+            return new Word(letters);
         }
 
         // Helper methods
-        private string WordFromFile(Categories category)
-        {
-            var allWords = DataSerialization.ReadFromFile(FileNames.words)
-                                            .Where(x => x.Contains(category.ToString())).ToArray();
+        // Goes to Database 
 
-            var randomIndex = random.Next(0, allWords.Count());
-            var separator = allWords[randomIndex].IndexOf(" ", StringComparison.Ordinal) + 1;
-            var word = allWords[randomIndex].Substring(separator);
-
-            return word;
-        }
-
-        private IList<ILetter> WordAsLetters(Categories category)
+        //Stay here
+        private List<ILetter> WordAsLetters(Categories category)
         {
             var allLetters = new List<ILetter>();
-            var word = WordFromFile(category);
+            var word = wordDataBase.GetRandomWordByCategory(category);
 
             foreach (var letter in word)
             {
