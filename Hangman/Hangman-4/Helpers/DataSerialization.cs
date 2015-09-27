@@ -7,9 +7,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-    public static class DataSerialization
+    public class DataSerialization : IDataSerialization
     {
-        public static ICollection<string> ReadFromFile(FileNames fileName)
+        public ICollection<string> ReadFromFile(FileNames fileName)
         {
             ICollection<string> textLines = File.ReadAllLines("../../Files/" + fileName + ".txt");
 
@@ -21,7 +21,7 @@ using System.IO;
             return textLines;
         }
 
-        public static void WriteToFile(IEnumerable<IPlayer> scoreBoardPlayers, FileNames fileName)
+        public void WriteToFile(IEnumerable<IPlayer> scoreBoardPlayers, FileNames fileName)
         {
 
             using (StreamWriter writer = new StreamWriter(string.Format("../../Files/{0}.txt", fileName)))
