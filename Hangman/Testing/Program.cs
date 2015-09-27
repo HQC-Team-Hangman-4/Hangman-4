@@ -17,24 +17,20 @@ namespace Testing
 
         static void Main()
         {
-            var allWords = DataSerialization.ReadFromFile(FileNames.words)
-                                            .Where(x => x.Contains("IT")).ToArray();
+            var listOfLetters = new List<ILetter>();
 
-            var randomIndex = random.Next(0, allWords.Count());
-            var separator = allWords[randomIndex].IndexOf(" ") + 1;
-            var word = allWords[randomIndex].Substring(separator);
-
-            var allLetters = new List<ILetter>();
-
-            foreach (var letter in word)
+            for (int i = 0; i < 10; i++)
             {
-                allLetters.Add(new Letter(letter.ToString()));
+                var l = (char) (47 + i);
+                var letter = new Letter(l.ToString());
+                listOfLetters.Add(letter);
             }
 
-            foreach (var letter in allLetters)
-            {
-                Console.WriteLine(letter.Value);
-            }
+            var word = new Word(listOfLetters);
+            var player = new Player();
+            var guessedWOrd = new Guessed(player);
+
+            Console.WriteLine(guessedWOrd.GetBody());
         }
     }
 }
