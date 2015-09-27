@@ -51,10 +51,13 @@
     <Compile Include="EntryPoint.cs" />
     <Compile Include="GameObjects\WordFactory.cs" />
     <Compile Include="Helpers\Categories.cs" />
+    <Compile Include="Helpers\Data\DataBase.cs" />
     <Compile Include="Helpers\GameState.cs" />
+    <Compile Include="Helpers\Data\WordDatabase.cs" />
     <Compile Include="InputProviders\ConsoleInputProvider.cs" />
-    <Compile Include="Helpers\DataSerialization.cs" />
+    <Compile Include="Helpers\Data\DataSerialization.cs" />
     <Compile Include="Helpers\FileNames.cs" />
+    <Compile Include="Interfaces\IDataSerialization.cs" />
     <Compile Include="Interfaces\IInputProvider.cs" />
     <Compile Include="Interfaces\ILetter.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
@@ -66,7 +69,9 @@
     <Compile Include="GameObjects\ScoreBoard.cs" />
     <Compile Include="Users\User.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Files\scoreboard.txt" />
     <Content Include="Files\words.txt" />

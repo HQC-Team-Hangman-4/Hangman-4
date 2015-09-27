@@ -1,38 +1,43 @@
-﻿
-using System.Collections.Generic;
-
-namespace HangMan.GameObjects
+﻿namespace HangMan.GameObjects
 {
     using System;
     using System.Linq;
 
     using HangMan.InputProviders;
     using HangMan.Interfaces;
+    using System.Collections.Generic;
+    using HangMan.Helpers.Data;
 
     public class WordFactory
     {
         private Random random = new Random();
+        private WordDatabase wordDataBase;
 
-        public WordFactory()
+        public WordFactory(WordDatabase wordDataBase)
         {
+            this.wordDataBase = wordDataBase;
         }
 
         public IWord GetWord(Categories category)
         {
+            var letters = new List<ILetter>();
             switch (category)
             {
                 case Categories.Astronomy:
-                    return new Word(WordAsLetters(Categories.Astronomy));
+                    letters = WordAsLetters(Categories.Astronomy);
+                    break;
                 case Categories.Biology:
-                    return new Word(WordAsLetters(Categories.Biology));
+                    letters = WordAsLetters(Categories.Biology);
+                    break;
                 case Categories.Geography:
-                    return new Word(WordAsLetters(Categories.Geography));
+                    letters = WordAsLetters(Categories.Geography);
+                    break;
                 case Categories.IT:
-                    return new Word(WordAsLetters(Categories.IT));
+                    letters = WordAsLetters(Categories.IT);
+                    break;
                 default:
                     throw new NotImplementedException();
             }
-        }
 
         // Helper methods
         private string WordFromFile(Categories category)
@@ -49,10 +54,10 @@ namespace HangMan.GameObjects
             return word;
         }
 
-        private IList<ILetter> WordAsLetters(Categories category)
+        private List<ILetter> WordAsLetters(Categories category)
         {
             var allLetters = new List<ILetter>();
-            var word = WordFromFile(category);
+            var word = wordDataBase.GetRandomWordByCategory(category);
 
             foreach (var letter in word)
             {
