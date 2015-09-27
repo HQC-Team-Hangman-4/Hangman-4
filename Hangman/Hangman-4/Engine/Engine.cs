@@ -1,4 +1,6 @@
-﻿namespace HangMan.Engine
+﻿using HangMan.Helpers;
+
+namespace HangMan.Engine
 {
     using System;
     using System.Collections.Generic;
@@ -16,22 +18,26 @@
         //private readonly IEnumerable<string> ScoreBoardInfo = DataSerialization.ReadFromFile(FileNames.scoreboard);
 
         //make wrapper around where do you get the word information from(Dependency inversion of the way you get information)
-        private readonly IEnumerable<string> WordsInfo = DataSerialization.ReadFromFile(FileNames.words);
         private readonly DefaultGameLogic gameLogic;
         private readonly IRenderer consoleRenderer;
         private readonly ScoreBoard scoreBoard;
+        //Word stuff, should be refactored.
+        private IDataSerialization dataSerialization = new DataSerialization();
+        private WordDatabase wordDataBase;
+        private WordFactory wordFactory;
 
         private IInputProvider inputProvider;
 
         public Engine(IRenderer consoleRenderer, IInputProvider inputProvider)
         {
-            Dictionary<Categories, ICollection<string>> words = GetWordsByCategory();
-
             this.inputProvider = inputProvider;
             this.consoleRenderer = consoleRenderer;
             this.scoreBoard = new ScoreBoard();
             this.gameLogic = new DefaultGameLogic();
-            this.gameLogic.Word = GenerateWordFromString(GetRandomWordByCategory(words, Categories.IT));
+            this.wordDataBase = new WordDatabase(dataSerialization);
+            this.wordFactory = new WordFactory(wordDataBase);
+            //Should generate word according to input! 
+            this.gameLogic.Word = wordFactory.GetWord(Categories.IT);
         }
 
         public void StartGame()
@@ -81,55 +87,6 @@
             {
                 this.consoleRenderer.PrintEndScreenIfYouPlayerCheated("You cheated!!!");
             }
-        }
-
-        private Dictionary<Categories, ICollection<string>> GetWordsByCategory()
-        {
-            Dictionary<Categories, ICollection<string>> wordWithCategory = new Dictionary<Categories, ICollection<string>>();
-
-            foreach (var categoryWithWord in WordsInfo)
-            {
-                var currentCategoryString = categoryWithWord.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)[0];
-                var currentWord = categoryWithWord.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)[1];
-
-                Categories currentCategory = (Categories)Enum.Parse(typeof(Categories), currentCategoryString);
-
-                if (!wordWithCategory.ContainsKey(currentCategory))
-                {
-                    wordWithCategory.Add(currentCategory, new List<string>() { currentWord }); //TODO: change list
-                }
-                else
-                {
-                    var currentWordsInCategory = wordWithCategory[currentCategory];
-                    currentWordsInCategory.Add(currentWord);
-                    wordWithCategory[currentCategory] = currentWordsInCategory;
-                }
-            }
-
-            return wordWithCategory;
-        }
-
-        private string GetRandomWordByCategory(Dictionary<Categories, ICollection<string>> words, Categories category)
-        {
-            Random random = new Random();
-
-            //TODO: remove guessed word 
-            var categoryWords = words.Where(categoryWord => categoryWord.Key == category).Select(catWord => catWord.Value).ToList()[0].ToList();
-
-            string resultWord = categoryWords[random.Next(0, categoryWords.Count)];
-
-            return resultWord;
-        }
-
-        private IWord GenerateWordFromString(string wordString)
-        {
-            List<ILetter> currentWordLetters = new List<ILetter>();
-            foreach (var letter in wordString)
-            {
-                currentWordLetters.Add(new Letter(letter.ToString()));
-            }
-
-            return new Word(currentWordLetters);
         }
 
     }
