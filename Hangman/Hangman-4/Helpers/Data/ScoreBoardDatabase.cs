@@ -17,7 +17,7 @@ namespace HangMan.Helpers.Data
         
         public ICollection<IPlayer> ReadScoreboard()
         {
-            ICollection<IPlayer> result = new List<IPlayer>();
+            IList<IPlayer> result = new List<IPlayer>();
             IEnumerable<string> scoreBoardInfo = DataSerialization.ReadFromFile(FileNames.scoreboard);
 
             foreach (var scorBoardPlayer in scoreBoardInfo)
@@ -28,7 +28,7 @@ namespace HangMan.Helpers.Data
                 player.Name = currentPlayerInfo[0];
                 player.Score = Convert.ToInt32(currentPlayerInfo[1]);
 
-                result.Add(player);
+                result.Insert(0,player);
             }
 
             return result;
