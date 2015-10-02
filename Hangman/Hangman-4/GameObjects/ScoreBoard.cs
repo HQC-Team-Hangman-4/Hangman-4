@@ -1,60 +1,51 @@
-﻿namespace HangMan.GameObjects
+﻿using HangMan.Helpers.Data;
+using HangMan.InputProviders.Data;
+using HangMan.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace HangMan.GameObjects
 {
-    using HangMan.InputProviders;
-    using HangMan.Interfaces;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-
-    public class ScoreBoard
+    public sealed class Scoreboard
     {
+        private ScoreBoardDatabase scoreboardDatabase;
+        private static volatile Scoreboard scoreboard;
+        private static object syncLock = new object();
 
-        public void AddPlayerToScoreBoard(IPlayer player)
+        private Scoreboard()
         {
-            ICollection<IPlayer> currentScoreBoard = new HashSet<IPlayer>();
-            currentScoreBoard = GetScoreBoard();
+            this.scoreboardDatabase = new ScoreBoardDatabase(new DataSerialization());
+        }
 
-            bool reorder = true;
-            //check if player already exist and have new high score
-            foreach (var currPlayer in currentScoreBoard.Where(cp => cp.Name == player.Name))
+        public static Scoreboard Instance
+        {
+            get
             {
-                if (currPlayer.Score <= player.Score)
+                if (scoreboard == null)
                 {
-                    currPlayer.Score = player.Score;
-                    reorder = false;
+                    lock (syncLock)
+                    {
+                        if (scoreboard == null)
+                        {
+                            scoreboard = new Scoreboard();
+                        }
+                    }
                 }
+
+                return scoreboard;
             }
-
-            var sortedScoreBoard = currentScoreBoard;
-            if (reorder)
-            {
-                currentScoreBoard.Add(player);
-                sortedScoreBoard = currentScoreBoard.OrderByDescending(pl => Convert.ToInt32(pl.Score)).ThenBy(pl => pl.Name).ToList();
-            }
-
-
-            DataSerialization.WriteToFile(sortedScoreBoard, FileNames.scoreboard);
         }
 
-        public ICollection<IPlayer> GetScoreBoard()
+        public void AddPlayerScore(IPlayer player)
         {
-            ICollection<IPlayer> result = new List<IPlayer>();
-            IEnumerable<string> scoreBoardInfo = DataSerialization.ReadFromFile(FileNames.scoreboard);
-
-            foreach (var scorBoardPlayer in scoreBoardInfo)
-            {
-                string[] currentPlayerInfo = scorBoardPlayer.Trim().Split(' ');
-
-                IPlayer player = new Player();
-                player.Name = currentPlayerInfo[0];
-                player.Score = Convert.ToInt32(currentPlayerInfo[1]);
-
-                result.Add(player);
-            }
-
-            return result;
+            this.scoreboardDatabase.WriteToScoreBoard(player);
         }
 
-
+        public ICollection<IPlayer> ViewScoreboard()
+        {
+            return this.scoreboardDatabase.ReadScoreboard();
+        }
     }
 }

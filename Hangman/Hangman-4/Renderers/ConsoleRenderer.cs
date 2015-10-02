@@ -32,10 +32,13 @@ namespace HangMan.Renderers
 
         public void RenderScoreboard(IEnumerable<IRendarable> scoreBoardInfo)
         {
+            Console.WriteLine(new string('-',40));
+            Console.WriteLine("High Score - sorted by number of mistakes");
             foreach (var player in scoreBoardInfo)
             {
                 Console.WriteLine(player.GetBody());
             }
+            Console.WriteLine(new string('-', 40));
         }
 
         public void PrintUsedLetters(IEnumerable<IRendarable> usedLetters)
@@ -56,6 +59,11 @@ namespace HangMan.Renderers
         public void PrintEndScreenIfYouPlayerCheated(string message)
         {
             Console.WriteLine(message);
+        }
+
+        public void InvalidCommand()
+        {
+            Console.WriteLine("Invalid command");
         }
     }
 }

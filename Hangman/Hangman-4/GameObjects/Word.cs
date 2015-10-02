@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections;
 
 namespace HangMan.GameObjects
 {
-    public class Word : IWord, IRendarable
+    public class Word : IWord, IRendarable, IEnumerable<ILetter>
     {
         private IEnumerable<ILetter> content;
 
@@ -53,6 +54,19 @@ namespace HangMan.GameObjects
             }
 
             return wordContent.ToString();
+        }
+
+        public IEnumerator<ILetter> GetEnumerator()
+        {
+            foreach (var letter in this.Content)
+            {
+                yield return letter;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
         }
     }
 }

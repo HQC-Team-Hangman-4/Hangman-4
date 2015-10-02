@@ -1,29 +1,23 @@
-﻿namespace HangMan.InputProviders
+﻿namespace HangMan.InputProviders.Data
 {
     using HangMan.GameObjects;
-using HangMan.Interfaces;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-
-    public static class DataSerialization
+    using HangMan.Interfaces;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.IO;
+    
+    public class DataSerialization : IDataSerialization
     {
-        public static ICollection<string> ReadFromFile(FileNames fileName)
+        public ICollection<string> ReadFromFile(FileNames fileName)
         {
             ICollection<string> textLines = File.ReadAllLines("../../Files/" + fileName + ".txt");
-
-            //foreach (var line in textLines)
-            //{
-            //    Console.WriteLine(line);
-            //}
 
             return textLines;
         }
 
-        public static void WriteToFile(IEnumerable<IPlayer> scoreBoardPlayers, FileNames fileName)
+        public void WriteToFile(IEnumerable<IPlayer> scoreBoardPlayers, FileNames fileName)
         {
-
             using (StreamWriter writer = new StreamWriter(string.Format("../../Files/{0}.txt", fileName)))
             {
                 foreach (var player in scoreBoardPlayers)

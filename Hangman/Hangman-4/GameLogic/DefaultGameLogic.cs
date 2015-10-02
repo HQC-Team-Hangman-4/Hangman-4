@@ -91,7 +91,6 @@
                 case "help":
                     {
                         this.gameState = GameState.help;
-                        Help();
                         break;
                     }
 
@@ -105,13 +104,12 @@
                 default:
                     {
                         this.gameState = GameState.invalidCommand;
-                        Console.WriteLine("invalid command");
                         break;
                     }
             }
         }
 
-        private void Help()
+        internal void Help()
         {
             foreach (var letter in this.Word.Content)
             {
@@ -124,7 +122,7 @@
             }
         }
 
-        private void Restart()
+        internal void Restart()
         {
             //foreach (var letter in this.Word.Content)
             //{
@@ -171,27 +169,6 @@
 
             return false;
         }
-
-        //TODO
-        public void PrintWhenStateGameIsChanging(Action<IEnumerable<IRendarable>> usedLetters, Action<int> mistakes, Action<IEnumerable<IRendarable>> scoreBoardInfo, ScoreBoard scoreBoard)
-        {
-            if (this.gameState == GameState.guessLetter)
-            {
-                usedLetters.Invoke(this.CurrentPlayerInfo.UsedLetters);
-                mistakes.Invoke(this.CurrentPlayerInfo.Mistakes);
-            }
-            else if (this.gameState == GameState.top)
-            {
-                scoreBoardInfo.Invoke(scoreBoard.GetScoreBoard());
-            }
-            else if (this.gameState == GameState.help)
-            {
-                
-            }
-            else if(this.gameState == GameState.restart)
-            {
-
-            }
-        }
+        
     }
 }

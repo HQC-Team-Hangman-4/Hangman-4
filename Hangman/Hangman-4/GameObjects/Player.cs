@@ -10,7 +10,6 @@
 
     public class Player : IPlayer, IRendarable
     {
-
         public Player()
         {
             this.PlayerGameInformation = new List<GameInfo>();
@@ -21,7 +20,6 @@
         public int Score { get; set; }
 
         public List<GameInfo> PlayerGameInformation { get; set; }
-
 
         public string GetBody()
         {
