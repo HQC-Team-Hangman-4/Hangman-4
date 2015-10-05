@@ -4,7 +4,7 @@ namespace HangMan.Helpers.Data
 {
     using HangMan.Interfaces;
 
-    public class WordDatabase : DataBase
+    public class WordDatabase : Database, IWordDatabase
     {
         private Random random = new Random();
 

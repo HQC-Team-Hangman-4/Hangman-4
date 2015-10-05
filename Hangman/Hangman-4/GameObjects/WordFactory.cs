@@ -11,9 +11,9 @@
     public class WordFactory
     {
         private Random random = new Random();
-        private WordDatabase wordDataBase;
+        private IWordDatabase wordDataBase;
 
-        public WordFactory(WordDatabase wordDataBase)
+        public WordFactory(IWordDatabase wordDataBase)
         {
             this.wordDataBase = wordDataBase;
         }
