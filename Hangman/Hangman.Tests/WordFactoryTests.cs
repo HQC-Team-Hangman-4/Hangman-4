@@ -14,8 +14,6 @@ namespace Hangman.Tests
 
         public WordFactoryTests()
             : this(new JustMockWordDatabase())
-        //Since Moq does not have It.IsNotNullOrEmpty the outcome may be different
-        //: this(new MoqCarsRepository())
         {
         }
 
