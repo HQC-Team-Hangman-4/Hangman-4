@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace HangMan.Helpers
 {
@@ -27,7 +28,7 @@ namespace HangMan.Helpers
         {
             if (number < min || max < number)
             {
-                throw new ArgumentException(string.Format("{0} is out of scope {0}-{1}.", name, min, max));
+                throw new ArgumentException(string.Format("{0} is out of scope {1}-{2}.", name, min, max));
             }
         }
 
@@ -36,6 +37,14 @@ namespace HangMan.Helpers
             foreach (var item in collection)
             {
                 Validator.CheckIfNull(item, name);
+            }
+        }
+
+        internal static void CheckIfLetter<T>(T value, string name)
+        {
+            if (!Regex.IsMatch(value.ToString(), @"^[a-zA-Z]+$"))
+            {
+                throw new ArgumentException(name + " is not a letter.");
             }
         }
     }
