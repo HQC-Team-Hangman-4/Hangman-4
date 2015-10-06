@@ -14,7 +14,7 @@ namespace Hangman.Tests.Mocks
         protected WordDataBaseMock()
         {
             this.PopulateFakeData();
-            this.ArrangeCarsRepositoryMock();
+            this.ArrangeDatabaseMock();
         }
 
         public IWordDatabase db { get; protected set; }
@@ -43,6 +43,11 @@ namespace Hangman.Tests.Mocks
             var allWords = this.FakeWordCollection
                                             .Where(x => x.Contains(category.ToString())).ToArray();
 
+            if (allWords.Length <= 0)
+            {
+                throw new ArgumentException("No word found.");
+            }
+
             var randomIndex = random.Next(0, allWords.Count());
             var separator = allWords[randomIndex].IndexOf(" ", StringComparison.Ordinal) + 1;
             var word = allWords[randomIndex].Substring(separator);
@@ -50,6 +55,6 @@ namespace Hangman.Tests.Mocks
             return word.Trim();
         }
 
-        protected abstract void ArrangeCarsRepositoryMock();
+        protected abstract void ArrangeDatabaseMock();
     }
 }

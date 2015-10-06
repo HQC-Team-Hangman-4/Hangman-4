@@ -2,11 +2,11 @@
 using Hangman.Tests.Mocks;
 using HangMan.GameObjects;
 using HangMan.Helpers.Data;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace Hangman.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class WordFactoryTests
     {
         private readonly IWordDatabase dbWordDatabase;
@@ -22,25 +22,29 @@ namespace Hangman.Tests
             this.dbWordDatabase = dbWordDataBaseMock.db;
         }
 
-        [TestInitialize]
+        [TestFixtureSetUp]
         public void CreateController()
         {
             this.wordFactory = new WordFactory(this.dbWordDatabase);
         }
 
 
-        [TestMethod]
-        public void GetWordShouldWorkPropperlyWhenValidInput()
+        [TestCase(Categories.Astronomy)]
+        [TestCase(Categories.Biology)]
+        [TestCase(Categories.IT)]
+        public void GetWordShouldWorkPropperlyWhenValidInput(Categories category)
         {
-            var itWord = wordFactory.GetWord(Categories.IT);
-            var astronWord = wordFactory.GetWord(Categories.Astronomy);
-            var bioWord = wordFactory.GetWord(Categories.Biology);
-            var geoWord = wordFactory.GetWord(Categories.Geography);
+            var word = wordFactory.GetWord(category);
 
-            Assert.IsNotNull(itWord);
-            Assert.IsNotNull(astronWord);
-            Assert.IsNotNull(bioWord);
-            Assert.IsNotNull(geoWord);
+            Assert.IsNotNull(word);
+            Assert.IsNotNull(word.Content);
+        }
+
+        [TestCase()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void GetWordShouldThrowArgumentExceptionWhenWordOfThatCategoryIsNotFound()
+        {
+            var geoWord = wordFactory.GetWord(Categories.Geography);
         }
     }
 }
