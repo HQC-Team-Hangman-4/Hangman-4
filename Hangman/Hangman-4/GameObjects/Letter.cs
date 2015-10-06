@@ -1,4 +1,6 @@
-﻿namespace HangMan.GameObjects
+﻿using HangMan.Helpers;
+
+namespace HangMan.GameObjects
 {
     using HangMan.Interfaces;
     using System.Collections.Generic;
@@ -11,6 +13,7 @@
         public Letter(string value)
         {
             this.Value = value;
+            this.IsFound = false;
         }
 
         public string Value
@@ -19,10 +22,11 @@
             {
                 return this.value;
             }
-            set
+            private set
             {
-                //TODO:make validation
-                this.value = value;
+                Validator.CheckIfNull(value, "Letter value");
+                Validator.CheckIfInRangeIncluded(value.Length, "Letter value length", 1, 1);
+                this.value = value.ToLower();
             }
         }
 
@@ -34,7 +38,7 @@
             }
             set
             {
-                //TODO:Validation
+                Validator.CheckIfNull(value, "Letter IsFound");
                 this.state = value;
             }
         }
