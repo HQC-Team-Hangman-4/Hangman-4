@@ -57,6 +57,7 @@
     <Compile Include="Helpers\Data\ScoreBoardDatabase.cs" />
     <Compile Include="Helpers\GameState.cs" />
     <Compile Include="Helpers\Data\WordDatabase.cs" />
+    <Compile Include="Helpers\Validator.cs" />
     <Compile Include="InputProviders\ConsoleInputProvider.cs" />
     <Compile Include="Helpers\Data\DataSerialization.cs" />
     <Compile Include="Helpers\FileNames.cs" />
