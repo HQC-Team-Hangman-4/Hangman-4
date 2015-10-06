@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
+using HangMan.Helpers;
 
 namespace HangMan.GameObjects
 {
@@ -26,6 +27,8 @@ namespace HangMan.GameObjects
             private set
             {
                 //TODO: validate
+                Validator.CheckIfNull(value, "All letters in word");
+                Validator.CheckAllElementsInCollection(value, "All letters in word");
                 this.content = value;
             }
         }

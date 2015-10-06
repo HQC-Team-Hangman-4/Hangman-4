@@ -8,7 +8,7 @@ namespace HangMan.Helpers.Data
     using System.Linq;
     using System.Text;
 
-    public class ScoreBoardDatabase : DataBase
+    public class ScoreBoardDatabase : Database
     {
         public ScoreBoardDatabase(IDataSerialization dataSerialization)
             :base(dataSerialization)

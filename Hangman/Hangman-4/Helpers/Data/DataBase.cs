@@ -2,11 +2,11 @@
 
 namespace HangMan.Helpers.Data
 {
-    public abstract class DataBase
+    public abstract class Database
     {
         private IDataSerialization dataSerialization;
 
-        internal DataBase(IDataSerialization dataSerialization)
+        internal Database(IDataSerialization dataSerialization)
         {
             this.DataSerialization = dataSerialization;
         }
