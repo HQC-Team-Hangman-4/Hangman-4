@@ -1,4 +1,6 @@
-﻿namespace HangMan.GameObjects
+﻿using HangMan.Helpers;
+
+namespace HangMan.GameObjects
 {
     using System;
     using System.Collections.Generic;
@@ -10,14 +12,34 @@
 
     public class Player : IPlayer, IRendarable
     {
+        private string name;
+        private int score;
+
         public Player()
         {
             this.PlayerGameInformation = new List<GameInfo>();
         }
 
-        public string Name { get; set; }
+        public string Name
+        {
+            get { return this.name; }
+            set
+            {
+                Validator.CheckIfNull(value, "Player name");
+                Validator.CheckIfInRangeExcluded(value.Length, "Player name", 3, 20);
+                this.name = value;
+            }
+        }
 
-        public int Score { get; set; }
+        public int Score
+        {
+            get { return this.score; }
+            set
+            {
+                Validator.checkIfValidScore(value, "Player score");
+                this.score = value;
+            }
+        }
 
         public List<GameInfo> PlayerGameInformation { get; set; }
 
