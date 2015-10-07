@@ -8,6 +8,8 @@ namespace HangMan.Helpers
 {
     public class Validator
     {
+        //TODO: Put it in game logic to maintain reusability.
+        private const int highestPossibleScore = 1000;
         internal static void CheckIfNull<T>(T item, string name)
         {
             if (item == null)
@@ -45,6 +47,14 @@ namespace HangMan.Helpers
             if (!Regex.IsMatch(value.ToString(), @"^[a-zA-Z]+$"))
             {
                 throw new ArgumentException(name + " is not a letter.");
+            }
+        }
+
+        internal static void checkIfValidScore(int score, string name)
+        {
+            if (score < 0 || highestPossibleScore < score)
+            {
+                throw new ArgumentException(string.Format("{0} cannot be higher than {1} or lower than 0.", name, highestPossibleScore));
             }
         }
     }

@@ -60,6 +60,7 @@
     <Compile Include="LetterTests.cs" />
     <Compile Include="Mocks\WordDataBaseMock.cs" />
     <Compile Include="Mocks\JustMockWordDatabase.cs" />
+    <Compile Include="PlayerTests.cs" />
     <Compile Include="WordFactoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
