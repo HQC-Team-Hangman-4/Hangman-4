@@ -8,7 +8,7 @@ using HangMan.Helpers;
 
 namespace HangMan.GameObjects
 {
-    public class Word : IWord, IRendarable, IEnumerable<ILetter>
+    public class Word : IWord, IRenderable, IEnumerable<ILetter>
     {
         private IEnumerable<ILetter> content;
 

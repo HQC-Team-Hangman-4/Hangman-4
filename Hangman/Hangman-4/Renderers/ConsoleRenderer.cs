@@ -15,7 +15,7 @@ namespace HangMan.Renderers
             "'restart' to start a new game, \n'help' to cheat and 'exit' to quit the game.");
         }
 
-        public void PrintWord(IRendarable word)
+        public void PrintWord(IRenderable word)
         {
             Console.WriteLine();
             Console.Write("The secret word is: ");
@@ -30,7 +30,7 @@ namespace HangMan.Renderers
             Console.Write("Enter your name: ");
         }
 
-        public void RenderScoreboard(IEnumerable<IRendarable> scoreBoardInfo)
+        public void RenderScoreboard(IEnumerable<IRenderable> scoreBoardInfo)
         {
             Console.WriteLine(new string('-',40));
             Console.WriteLine("High Score - sorted by number of mistakes");
@@ -41,7 +41,7 @@ namespace HangMan.Renderers
             Console.WriteLine(new string('-', 40));
         }
 
-        public void PrintUsedLetters(IEnumerable<IRendarable> usedLetters)
+        public void PrintUsedLetters(IEnumerable<IRenderable> usedLetters)
         {
             Console.Write("Used Letters --> ");
             foreach (var letter in usedLetters)

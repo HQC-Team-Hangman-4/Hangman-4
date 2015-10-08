@@ -3,7 +3,7 @@
     using HangMan.GameObjects;
     using System.Collections.Generic;
 
-    public interface IPlayer : IRendarable
+    public interface IPlayer : IRenderable
     {
         string Name { get; set; }
 

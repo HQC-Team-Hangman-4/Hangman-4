@@ -5,7 +5,7 @@ namespace HangMan.GameObjects
     using HangMan.Interfaces;
     using System.Collections.Generic;
 
-    public class Letter : ILetter, IRendarable
+    public class Letter : ILetter, IRenderable
     {
         private string value;
         private bool state;

@@ -10,7 +10,7 @@ namespace HangMan.GameObjects
     using HangMan.Interfaces;
     using HangMan.Users;
 
-    public class Player : IPlayer, IRendarable
+    public class Player : IPlayer, IRenderable
     {
         private string name;
         private int score;
