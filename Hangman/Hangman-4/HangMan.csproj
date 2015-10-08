@@ -45,6 +45,7 @@
     <Compile Include="Engine\Engine.cs" />
     <Compile Include="GameLogic\DefaultGameLogic.cs" />
     <Compile Include="GameObjects\GameInfo.cs" />
+    <Compile Include="GameObjects\Guessed.cs" />
     <Compile Include="GameObjects\Letter.cs" />
     <Compile Include="GameObjects\Player.cs" />
     <Compile Include="GameObjects\Scoreboard.cs" />
@@ -65,7 +66,7 @@
     <Compile Include="Interfaces\IInputProvider.cs" />
     <Compile Include="Interfaces\ILetter.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
-    <Compile Include="Interfaces\IRendarable.cs" />
+    <Compile Include="Interfaces\IRenderable.cs" />
     <Compile Include="Interfaces\IRenderer.cs" />
     <Compile Include="Interfaces\IScoreBoard.cs" />
     <Compile Include="Interfaces\IWord.cs" />

@@ -57,6 +57,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="GuessedTests.cs" />
     <Compile Include="LetterTests.cs" />
     <Compile Include="Mocks\WordDataBaseMock.cs" />
     <Compile Include="Mocks\JustMockWordDatabase.cs" />
