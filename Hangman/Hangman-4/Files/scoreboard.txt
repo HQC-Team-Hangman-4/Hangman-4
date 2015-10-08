@@ -1,9 +1,8 @@
 kollslsl 44
 Ippo 35
-p 17
-ASD 7
+ASDS 7
 Koleto 7
-asd 3
+asdg 3
 asdx 3
 asdf 2
 aaas 1

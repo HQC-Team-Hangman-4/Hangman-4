@@ -69,10 +69,15 @@
                 return true;
             }
 
+            if(Player.Score == 0)
+            {
+                return false;
+            }
+
             Player.Score--;
             return false;
         }
-
+            
         private void SetGameState(string  command)
         {
             switch (command)

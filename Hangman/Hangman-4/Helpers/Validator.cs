@@ -22,7 +22,7 @@ namespace HangMan.Helpers
         {
             if (number <= min || max <= number)
             {
-                throw new ArgumentException(string.Format("{0} is out of scope {0}-{1}.", name, min, max));
+                throw new ArgumentException(string.Format("{0} is out of scope {1}-{2}. Was {3}", name, min, max, number));
             }
         }
 
