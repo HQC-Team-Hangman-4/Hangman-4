@@ -26,7 +26,8 @@ namespace HangMan.GameObjects
             set
             {
                 Validator.CheckIfNull(value, "Player name");
-                Validator.CheckIfInRangeExcluded(value.Length, "Player name", 3, 20);
+                Validator.CheckIfInRangeIncluded(value.Length, "Player name", 3, 20);
+                
                 this.name = value;
             }
         }

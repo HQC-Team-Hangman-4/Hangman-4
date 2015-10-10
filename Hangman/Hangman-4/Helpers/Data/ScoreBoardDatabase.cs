@@ -28,7 +28,7 @@ namespace HangMan.Helpers.Data
                 player.Name = currentPlayerInfo[0];
                 player.Score = Convert.ToInt32(currentPlayerInfo[1]);
 
-                result.Insert(0,player);
+                result.Insert(0, player);
             }
 
             return result;

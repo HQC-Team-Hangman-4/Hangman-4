@@ -21,12 +21,12 @@ namespace HangMan.Renderers
             Console.Write("The secret word is: ");
             Console.WriteLine(word.GetBody());
             Console.WriteLine();
-            Console.Write("enter a letter or command: ");
+            //Console.Write("enter a letter or command: ");
         }
 
         public void PrintEndScreen()
         {
-            Console.WriteLine("Congratulations! You made the scoreboard");
+            //Console.WriteLine("Congratulations! You made the scoreboard!");
             Console.Write("Enter your name: ");
         }
 

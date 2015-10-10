@@ -101,7 +101,12 @@
                 case "restart":
                     {
                         this.gameState = GameState.restart;
-                        Restart();
+                        this.Restart();
+                        break;
+                    }
+                case "exit":
+                    {
+                        this.gameState = GameState.exit;
                         break;
                     }
 
@@ -173,6 +178,5 @@
 
             return false;
         }
-        
     }
 }
