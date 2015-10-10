@@ -69,11 +69,20 @@
     <Compile Include="Interfaces\IRenderer.cs" />
     <Compile Include="Interfaces\IScoreBoard.cs" />
     <Compile Include="Interfaces\IWord.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Renderers\ConsoleRenderer.cs" />
     <Compile Include="Users\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\scoreboard.txt" />
