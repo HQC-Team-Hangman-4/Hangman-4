@@ -1,7 +1,7 @@
-﻿using System;
-using System.Linq;
-namespace HangMan.Helpers.Data
+﻿namespace HangMan.Helpers.Data
 {
+    using System;
+    using System.Linq;
     using HangMan.Interfaces;
 
     public class WordDatabase : Database, IWordDatabase
@@ -23,7 +23,7 @@ namespace HangMan.Helpers.Data
                 throw new ArgumentException("No word found.");
             }
 
-            var randomIndex = random.Next(0, allWords.Count());
+            var randomIndex = this.random.Next(0, allWords.Count());
             var separator = allWords[randomIndex].IndexOf(" ", StringComparison.Ordinal) + 1;
             var word = allWords[randomIndex].Substring(separator);
 

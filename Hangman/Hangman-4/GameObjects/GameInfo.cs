@@ -1,7 +1,7 @@
 ﻿namespace HangMan.GameObjects
 {
-    using HangMan.Interfaces;
     using System.Collections.Generic;
+    using HangMan.Interfaces;
 
     public class GameInfo
     {

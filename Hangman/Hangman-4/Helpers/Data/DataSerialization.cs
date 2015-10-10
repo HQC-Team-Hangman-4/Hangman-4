@@ -1,11 +1,9 @@
 ﻿namespace HangMan.InputProviders.Data
 {
-    using HangMan.GameObjects;
-    using HangMan.Interfaces;
-    using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.IO;
+    using HangMan.Interfaces;
     
     public class DataSerialization : IDataSerialization
     {

@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-
-namespace HangMan.Helpers
+﻿namespace HangMan.Helpers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text.RegularExpressions;
+
     public class Validator
     {
         //TODO: Put it in game logic to maintain reusability.
-        private const int highestPossibleScore = 1000;
+        private const int HighestPossibleScore = 1000;
+
         internal static void CheckIfNull<T>(T item, string name)
         {
             if (item == null)
@@ -50,11 +49,11 @@ namespace HangMan.Helpers
             }
         }
 
-        internal static void checkIfValidScore(int score, string name)
+        internal static void CheckIfValidScore(int score, string name)
         {
-            if (score < 0 || highestPossibleScore < score)
+            if (score < 0 || HighestPossibleScore < score)
             {
-                throw new ArgumentException(string.Format("{0} cannot be higher than {1} or lower than 0.", name, highestPossibleScore));
+                throw new ArgumentException(string.Format("{0} cannot be higher than {1} or lower than 0.", name, HighestPossibleScore));
             }
         }
     }

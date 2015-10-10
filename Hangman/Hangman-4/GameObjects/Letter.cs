@@ -1,9 +1,7 @@
-﻿using HangMan.Helpers;
-
-namespace HangMan.GameObjects
+﻿namespace HangMan.GameObjects
 {
+    using HangMan.Helpers;
     using HangMan.Interfaces;
-    using System.Collections.Generic;
 
     public class Letter : ILetter, IRendarable
     {
@@ -22,6 +20,7 @@ namespace HangMan.GameObjects
             {
                 return this.value;
             }
+
             private set
             {
                 Validator.CheckIfNull(value, "Letter value");
@@ -37,6 +36,7 @@ namespace HangMan.GameObjects
             {
                 return this.state;
             }
+
             set
             {
                 this.state = value;
@@ -50,15 +50,14 @@ namespace HangMan.GameObjects
             {
                 return false;
             }
-            return this.Value == ((ILetter)obj).Value;
 
+            return this.Value == ((ILetter)obj).Value;
         }
 
         public override int GetHashCode()
         {
             return this.Value.ToString().GetHashCode();
         }
-
 
         public string GetBody()
         {

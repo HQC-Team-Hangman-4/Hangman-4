@@ -1,9 +1,9 @@
-﻿using System;
-using HangMan.GameObjects;
-using NUnit.Framework;
-
-namespace Hangman.Tests
+﻿namespace Hangman.Tests
 {
+    using System;
+    using HangMan.GameObjects;
+    using NUnit.Framework;
+
     [TestFixture]
     public class LetterTests
     {

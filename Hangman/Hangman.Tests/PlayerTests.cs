@@ -27,7 +27,6 @@
             player.Name = invalidName;
         }
 
-
         [TestCase("AAAAAAAAAAAAAAAAAAAA", ExpectedException = typeof(ArgumentException))]
         [TestCase("KARAKONDJULKARABABADOGARATA", ExpectedException = typeof(ArgumentException))]
         public void NameShouldThrowArgumentExceptionWhenProvidedLongName(string invalidName)
@@ -50,7 +49,6 @@
             Assert.IsNotNull(player.Name);
             return player.Name;
         }
-
 
         [TestCase(5, Result = 5)]
         [TestCase(125, Result = 125)]

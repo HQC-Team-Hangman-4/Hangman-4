@@ -1,17 +1,15 @@
-﻿using HangMan.Interfaces;
-
-namespace HangMan.Helpers.Data
+﻿namespace HangMan.Helpers.Data
 {
-    using GameObjects;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-
+    using GameObjects;
+    using HangMan.Interfaces;
+    
     public class ScoreBoardDatabase : Database
     {
         public ScoreBoardDatabase(IDataSerialization dataSerialization)
-            :base(dataSerialization)
+            : base(dataSerialization)
         {
         }
         
@@ -37,7 +35,7 @@ namespace HangMan.Helpers.Data
         public void WriteToScoreBoard(IPlayer player)
         {
             ICollection<IPlayer> currentScoreBoard = new HashSet<IPlayer>();
-            currentScoreBoard = ReadScoreboard();
+            currentScoreBoard = this.ReadScoreboard();
 
             bool reorder = true;
             //check if player already exist and have new high score

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HangMan.Interfaces;
-
-namespace Testing
+﻿namespace Testing
 {
+    using System.Text;
+    using HangMan.Interfaces;
+
     public class Guessed : IRendarable
     {
         private IRendarable renderable;
@@ -19,8 +15,8 @@ namespace Testing
         public string GetBody()
         {
             var strB = new StringBuilder();
-            strB.AppendLine(new string('-',10));
-            strB.AppendLine(renderable.GetBody());
+            strB.AppendLine(new string('-', 10));
+            strB.AppendLine(this.renderable.GetBody());
             strB.AppendLine(new string('-', 10));
 
             return strB.ToString();

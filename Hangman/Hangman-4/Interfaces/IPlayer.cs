@@ -1,7 +1,7 @@
 ﻿namespace HangMan.Interfaces
 {
-    using HangMan.GameObjects;
     using System.Collections.Generic;
+    using HangMan.GameObjects;
 
     public interface IPlayer : IRendarable
     {

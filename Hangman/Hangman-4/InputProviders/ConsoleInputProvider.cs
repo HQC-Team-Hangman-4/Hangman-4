@@ -1,11 +1,8 @@
-﻿using HangMan.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace HangMan.InputProviders
+﻿namespace HangMan.InputProviders
 {
+    using System;
+    using HangMan.Interfaces;
+
     public class ConsoleInputProvider : IInputProvider
     {
         private string command;
@@ -21,6 +18,7 @@ namespace HangMan.InputProviders
             {
                 return this.command;
             }
+
             set
             {
                 this.command = value;

@@ -1,18 +1,12 @@
 ﻿namespace HangMan.Engine
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-
     using HangMan.GameLogic;
     using HangMan.GameObjects;
-    using HangMan.Interfaces;
-    using HangMan.Renderers;
     using HangMan.Helpers;
     using HangMan.Helpers.Data;
     using HangMan.InputProviders.Data;
-
-    using InputProviders;
+    using HangMan.Interfaces;
 
     public class Engine
     {
@@ -34,16 +28,16 @@
             this.inputProvider = inputProvider;
             this.consoleRenderer = consoleRenderer;
             this.scoreBoard = Scoreboard.Instance;
-            this.wordDataBase = new WordDatabase(dataSerialization);
-            this.wordFactory = new WordFactory(wordDataBase);
+            this.wordDataBase = new WordDatabase(this.dataSerialization);
+            this.wordFactory = new WordFactory(this.wordDataBase);
             this.gameLogic = new DefaultGameLogic();
             //Should generate word according to input! 
-            this.gameLogic.Word = wordFactory.GetWord(Categories.IT);
+            this.gameLogic.Word = this.wordFactory.GetWord(Categories.IT);
         }
 
         public void StartGame()
         {
-            consoleRenderer.PrintInitialScreen();
+            this.consoleRenderer.PrintInitialScreen();
 
             while (this.inputProvider.Command != "exit")
             {
@@ -53,14 +47,14 @@
 
                 this.gameLogic.ParseCommand(this.inputProvider.Command);
 
-                switch (this.gameLogic.gameState)
+                switch (this.gameLogic.GameState)
                 {
                     case GameState.guessLetter:
                         this.consoleRenderer.PrintUsedLetters(this.gameLogic.CurrentPlayerInfo.UsedLetters);
                         this.consoleRenderer.PrintMistakes(this.gameLogic.CurrentPlayerInfo.Mistakes); 
                         break;
                     case GameState.top:
-                        this.consoleRenderer.RenderScoreboard(scoreBoard.ViewScoreboard());
+                        this.consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
                         break;
                     case GameState.help:
                         this.gameLogic.Help();
@@ -89,7 +83,7 @@
         {
             this.consoleRenderer.PrintWord(this.gameLogic.Word);
 
-            this.gameLogic.Word = wordFactory.GetWord(Categories.IT);
+            this.gameLogic.Word = this.wordFactory.GetWord(Categories.IT);
             this.gameLogic.CurrentPlayerInfo.UsedLetters.Clear();
             this.gameLogic.CurrentPlayerInfo.Mistakes += this.gameLogic.CurrentPlayerInfo.Mistakes;
         }
@@ -108,7 +102,6 @@
                         {
                             this.inputProvider.GetInput();
                             this.gameLogic.Player.Name = this.inputProvider.Command;
-
                         }
                         catch (ArgumentNullException ex)
                         {
@@ -128,16 +121,14 @@
                         break;
                     }
 
-                    consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
+                    this.consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
 
                     this.scoreBoard.AddPlayerScore(this.gameLogic.Player);
                 }
-
                 else
                 {
                     Console.WriteLine("Bye bye!");
                 }
-                
             }
             else
             {

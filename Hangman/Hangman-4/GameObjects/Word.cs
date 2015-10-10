@@ -1,13 +1,12 @@
-﻿using HangMan.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Collections;
-using HangMan.Helpers;
-
-namespace HangMan.GameObjects
+﻿namespace HangMan.GameObjects
 {
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using HangMan.Helpers;
+    using HangMan.Interfaces;
+    
     public class Word : IWord, IRendarable, IEnumerable<ILetter>
     {
         private IEnumerable<ILetter> content;
@@ -32,6 +31,7 @@ namespace HangMan.GameObjects
                 this.content = value;
             }
         }
+
         public bool IsRevealed
         {
             get

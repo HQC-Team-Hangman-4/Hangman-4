@@ -1,22 +1,19 @@
-﻿using System.ComponentModel;
-
-namespace Hangman.Tests.Mocks
+﻿namespace Hangman.Tests.Mocks
 {
     using System;
-
-    using Telerik.JustMock;
+    using System.ComponentModel;
 
     using HangMan.Helpers.Data;
 
+    using Telerik.JustMock;
 
     public class JustMockWordDatabase : WordDataBaseMock
     {
         protected override void ArrangeDatabaseMock()
         {
-            this.db = Mock.Create<IWordDatabase>();
-            Mock.Arrange(() => this.db.GetRandomWordByCategory(Arg.IsAny<Categories>()))
+            this.DB = Mock.Create<IWordDatabase>();
+            Mock.Arrange(() => this.DB.GetRandomWordByCategory(Arg.IsAny<Categories>()))
                 .Returns((Categories cat) => this.GetWord(cat));
-
         }
     }
 }
