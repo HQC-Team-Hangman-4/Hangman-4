@@ -1,9 +1,20 @@
 ## Travis CI Integration
-
-language: c
-
-install:
-  - sudo apt-get install mono-devel mono-gmcs nunit-console
-script:
-  - xbuild Hangman/Hangman-4/HangMan.sln
-  - nunit-console-x86 Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
+#
+#sudo: false
+#
+#language: c
+#
+#install:
+#  - sudo apt-get install mono-devel mono-gmcs nunit-console
+#script:
+#  - xbuild Hangman/Hangman-4/HangMan.sln
+#  - nunit-console-x86 Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
+  
+  language: csharp
+solution: solution-name.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore Hangman/Hangman-4/HangMan.sln
+after_script:
+  - nunit-console Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
