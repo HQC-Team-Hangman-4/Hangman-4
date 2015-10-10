@@ -6,4 +6,4 @@
   - nuget restore Hangman/Hangman-4/HangMan.sln
   - msbuild /p:Configuration=Debug Hangman/Hangman-4/HangMan.sln
  test_script:
-  - nunit-console-x86 Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
+  - nunit-console-x86 Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll /labels
