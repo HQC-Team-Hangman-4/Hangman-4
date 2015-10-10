@@ -16,4 +16,14 @@
   - nuget restore nunitPerf.sln
   - msbuild /p:Configuration=Debug Hangman/Hangman-4/HangMan.sln
  test_script:
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe nunitPerf\bin\Debug\nunitPerf.exe
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --labels=All --framework=net-4.0 nunitPerf\bin\Debug\nunitPerf.exe
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --process=Single nunitPerf\bin\Debug\nunitPerf.exe
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --framework=net-4.0 nunit26Perf\bin\Debug\nunit26Perf.exe
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe nunit26Perf\bin\Debug\nunit26Perf.exe
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --process=Single nunit26Perf\bin\Debug\nunit26Perf.exe
+  - nunit\bin\nunit-console.exe nunit26Perf\bin\Debug\nunit26Perf.exe
+  - nunit-console /framework=net-4.0 nunit26Perf\bin\Debug\nunit26Perf.exe
+  - nunit-console nunit26Perf\bin\Debug\nunit26Perf.exe
+  - nunitPerf\bin\Debug\nunitPerf.exe 
   - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console-x86.exe Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
