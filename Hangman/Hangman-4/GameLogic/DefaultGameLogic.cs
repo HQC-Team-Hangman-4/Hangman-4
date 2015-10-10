@@ -69,7 +69,11 @@
                 return true;
             }
 
-            Player.Score--;
+            else if (Player.Score > 0)
+            {
+                Player.Score--;
+            }
+            
             return false;
         }
 
