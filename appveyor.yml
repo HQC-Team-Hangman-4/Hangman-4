@@ -1,8 +1,19 @@
-before_build:
-  - nuget restore Hangman/Hangman-4/HangMan.sln
-
-build_script: 
-  - msbuild Hangman/Hangman-4/HangMan.sln /p:Configuration=Release /t:Rebuild
+##before_build:
+##  - nuget restore Hangman/Hangman-4/HangMan.sln
+##
+##build_script: 
+##  - msbuild Hangman/Hangman-4/HangMan.sln /p:Configuration=Release /t:Rebuild
+##  
+##test_script:
+##  - msbuild Hangman/Hangman.Tests/Hangman.Tests.csproj /t:TestAll /p:Configuration=Release /p:ResultFormat=nunit2 /p:ContinueOnFailure=ErrorAndContinue
+##  
   
+ build_script:
+  - mkdir nunit && cd nunit
+  - curl https://github.com/nunit/nunit/releases/download/3.0.0-alpha-5/NUnit-3.0.0-alpha-5b.zip -L -o nunit.zip
+  - unzip nunit.zip && cd ..
+  - nuget install NUnit.Console -Version 3.0.0-alpha-5b -pre
+  - nuget restore nunitPerf.sln
+  - msbuild /p:Configuration=Debug Hangman/Hangman-4/HangMan.sln
  test_script:
-  - bin\Release\nunit-console-x86 Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll --config=Release
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console-x86.exe Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
