@@ -13,17 +13,18 @@
   - curl https://github.com/nunit/nunit/releases/download/3.0.0-alpha-5/NUnit-3.0.0-alpha-5b.zip -L -o nunit.zip
   - unzip nunit.zip && cd ..
   - nuget install NUnit.Console -Version 3.0.0-alpha-5b -pre
-  - nuget restore nunitPerf.sln
+  - nuget restore Hangman/Hangman-4/HangMan.sln
   - msbuild /p:Configuration=Debug Hangman/Hangman-4/HangMan.sln
  test_script:
-  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe nunitPerf\bin\Debug\nunitPerf.exe
-  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --labels=All --framework=net-4.0 nunitPerf\bin\Debug\nunitPerf.exe
-  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --process=Single nunitPerf\bin\Debug\nunitPerf.exe
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe Hangman\bin\Debug\Hangman.exe
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --labels=All --framework=net-4.0 Hangman\bin\Debug\Hangman.exe
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --process=Single Hangman\bin\Debug\Hangman.exe
   - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --framework=net-4.0 nunit26Perf\bin\Debug\nunit26Perf.exe
   - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe nunit26Perf\bin\Debug\nunit26Perf.exe
   - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --process=Single nunit26Perf\bin\Debug\nunit26Perf.exe
   - nunit\bin\nunit-console.exe nunit26Perf\bin\Debug\nunit26Perf.exe
   - nunit-console /framework=net-4.0 nunit26Perf\bin\Debug\nunit26Perf.exe
   - nunit-console nunit26Perf\bin\Debug\nunit26Perf.exe
-  - nunitPerf\bin\Debug\nunitPerf.exe 
+  - Hangman\bin\Debug\Hangman.exe 
+  - Hangman\bin\Debug\Hangman.exe 
   - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console-x86.exe Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
