@@ -1,10 +1,10 @@
 ## Travis CI Integration
 language: csharp
 
-solution: HangMan.sln
+solution: Hangman/Hangman-4/HangMan.sln
 before_install:
   - sudo apt-get install nunit-console
 before_script:
-  - nuget restore HangMan.sln
+  - nuget restore Hangman/Hangman-4/HangMan.sln
 after_script:
-  - nunit-console Hangman.Tests/bin/Debug/Hangman.Tests.dll
+  - nunit-console Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
