@@ -1,30 +1,47 @@
-##before_build:
-##  - nuget restore Hangman/Hangman-4/HangMan.sln
-##
-##build_script: 
-##  - msbuild Hangman/Hangman-4/HangMan.sln /p:Configuration=Release /t:Rebuild
-##  
-##test_script:
-##  - msbuild Hangman/Hangman.Tests/Hangman.Tests.csproj /t:TestAll /p:Configuration=Release /p:ResultFormat=nunit2 /p:ContinueOnFailure=ErrorAndContinue
-##  
-  
- build_script:
-  - mkdir nunit && cd nunit
-  - curl https://github.com/nunit/nunit/releases/download/3.0.0-alpha-5/NUnit-3.0.0-alpha-5b.zip -L -o nunit.zip
-  - unzip nunit.zip && cd ..
+build_script:
+  - nuget install NUnitLite -version 3.0.0-alpha-5 -pre
+  - mkdir nunit
+  - copy NUnitLite.3.0.0-alpha-5\lib\net45\nunitlite.dll nunit
+  - copy NUnit.3.0.0-alpha-5\lib\net45\nunit.framework.dll nunit
+  - copy nulite\App.config nunit
+  - csc /platform:anycpu32bitpreferred /out:nunit\nulite.exe /optimize+ NUnitLite.3.0.0-alpha-5\content\Program.cs /r:nunit\nunitlite.dll /r:nunit\nunit.framework.dll
+  - dir nunit
+  #- copy nulite\App.config nunit\nulite.exe.config 
+  #- cat nunit\nulite.exe.config
+  - nunit\nulite.exe --help
   - nuget install NUnit.Console -Version 3.0.0-alpha-5b -pre
   - nuget restore Hangman/Hangman-4/HangMan.sln
   - msbuild /p:Configuration=Debug Hangman/Hangman-4/HangMan.sln
- test_script:
-  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe Hangman\bin\Debug\Hangman.exe
-  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --labels=All --framework=net-4.0 Hangman\bin\Debug\Hangman.exe
-  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --process=Single Hangman\bin\Debug\Hangman.exe
-  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --framework=net-4.0 nunit26Perf\bin\Debug\nunit26Perf.exe
-  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe nunit26Perf\bin\Debug\nunit26Perf.exe
-  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --process=Single nunit26Perf\bin\Debug\nunit26Perf.exe
-  - nunit\bin\nunit-console.exe nunit26Perf\bin\Debug\nunit26Perf.exe
-  - nunit-console /framework=net-4.0 nunit26Perf\bin\Debug\nunit26Perf.exe
-  - nunit-console nunit26Perf\bin\Debug\nunit26Perf.exe
-  - Hangman\bin\Debug\Hangman.exe 
-  - Hangman\bin\Debug\Hangman.exe 
-  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console-x86.exe Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
+  - copy test\bin\Debug\* nulite\bin\Debug
+  - copy test\bin\Debug\* nunit
+  - copy nunit\* test\bin\Debug
+test_script:
+  - nulite\bin\Debug\nulite.exe --labels=All --test=UnitTest.SerializationTests.Lists test
+  - test\bin\Debug\nulite.exe --labels=All --test=UnitTest.SerializationTests.Lists test
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --x86 --workers=0 --labels=All --test=UnitTest.SerializationTests.Lists Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
+  - nulite\bin\Debug\nulite.exe --labels=All --result=nunitlite.xml test
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --x86 --workers=0 --labels=All --result=nunitconsole.xml Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
+  - copy Hangman\bin\Debug\Hangman.exe.config NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe.config
+  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --x86 --workers=0 --labels=All --result=nunitconsole2.xml Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
+  - Hangman\bin\Debug\Hangman.exe Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
+##  
+## build_script:
+##  - mkdir nunit && cd nunit
+##  - curl https://github.com/nunit/nunit/releases/download/3.0.0-alpha-5/NUnit-3.0.0-alpha-5b.zip -L -o nunit.zip
+##  - unzip nunit.zip && cd ..
+##  - nuget install NUnit.Console -Version 3.0.0-alpha-5b -pre
+##  - nuget restore Hangman/Hangman-4/HangMan.sln
+##  - msbuild /p:Configuration=Debug Hangman/Hangman-4/HangMan.sln
+## test_script:
+##  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe Hangman\bin\Debug\Hangman.exe
+##  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --labels=All --framework=net-4.0 Hangman\bin\Debug\Hangman.exe
+##  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --process=Single Hangman\bin\Debug\Hangman.exe
+##  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --framework=net-4.0 nunit26Perf\bin\Debug\nunit26Perf.exe
+##  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe nunit26Perf\bin\Debug\nunit26Perf.exe
+##  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console.exe --process=Single nunit26Perf\bin\Debug\nunit26Perf.exe
+##  - nunit\bin\nunit-console.exe nunit26Perf\bin\Debug\nunit26Perf.exe
+##  - nunit-console /framework=net-4.0 nunit26Perf\bin\Debug\nunit26Perf.exe
+##  - nunit-console nunit26Perf\bin\Debug\nunit26Perf.exe
+##  - Hangman\bin\Debug\Hangman.exe 
+##  - Hangman\bin\Debug\Hangman.exe 
+##  - NUnit.Console.3.0.0-alpha-5b\tools\nunit-console-x86.exe Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
