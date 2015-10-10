@@ -10,8 +10,9 @@
 ##  - xbuild Hangman/Hangman-4/HangMan.sln
 ##  - nunit-console-x86 Hangman/Hangman.Tests/bin/Debug/Hangman.Tests.dll
   
-  language: csharp
-solution: solution-name.sln
+language: csharp
+
+solution: Hangman/Hangman-4/HangMan.sln
 before_install:
   - sudo apt-get install nunit-console
 before_script:
