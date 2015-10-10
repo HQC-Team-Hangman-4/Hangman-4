@@ -20,14 +20,13 @@
         [TestCase("A", ExpectedException = typeof(ArgumentException))]
         [TestCase("", ExpectedException = typeof(ArgumentException))]
         [TestCase(" ", ExpectedException = typeof(ArgumentException))]
-        [TestCase("ASD", ExpectedException = typeof(ArgumentException))]
         public void NameShouldThrowArgumentExceptionWhenProvidedShortName(string invalidName)
         {
             var player = new Player();
             player.Name = invalidName;
         }
 
-        [TestCase("AAAAAAAAAAAAAAAAAAAA", ExpectedException = typeof(ArgumentException))]
+        [TestCase("AAAAAAAAAAAAAAAAAAAAA", ExpectedException = typeof(ArgumentException))]
         [TestCase("KARAKONDJULKARABABADOGARATA", ExpectedException = typeof(ArgumentException))]
         public void NameShouldThrowArgumentExceptionWhenProvidedLongName(string invalidName)
         {
