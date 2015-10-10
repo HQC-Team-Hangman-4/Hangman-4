@@ -1,0 +1,8 @@
+before_build:
+  - nuget restore Hangman/Hangman-4/HangMan.sln
+
+build_script: 
+  - msbuild Hangman/Hangman-4/HangMan.sln /p:Configuration=Release /t:Rebuild
+  
+test_script:
+  - msbuild Hangman/Hangman.Tests/Hangman.Tests.proj /t:TestAll /p:Configuration=Release /p:ResultFormat=nunit2 /p:ContinueOnFailure=ErrorAndContinue
