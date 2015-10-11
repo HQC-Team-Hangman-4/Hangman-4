@@ -161,11 +161,9 @@
             consoleRenderer.ClearScreen();
             textWriter.Close();
 
-            string expected = string.Empty;
-
             string actual = File.ReadAllText("./consolewritertests.txt");
 
-            Assert.AreEqual(expected, actual);
+            Assert.IsTrue(string.IsNullOrEmpty(actual));
         }
     }
 }
