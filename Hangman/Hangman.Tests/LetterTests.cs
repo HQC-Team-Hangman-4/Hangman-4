@@ -9,6 +9,44 @@
     {
         private Letter letterPrototype = new Letter();
 
+        [TestCase]
+        public void LetterShouldNotBeNullWhenInstantiated()
+        {
+            var letter = new Letter();
+
+            Assert.NotNull(letter);
+        }
+
+        [TestCase]
+        public void IsFoundShouldBeFalseWhenLetterIsInstantiated()
+        {
+            var letter = new Letter();
+
+            Assert.IsFalse(letter.IsFound);
+        }
+
+        [TestCase]
+        public void ValueShouldNotBeNullWhenLetterIsInstantiated()
+        {
+            var letter = new Letter();
+
+            Assert.IsNotNull(letter.Value);
+        }
+
+        [TestCase]
+        public void ValueShouldHaveDefaultValueA()
+        {
+            var letter = new Letter();
+
+            Assert.AreEqual(letter.Value, 'a');
+        }
+
+        [TestCase]
+        public void GetBodyShouldReturnString()
+        {
+            Assert.That(letterPrototype.GetBody(), Is.TypeOf(typeof(string)));
+        }
+
         [TestCase('a', Result = 'a')]
         [TestCase('b', Result = 'b')]
         [TestCase('E', Result = 'e')]
@@ -23,13 +61,6 @@
 
             return let.Value;
         }
-
-        //[TestCase]
-        //[ExpectedException(typeof(ArgumentNullException))]
-        //public void CreatingLetterShouldThrowArgumentNullExceptionWhenProvidedNullData()
-        //{
-        //    var let = new LetterPrototype(null);
-        //}
 
         [TestCase('a')]
         [TestCase('b')]
@@ -72,6 +103,54 @@
         {
             var let = this.letterPrototype.Clone();
             let.Value = letter;
+        }
+
+        [TestCase('s')]
+        [TestCase('r')]
+        [TestCase('T')]
+        [TestCase('O')]
+        [TestCase('P')]
+        public void LetterShouldNotBeEqualWhenDifferent(char letter)
+        {
+            var letA = this.letterPrototype.Clone();
+            letA.Value = letter;
+
+            var letB = this.letterPrototype.Clone();
+            letB.Value = 'A';
+
+            Assert.AreNotEqual(letA, letB);
+        }
+
+        [TestCase('p')]
+        [TestCase('Y')]
+        [TestCase('q')]
+        [TestCase('f')]
+        [TestCase('n')]
+        public void LetterShouldBeEqualWhenSame(char letter)
+        {
+            var letA = this.letterPrototype.Clone();
+            letA.Value = letter;
+
+            var letB = this.letterPrototype.Clone();
+            letB.Value = letter;
+
+            Assert.AreEqual(letA, letB);
+        }
+
+        [TestCase('s')]
+        [TestCase('t')]
+        [TestCase('r')]
+        [TestCase('p')]
+        [TestCase('M')]
+        public void DifferentLettersHashCodeShouldBeUnique(char letter)
+        {
+            var letA = this.letterPrototype.Clone();
+            letA.Value = letter;
+
+            var letB = this.letterPrototype.Clone();
+            letB.Value = 'A';
+
+            Assert.AreNotEqual(letA.GetHashCode(), letB.GetHashCode());
         }
     }
 }
