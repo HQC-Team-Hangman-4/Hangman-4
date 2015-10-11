@@ -57,7 +57,7 @@
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Helpers\Categories.cs" />
     <Compile Include="Helpers\Data\Database.cs" />
-    <Compile Include="Helpers\FontHelper.cs" />
+    <Compile Include="Helpers\FontConsoleHelper.cs" />
     <Compile Include="Interfaces\IWordDatabase.cs" />
     <Compile Include="Helpers\Data\ScoreBoardDatabase.cs" />
     <Compile Include="Helpers\GameState.cs" />

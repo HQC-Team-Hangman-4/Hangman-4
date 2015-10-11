@@ -23,7 +23,6 @@
 
         public void PrintEndScreen()    
         {
-            //Console.WriteLine("Congratulations! You made the scoreboard!");
             Console.Write("Enter your name: ");
         }
 
@@ -55,7 +54,7 @@
             Console.WriteLine("Mistakes: {0}", numberOfMistakes);
         }
 
-        public void PrintEndScreenIfYouPlayerCheated(string message)
+        public void PrintEndScreenIfPlayerCheated(string message)
         {
             Console.WriteLine(message);
         }

@@ -16,7 +16,7 @@
 
         void PrintMistakes(int numberOfMistakes);
 
-        void PrintEndScreenIfYouPlayerCheated(string message);
+        void PrintEndScreenIfPlayerCheated(string message);
 
         void InvalidCommand();
 

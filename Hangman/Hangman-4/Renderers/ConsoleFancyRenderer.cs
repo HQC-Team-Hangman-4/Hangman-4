@@ -19,10 +19,10 @@
         private const string GamePlayMessage3Line = "Press ENTER to continue";
         private const ConsoleColor BackgroundColor = ConsoleColor.Yellow;
         private const ConsoleColor FontColor = ConsoleColor.Magenta;
-        private static FontHelper normalFont = new FontHelper("../../Files/cyber.txt");
-        private static FontHelper titleFont = new FontHelper("../../Files/shadow.txt");
-        private static FontHelper wordsFont = new FontHelper("../../Files/calvin.txt");
-        private static FontHelper smallFont = new FontHelper("../../Files/straight.txt");
+        private static FontConsoleHelper normalFont = new FontConsoleHelper("../../Files/cyber.txt");
+        private static FontConsoleHelper titleFont = new FontConsoleHelper("../../Files/shadow.txt");
+        private static FontConsoleHelper wordsFont = new FontConsoleHelper("../../Files/calvin.txt");
+        private static FontConsoleHelper smallFont = new FontConsoleHelper("../../Files/straight.txt");
 
         public void PrintInitialScreen()
         {
@@ -155,7 +155,7 @@
             ClearCommand();
         }
 
-        public void PrintEndScreenIfYouPlayerCheated(string message)
+        public void PrintEndScreenIfPlayerCheated(string message)
         {
             Console.ForegroundColor = FontColor;
             Console.Clear();

@@ -137,7 +137,7 @@
             }
             else
             {
-                this.consoleRenderer.PrintEndScreenIfYouPlayerCheated("You cheated!!!");
+                this.consoleRenderer.PrintEndScreenIfPlayerCheated("You cheated!!!");
             }
 
             Environment.Exit(1);
