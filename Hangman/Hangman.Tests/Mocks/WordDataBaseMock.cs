@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using HangMan.Helpers.Data;
+    using HangMan.Interfaces;
     
     public abstract class WordDataBaseMock
     {

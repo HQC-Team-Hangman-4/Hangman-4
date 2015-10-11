@@ -1,4 +1,4 @@
-﻿namespace HangMan.Helpers.Data
+﻿namespace HangMan.Interfaces
 {
     public interface IWordDatabase
     {

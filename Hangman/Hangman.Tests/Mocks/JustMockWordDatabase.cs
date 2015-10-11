@@ -3,7 +3,7 @@
     using System;
     using System.ComponentModel;
 
-    using HangMan.Helpers.Data;
+    using HangMan.Interfaces;
 
     using Telerik.JustMock;
 

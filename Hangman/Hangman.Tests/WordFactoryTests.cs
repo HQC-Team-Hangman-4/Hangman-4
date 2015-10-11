@@ -3,8 +3,8 @@
     using System;
     using Hangman.Tests.Mocks;
     using HangMan.GameObjects;
-    using HangMan.Helpers.Data;
     using NUnit.Framework;
+    using HangMan.Interfaces;
 
     [TestFixture]
     public class WordFactoryTests
