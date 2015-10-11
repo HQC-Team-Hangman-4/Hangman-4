@@ -1,11 +1,9 @@
-﻿using HangMan.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace HangMan.Renderers
+﻿namespace HangMan.Renderers
 {
+    using System;
+    using System.Collections.Generic;
+    using HangMan.Interfaces;
+    
     public class ConsoleRenderer : IRenderer
     {
         public void PrintInitialScreen()
@@ -21,23 +19,23 @@ namespace HangMan.Renderers
             Console.Write("The secret word is: ");
             Console.WriteLine(word.GetBody());
             Console.WriteLine();
-            Console.Write("enter a letter or command: ");
         }
 
         public void PrintEndScreen()
         {
-            Console.WriteLine("Congratulations! You made the scoreboard");
+            //Console.WriteLine("Congratulations! You made the scoreboard!");
             Console.Write("Enter your name: ");
         }
 
         public void RenderScoreboard(IEnumerable<IRenderable> scoreBoardInfo)
         {
-            Console.WriteLine(new string('-',40));
+            Console.WriteLine(new string('-', 40));
             Console.WriteLine("High Score - sorted by number of mistakes");
             foreach (var player in scoreBoardInfo)
             {
                 Console.WriteLine(player.GetBody());
             }
+
             Console.WriteLine(new string('-', 40));
         }
 
@@ -48,6 +46,7 @@ namespace HangMan.Renderers
             {
                 Console.Write("{0} ", letter.GetBody());
             }
+
             Console.WriteLine();
         }
 

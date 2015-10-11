@@ -1,20 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-
-namespace HangMan.Helpers
+﻿namespace HangMan.Helpers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text.RegularExpressions;
+
     public class Validator
     {
+        private const string NullMessage = "{0} cannot be null.";
+        private const string OutOfRangeMessage = "{0} is out of range {1} -- {2}";
+        private const string NotLetterMessage = "{0} is not a letter.";
+
         //TODO: Put it in game logic to maintain reusability.
-        private const int highestPossibleScore = 1000;
+        private const int HighestPossibleScore = 1000;
+
         internal static void CheckIfNull<T>(T item, string name)
         {
             if (item == null)
             {
-                throw new ArgumentNullException(name + " cannot be null.");
+                throw new ArgumentNullException(string.Format(NullMessage, name));
             }
         }
 
@@ -30,7 +33,7 @@ namespace HangMan.Helpers
         {
             if (number < min || max < number)
             {
-                throw new ArgumentException(string.Format("{0} is out of scope {1}-{2}.", name, min, max));
+                throw new ArgumentException(string.Format(OutOfRangeMessage, name, min, max) + ", inclusive.");
             }
         }
 
@@ -42,19 +45,19 @@ namespace HangMan.Helpers
             }
         }
 
-        internal static void CheckIfLetter<T>(T value, string name)
+        internal static void CheckIfLetter(char value, string name)
         {
             if (!Regex.IsMatch(value.ToString(), @"^[a-zA-Z]+$"))
             {
-                throw new ArgumentException(name + " is not a letter.");
+                throw new ArgumentException(string.Format(NotLetterMessage, name));
             }
         }
 
-        internal static void checkIfValidScore(int score, string name)
+        internal static void CheckIfValidScore(int score, string name)
         {
-            if (score < 0 || highestPossibleScore < score)
+            if (score < 0 || HighestPossibleScore < score)
             {
-                throw new ArgumentException(string.Format("{0} cannot be higher than {1} or lower than 0.", name, highestPossibleScore));
+                throw new ArgumentException(string.Format(OutOfRangeMessage, name, 0, HighestPossibleScore));
             }
         }
     }

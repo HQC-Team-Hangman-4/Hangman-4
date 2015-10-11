@@ -1,12 +1,13 @@
-﻿using System;
-using System.Text;
-using Hangman.Tests.Mocks;
-using HangMan.GameObjects;
-using HangMan.Helpers.Data;
-using NUnit.Framework;
-
-namespace Hangman.Tests
+﻿namespace Hangman.Tests
 {
+    using System;
+    using System.Text;
+    using Hangman.Tests.Mocks;
+    using HangMan.GameObjects;
+    using HangMan.Helpers.Data;
+    using HangMan.Interfaces;
+    using NUnit.Framework;
+
     [TestFixture]
     public class GuessedTests
     {
@@ -21,7 +22,7 @@ namespace Hangman.Tests
 
         private GuessedTests(WordDataBaseMock dbWordDataBaseMock)
         {
-            this.dbWordDatabase = dbWordDataBaseMock.db;
+            this.dbWordDatabase = dbWordDataBaseMock.DB;
         }
 
         [TestFixtureSetUp]

@@ -1,18 +1,15 @@
-﻿using HangMan.Helpers.Data;
-using HangMan.InputProviders.Data;
-using HangMan.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace HangMan.GameObjects
+﻿namespace HangMan.GameObjects
 {
+    using System.Collections.Generic;
+    using HangMan.Helpers.Data;
+    using HangMan.InputProviders.Data;
+    using HangMan.Interfaces;
+
     public sealed class Scoreboard
     {
-        private ScoreBoardDatabase scoreboardDatabase;
         private static volatile Scoreboard scoreboard;
         private static object syncLock = new object();
+        private ScoreBoardDatabase scoreboardDatabase;
 
         private Scoreboard()
         {

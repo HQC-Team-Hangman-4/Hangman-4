@@ -1,33 +1,33 @@
-﻿using HangMan.Helpers;
-
-namespace HangMan.GameObjects
+﻿namespace HangMan.GameObjects
 {
+    using HangMan.Helpers;
     using HangMan.Interfaces;
-    using System.Collections.Generic;
 
-    public class Letter : ILetter, IRenderable
+    public class Letter : LetterPrototype, ILetter, IRenderable
     {
-        private string value;
+        private const char DefaultValue = 'a';
+        private const bool DefaultIsFound = false;
+        private char value;
         private bool state;
 
-        public Letter(string value)
+        public Letter()
         {
-            this.Value = value;
-            this.IsFound = false;
+            this.IsFound = DefaultIsFound;
+            this.Value = DefaultValue;
         }
 
-        public string Value
+        public char Value
         {
             get
             {
                 return this.value;
             }
-            private set
+
+            set
             {
                 Validator.CheckIfNull(value, "Letter value");
-                Validator.CheckIfInRangeIncluded(value.Length, "Letter value length", 1, 1);
                 Validator.CheckIfLetter(value, "Letter value");
-                this.value = value.ToLower();
+                this.value = char.ToLower(value);
             }
         }
 
@@ -37,6 +37,7 @@ namespace HangMan.GameObjects
             {
                 return this.state;
             }
+
             set
             {
                 this.state = value;
@@ -50,8 +51,8 @@ namespace HangMan.GameObjects
             {
                 return false;
             }
-            return this.Value == ((ILetter)obj).Value;
 
+            return this.Value == ((ILetter)obj).Value;
         }
 
         public override int GetHashCode()
@@ -59,10 +60,18 @@ namespace HangMan.GameObjects
             return this.Value.ToString().GetHashCode();
         }
 
-
         public string GetBody()
         {
-            return this.Value;
+            return this.Value.ToString();
+        }
+
+        public override ILetter Clone()
+        {
+            ILetter otherLetter = (ILetter)this.MemberwiseClone();
+            otherLetter.IsFound = this.IsFound;
+            otherLetter.Value = this.Value;
+
+            return otherLetter;
         }
     }
 }

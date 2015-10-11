@@ -1,24 +1,24 @@
 ﻿namespace HangMan.GameLogic
 {
-    using System;
     using System.Collections.Generic;
-
-    using HangMan.Interfaces;
-    using HangMan.InputProviders;
     using HangMan.GameObjects;
     using HangMan.Helpers;
+    using HangMan.Interfaces;
 
     public class DefaultGameLogic
     {
+        private Letter letterPrototype = new Letter();
+        private Player playerPrototype = new Player();
+
         public DefaultGameLogic()
         {
             this.CurrentPlayerInfo = new GameInfo();
-            this.Player = new Player();
+            this.Player = playerPrototype.Clone();
 
             this.IsCheated = false;
         }
 
-        public GameState gameState { get; private set; }
+        public GameState GameState { get; private set; }
 
         public GameInfo CurrentPlayerInfo { get; set; }
 
@@ -45,73 +45,58 @@
             return guessedLetter;
         }
 
-        private int LettersLeft(IWord word)
-        {
-            int countLeftLetters = 0;
-            foreach (var letter in word.Content)
-            {
-                if (!letter.IsFound)
-                {
-                    countLeftLetters++;
-                }
-            }
-
-            return countLeftLetters;
-        }
-
         public bool IsLetterGuessed(ILetter letter)
         {
-            int guessed = this.GuessLetter(letter);
+             int guessed = this.GuessLetter(letter);
 
             if (guessed > 0)
             {
-                Player.Score += 5;
+                this.Player.Score += 5;
                 return true;
             }
-
-            if(Player.Score == 0)
+            else if (this.Player.Score > 0)
             {
-                return false;
+                this.Player.Score--;
             }
-
-            Player.Score--;
+            
             return false;
         }
             
-        private void SetGameState(string  command)
+        public void ParseCommand(string command)
         {
-            switch (command)
+            if (command.Length == 1)
             {
-                case "letter":
-                    {
-                        this.gameState = GameState.guessLetter;
-                        break;
-                    }
-                case "top":
-                    {
-                        this.gameState = GameState.top;
-                        break;
-                    }
 
-                case "help":
-                    {
-                        this.gameState = GameState.help;
-                        break;
-                    }
+                ILetter currentLetter = letterPrototype.Clone();
+                currentLetter.Value = command[0];
+                this.CurrentPlayerInfo.UsedLetters.Add(currentLetter);
 
-                case "restart":
-                    {
-                        this.gameState = GameState.restart;
-                        Restart();
-                        break;
-                    }
+                bool isGuessLetter = this.IsLetterGuessed(currentLetter);
+                if (isGuessLetter)
+                {
+                    currentLetter.IsFound = true;
+                }
+                else
+                {
+                    this.CurrentPlayerInfo.Mistakes++;
+                }
 
-                default:
-                    {
-                        this.gameState = GameState.invalidCommand;
-                        break;
-                    }
+                this.SetGameState("letter");
             }
+            else
+            {
+                this.SetGameState(command);
+            }
+        }
+
+        public bool IsWordRevealed()
+        {
+            if (this.Word.IsRevealed)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         internal void Help()
@@ -137,43 +122,69 @@
             //TODO: change method to the right class
             //var words = engine.GetWordsByCategory(); 
             //this.Word = GenerateWordFromString(GetRandomWordByCategory(words, Categories.IT));
-
         }
 
-        public void ParseCommand(string command)
+        private void SetGameState(string command)
         {
-            if (command.Length == 1)
+            switch (command)
             {
-                ILetter currentLetter = new Letter(command);
-                CurrentPlayerInfo.UsedLetters.Add(currentLetter);
+                case "letter":
+                    {
+                        this.GameState = GameState.guessLetter;
 
-                bool isGuessLetter = this.IsLetterGuessed(currentLetter);
-                if (isGuessLetter)
-                {
-                    currentLetter.IsFound = true;
-                }
-                else
-                {
-                    this.CurrentPlayerInfo.Mistakes++;
-                }
+                        break;
+                    }
 
-                SetGameState("letter");
-            }
-            else
-            {
-                this.SetGameState(command);
+                case "top":
+                    {
+                        this.GameState = GameState.top;
+
+                        break;
+                    }
+
+                case "help":
+                    {
+                        this.GameState = GameState.help;
+
+                        break;
+                    }
+
+                case "restart":
+                    {
+                        this.GameState = GameState.restart;
+                        this.Restart();
+
+                        break;
+                    }
+
+                case "exit":
+                    {
+                        this.GameState = GameState.exit;
+
+                        break;
+                    }
+
+                default:
+                    {
+                        this.GameState = GameState.invalidCommand;
+
+                        break;
+                    }
             }
         }
 
-        public bool IsWordRevealed()
+        private int LettersLeft(IWord word)
         {
-            if (this.Word.IsRevealed)
+            int countLeftLetters = 0;
+            foreach (var letter in word.Content)
             {
-                return true;
+                if (!letter.IsFound)
+                {
+                    countLeftLetters++;
+                }
             }
 
-            return false;
+            return countLeftLetters;
         }
-        
     }
 }

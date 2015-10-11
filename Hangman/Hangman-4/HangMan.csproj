@@ -47,14 +47,16 @@
     <Compile Include="GameObjects\GameInfo.cs" />
     <Compile Include="GameObjects\Guessed.cs" />
     <Compile Include="GameObjects\Letter.cs" />
+    <Compile Include="GameObjects\LetterPrototype.cs" />
     <Compile Include="GameObjects\Player.cs" />
+    <Compile Include="GameObjects\PlayerPrototype.cs" />
     <Compile Include="GameObjects\Scoreboard.cs" />
     <Compile Include="GameObjects\Word.cs" />
     <Compile Include="GameObjects\WordFactory.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Helpers\Categories.cs" />
     <Compile Include="Helpers\Data\Database.cs" />
-    <Compile Include="Helpers\Data\IWordDatabase.cs" />
+    <Compile Include="Interfaces\IWordDatabase.cs" />
     <Compile Include="Helpers\Data\ScoreBoardDatabase.cs" />
     <Compile Include="Helpers\GameState.cs" />
     <Compile Include="Helpers\Data\WordDatabase.cs" />
@@ -79,6 +81,9 @@
   <ItemGroup>
     <Content Include="Files\scoreboard.txt" />
     <Content Include="Files\words.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

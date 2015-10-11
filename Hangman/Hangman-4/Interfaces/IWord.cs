@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
-namespace HangMan.Interfaces
+﻿namespace HangMan.Interfaces
 {
+    using System.Collections.Generic;
+    
     public interface IWord : IRenderable
     {
         IEnumerable<ILetter> Content { get; }

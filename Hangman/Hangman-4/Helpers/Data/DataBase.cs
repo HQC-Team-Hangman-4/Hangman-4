@@ -1,7 +1,7 @@
-﻿using HangMan.Interfaces;
-
-namespace HangMan.Helpers.Data
+﻿namespace HangMan.Helpers.Data
 {
+    using HangMan.Interfaces;
+
     public abstract class Database
     {
         private IDataSerialization dataSerialization;

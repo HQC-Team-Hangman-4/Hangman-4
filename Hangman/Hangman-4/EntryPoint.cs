@@ -1,12 +1,12 @@
 ﻿namespace HangMan
 {
-    using HangMan.GameObjects;
-    using HangMan.InputProviders;
-    using HangMan.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
+    using HangMan.GameObjects;
+    using HangMan.InputProviders;
+    using HangMan.Interfaces;
 
     public class EntryPoint
     {

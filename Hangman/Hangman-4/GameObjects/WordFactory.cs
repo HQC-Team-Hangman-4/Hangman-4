@@ -1,15 +1,13 @@
 ﻿namespace HangMan.GameObjects
 {
     using System;
-    using System.Linq;
-
-    using HangMan.InputProviders;
-    using HangMan.Interfaces;
     using System.Collections.Generic;
     using HangMan.Helpers.Data;
+    using HangMan.Interfaces;
 
     public class WordFactory
     {
+        private Letter letterPrototype = new Letter();
         private Random random = new Random();
         private IWordDatabase wordDataBase;
 
@@ -24,16 +22,16 @@
             switch (category)
             {
                 case Categories.Astronomy:
-                    letters = WordAsLetters(Categories.Astronomy);
+                    letters = this.WordAsLetters(Categories.Astronomy);
                     break;
                 case Categories.Biology:
-                    letters = WordAsLetters(Categories.Biology);
+                    letters = this.WordAsLetters(Categories.Biology);
                     break;
                 case Categories.Geography:
-                    letters = WordAsLetters(Categories.Geography);
+                    letters = this.WordAsLetters(Categories.Geography);
                     break;
                 case Categories.IT:
-                    letters = WordAsLetters(Categories.IT);
+                    letters = this.WordAsLetters(Categories.IT);
                     break;
                 default:
                     throw new NotImplementedException();
@@ -45,15 +43,16 @@
         private List<ILetter> WordAsLetters(Categories category)
         {
             var allLetters = new List<ILetter>();
-            var word = wordDataBase.GetRandomWordByCategory(category);
+            var word = this.wordDataBase.GetRandomWordByCategory(category);
 
             foreach (var letter in word)
             {
-                allLetters.Add(new Letter(letter.ToString()));
+                var currentLetter = letterPrototype.Clone();
+                currentLetter.Value = letter;
+                allLetters.Add(currentLetter);
             }
 
             return allLetters;
         }
-
     }
 }

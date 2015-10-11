@@ -5,34 +5,35 @@
     using HangMan.GameObjects;
     using HangMan.Helpers.Data;
     using NUnit.Framework;
+    using HangMan.Interfaces;
 
     [TestFixture]
     public class PlayerTests
     {
+        private Player playerPrototype = new Player();
+
         [TestCase]
         [ExpectedException(typeof(ArgumentNullException))]
         public void NameShouldThrowArgumentNullExceptionWhenProvidedNullData()
         {
-            var player = new Player();
+            var player = playerPrototype.Clone();
             player.Name = null;
         }
 
         [TestCase("A", ExpectedException = typeof(ArgumentException))]
         [TestCase("", ExpectedException = typeof(ArgumentException))]
         [TestCase(" ", ExpectedException = typeof(ArgumentException))]
-        [TestCase("ASD", ExpectedException = typeof(ArgumentException))]
         public void NameShouldThrowArgumentExceptionWhenProvidedShortName(string invalidName)
         {
-            var player = new Player();
+            var player = playerPrototype.Clone();
             player.Name = invalidName;
         }
 
-
-        [TestCase("AAAAAAAAAAAAAAAAAAAA", ExpectedException = typeof(ArgumentException))]
+        [TestCase("AAAAAAAAAAAAAAAAAAAAA", ExpectedException = typeof(ArgumentException))]
         [TestCase("KARAKONDJULKARABABADOGARATA", ExpectedException = typeof(ArgumentException))]
         public void NameShouldThrowArgumentExceptionWhenProvidedLongName(string invalidName)
         {
-            var player = new Player();
+            var player = playerPrototype.Clone();
             player.Name = invalidName;
         }
 
@@ -43,14 +44,13 @@
         [TestCase("Baghdad", Result = "Baghdad")]
         public string NameShouldWorkWhenProvidedValidData(string name)
         {
-            var player = new Player();
+            var player = playerPrototype.Clone();
             player.Name = name;
 
             Assert.IsNotNull(player);
             Assert.IsNotNull(player.Name);
             return player.Name;
         }
-
 
         [TestCase(5, Result = 5)]
         [TestCase(125, Result = 125)]
@@ -59,8 +59,9 @@
         [TestCase(350, Result = 350)]
         public int ScoreShouldWorkWhenProvidedValidData(int score)
         {
-            var player = new Player();
+            var player = playerPrototype.Clone();
             player.Score = score;
+
             return player.Score;
         }
 
@@ -70,7 +71,7 @@
         [TestCase(10000000, ExpectedException = typeof(ArgumentException))]
         public void ScoreShouldThrowArgumentExceptionWhenProvidedTooBigScore(int score)
         {
-            var player = new Player();
+            var player = playerPrototype.Clone();
             player.Score = score;
         }
 
@@ -80,7 +81,7 @@
         [TestCase(-1, ExpectedException = typeof(ArgumentException))]
         public void ScoreShouldThrowArgumentExceptionWhenProvidedNegativeScore(int score)
         {
-            var player = new Player();
+            IPlayer player = playerPrototype.Clone();
             player.Score = score;
         }
     }

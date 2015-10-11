@@ -34,11 +34,11 @@
             this.inputProvider = inputProvider;
             this.consoleRenderer = consoleRenderer;
             this.scoreBoard = Scoreboard.Instance;
-            this.wordDataBase = new WordDatabase(dataSerialization);
-            this.wordFactory = new WordFactory(wordDataBase);
+            this.wordDataBase = new WordDatabase(this.dataSerialization);
+            this.wordFactory = new WordFactory(this.wordDataBase);
             this.gameLogic = new DefaultGameLogic();
             //Should generate word according to input! 
-            this.gameLogic.Word = wordFactory.GetWord(Categories.IT);
+            this.gameLogic.Word = this.wordFactory.GetWord(Categories.IT);
         }
 
         public void StartGame()
@@ -47,21 +47,20 @@
 
             while (this.inputProvider.Command != "exit")
             {
-
                 this.consoleRenderer.PrintWord(this.gameLogic.Word);
 
                 this.inputProvider.GetInput();
 
                 this.gameLogic.ParseCommand(this.inputProvider.Command);
 
-                switch (this.gameLogic.gameState)
+                switch (this.gameLogic.GameState)
                 {
                     case GameState.guessLetter:
                         this.consoleRenderer.PrintUsedLetters(this.gameLogic.CurrentPlayerInfo.UsedLetters);
-                        this.consoleRenderer.PrintMistakes(this.gameLogic.CurrentPlayerInfo.Mistakes); 
+                        this.consoleRenderer.PrintMistakes(this.gameLogic.CurrentPlayerInfo.Mistakes);
                         break;
                     case GameState.top:
-                        this.consoleRenderer.RenderScoreboard(scoreBoard.ViewScoreboard());
+                        this.consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
                         break;
                     case GameState.help:
                         this.gameLogic.Help();
@@ -70,39 +69,79 @@
                         this.gameLogic.Restart();
                         break;
                     case GameState.exit:
+                        this.EndGame();
                         break;
                     case GameState.invalidCommand:
                         this.consoleRenderer.InvalidCommand();
                         break;
-                    default:
+                    default: this.consoleRenderer.InvalidCommand();
                         break;
                 }
 
                 if (this.gameLogic.IsWordRevealed())
                 {
-                    this.EndGame();
+                    this.EndCurrentWordGame();
                 }
             }
         }
-        
+
+        private void EndCurrentWordGame()
+        {
+            this.consoleRenderer.PrintWord(this.gameLogic.Word);
+
+            this.gameLogic.Word = this.wordFactory.GetWord(Categories.IT);
+            this.gameLogic.CurrentPlayerInfo.UsedLetters.Clear();
+            this.gameLogic.CurrentPlayerInfo.Mistakes += this.gameLogic.CurrentPlayerInfo.Mistakes;
+        }
+
         private void EndGame()
         {
             if (!this.gameLogic.IsCheated)
             {
-                this.consoleRenderer.PrintEndScreen();
+                if (this.gameLogic.Player.Score > 0)
+                {
+                    this.consoleRenderer.PrintEndScreen();
 
-                this.inputProvider.GetInput();
-                this.gameLogic.Player.Name = this.inputProvider.Command;
+                    while (true)
+                    {
+                        try
+                        {
+                            this.inputProvider.GetInput();
+                            this.gameLogic.Player.Name = this.inputProvider.Command;
+                        }
+                        catch (ArgumentNullException ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                            Console.WriteLine("Try again.");
 
-                this.scoreBoard.AddPlayerScore(this.gameLogic.Player);
+                            continue;
+                        }
+                        catch (ArgumentException ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                            Console.WriteLine("Try again.");
 
-                consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
+                            continue;
+                        }
+
+                        break;
+                    }
+
+                    this.consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
+
+                    this.scoreBoard.AddPlayerScore(this.gameLogic.Player);
+                }
+                else
+                {
+                    Console.WriteLine("Bye bye!");
+                }
             }
             else
             {
                 this.consoleRenderer.PrintEndScreenIfYouPlayerCheated("You cheated!!!");
             }
-        }
 
+            Environment.Exit(1);
+        }
     }
 }
