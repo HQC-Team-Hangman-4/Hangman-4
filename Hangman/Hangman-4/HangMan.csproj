@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Engine\Engine.cs" />
+    <Compile Include="HangmanFacade.cs" />
     <Compile Include="GameLogic\DefaultGameLogic.cs" />
     <Compile Include="GameObjects\GameInfo.cs" />
     <Compile Include="GameObjects\Guessed.cs" />
