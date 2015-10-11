@@ -20,6 +20,36 @@
             player.Name = null;
         }
 
+        [TestCase]
+        public void GetBodyShouldReturnString()
+        {
+            var player = this.playerPrototype.Clone();
+
+            Assert.That(player.GetBody(), Is.TypeOf(typeof(string)));
+        }
+
+        [TestCase]
+        public void GetBodyShouldNotBeNull()
+        {
+            var player = this.playerPrototype.Clone();
+
+            Assert.IsNotNull(player.GetBody());
+        }
+
+        [TestCase]
+        public void GetBodyShouldBeInCorrectFormat()
+        {
+            var player = this.playerPrototype.Clone();
+            player.Name = "name";
+            player.Score = 10;
+
+            string expected = string.Format("{0} --> {1}", player.Name.PadLeft(20, ' '), player.Score);
+
+            string actual = player.GetBody();
+
+            Assert.AreEqual(expected, actual);
+        }
+
         [TestCase("A", ExpectedException = typeof(ArgumentException))]
         [TestCase("", ExpectedException = typeof(ArgumentException))]
         [TestCase(" ", ExpectedException = typeof(ArgumentException))]
