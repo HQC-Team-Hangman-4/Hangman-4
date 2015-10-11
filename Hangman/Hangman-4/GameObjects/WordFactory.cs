@@ -47,7 +47,7 @@
 
             foreach (var letter in word)
             {
-                var currentLetter = letterPrototype.Clone();
+                var currentLetter = this.letterPrototype.Clone();
                 currentLetter.Value = letter;
                 allLetters.Add(currentLetter);
             }

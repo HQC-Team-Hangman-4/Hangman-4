@@ -21,7 +21,7 @@
             Console.WriteLine();
         }
 
-        public void PrintEndScreen()
+        public void PrintEndScreen()    
         {
             //Console.WriteLine("Congratulations! You made the scoreboard!");
             Console.Write("Enter your name: ");
@@ -63,6 +63,11 @@
         public void InvalidCommand()
         {
             Console.WriteLine("Invalid command");
+        }
+
+        public void PrintMessage(string message)
+        {
+            Console.WriteLine(message);
         }
     }
 }

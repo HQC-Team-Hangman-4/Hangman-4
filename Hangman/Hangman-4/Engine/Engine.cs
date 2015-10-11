@@ -86,6 +86,8 @@
             this.gameLogic.Word = this.wordFactory.GetWord(Categories.IT);
             this.gameLogic.CurrentPlayerInfo.UsedLetters.Clear();
             this.gameLogic.CurrentPlayerInfo.Mistakes += this.gameLogic.CurrentPlayerInfo.Mistakes;
+
+            System.Threading.Thread.Sleep(2000);
         }
         
         private void EndGame()
@@ -105,15 +107,13 @@
                         }
                         catch (ArgumentNullException ex)
                         {
-                            Console.WriteLine(ex.Message);
-                            Console.WriteLine("Try again.");
+                            this.consoleRenderer.PrintMessage(ex.Message);
 
                             continue;
                         }
                         catch (ArgumentException ex)
                         {
-                            Console.WriteLine(ex.Message);
-                            Console.WriteLine("Try again.");
+                            this.consoleRenderer.PrintMessage(ex.Message);
 
                             continue;
                         }
@@ -127,7 +127,7 @@
                 }
                 else
                 {
-                    Console.WriteLine("Bye bye!");
+                    this.consoleRenderer.PrintMessage("Bye bye!");
                 }
             }
             else

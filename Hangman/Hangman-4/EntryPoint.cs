@@ -5,8 +5,9 @@
     using System.Linq;
     using System.Text;
     using HangMan.GameObjects;
+    using HangMan.Helpers;
     using HangMan.InputProviders;
-    using HangMan.Interfaces;
+    using HangMan.Interfaces;    
 
     public class EntryPoint
     {
@@ -14,7 +15,7 @@
 
         private static void Main()
         {
-            IRenderer renderer = new Renderers.ConsoleRenderer();
+            IRenderer renderer = new Renderers.ConsoleFancyRenderer();
             IInputProvider provider = new ConsoleInputProvider();
             Engine.Engine engine = new Engine.Engine(renderer, provider);
             engine.StartGame();

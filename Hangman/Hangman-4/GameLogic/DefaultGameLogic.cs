@@ -13,7 +13,7 @@
         public DefaultGameLogic()
         {
             this.CurrentPlayerInfo = new GameInfo();
-            this.Player = playerPrototype.Clone();
+            this.Player = this.playerPrototype.Clone();
 
             this.IsCheated = false;
         }
@@ -66,8 +66,7 @@
         {
             if (command.Length == 1)
             {
-
-                ILetter currentLetter = letterPrototype.Clone();
+                ILetter currentLetter = this.letterPrototype.Clone();
                 currentLetter.Value = command[0];
                 this.CurrentPlayerInfo.UsedLetters.Add(currentLetter);
 

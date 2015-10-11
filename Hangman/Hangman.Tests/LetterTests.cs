@@ -18,7 +18,7 @@
         [TestCase('Z', Result = 'z')]
         public char CreatingLetterShouldSucceedWhenProvidingValidData(char letter)
         {
-            var let = letterPrototype.Clone();
+            var let = this.letterPrototype.Clone();
             let.Value = letter;
 
             return let.Value;
@@ -40,7 +40,7 @@
         [TestCase('Z')]
         public void CreatingLetterShouldSetIsFoundToFalse(char letter)
         {
-            var let = letterPrototype.Clone();
+            var let = this.letterPrototype.Clone();
             let.Value = letter;
 
             Assert.AreEqual(false, let.IsFound);
@@ -55,7 +55,7 @@
         [TestCase('Z')]
         public void ChangingLetterIsFoundPropertyShouldWorkWhenGivenValidData(char letter)
         {
-            var let = letterPrototype.Clone();
+            var let = this.letterPrototype.Clone();
             let.Value = letter;
 
             let.IsFound = true;
@@ -70,7 +70,7 @@
         [TestCase('*', ExpectedException = typeof(ArgumentException))]
         public void ChangingLetterIsFoundPropertyShouldThrowWhenProvidedInvalidData(char letter)
         {
-            var let = letterPrototype.Clone();
+            var let = this.letterPrototype.Clone();
             let.Value = letter;
         }
     }

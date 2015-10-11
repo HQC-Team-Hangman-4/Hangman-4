@@ -24,7 +24,7 @@
             {
                 string[] currentPlayerInfo = scorBoardPlayer.Trim().Split(' ');
 
-                IPlayer player = playerPrototype.Clone();
+                IPlayer player = this.playerPrototype.Clone();
                 player.Name = currentPlayerInfo[0];
                 player.Score = Convert.ToInt32(currentPlayerInfo[1]);
 

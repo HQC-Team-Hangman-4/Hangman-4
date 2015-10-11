@@ -55,6 +55,7 @@
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Helpers\Categories.cs" />
     <Compile Include="Helpers\Data\Database.cs" />
+    <Compile Include="Helpers\FontHelper.cs" />
     <Compile Include="Interfaces\IWordDatabase.cs" />
     <Compile Include="Helpers\Data\ScoreBoardDatabase.cs" />
     <Compile Include="Helpers\GameState.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Interfaces\IRenderer.cs" />
     <Compile Include="Interfaces\IScoreBoard.cs" />
     <Compile Include="Interfaces\IWord.cs" />
+    <Compile Include="Renderers\ConsoleFancyRenderer.cs" />
     <Compile Include="Renderers\ConsoleRenderer.cs" />
     <Compile Include="Users\User.cs" />
   </ItemGroup>
@@ -78,7 +80,11 @@
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Files\calvin.txt" />
+    <Content Include="Files\cyber.txt" />
     <Content Include="Files\scoreboard.txt" />
+    <Content Include="Files\shadow.txt" />
+    <Content Include="Files\straight.txt" />
     <Content Include="Files\words.txt" />
   </ItemGroup>
   <ItemGroup>
