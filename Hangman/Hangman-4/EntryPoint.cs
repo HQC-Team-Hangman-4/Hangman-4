@@ -1,15 +1,6 @@
-﻿using HangMan.Engine;
-
-namespace HangMan
+﻿namespace HangMan
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using HangMan.GameObjects;
-    using HangMan.Helpers;
-    using HangMan.InputProviders;
-    using HangMan.Interfaces;    
+    using HangMan.Engine;
 
     public class EntryPoint
     {

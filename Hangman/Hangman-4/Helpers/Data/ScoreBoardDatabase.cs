@@ -40,7 +40,6 @@
             currentScoreBoard = this.ReadScoreboard();
 
             bool reorder = true;
-            //check if player already exist and have new high score
             foreach (var currPlayer in currentScoreBoard.Where(cp => cp.Name == player.Name))
             {
                 if (currPlayer.Score <= player.Score)

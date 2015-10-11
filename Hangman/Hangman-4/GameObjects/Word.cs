@@ -25,7 +25,6 @@
 
             private set
             {
-                //TODO: validate
                 Validator.CheckIfNull(value, "All letters in word");
                 Validator.CheckAllElementsInCollection(value, "All letters in word");
                 this.content = value;

@@ -113,14 +113,6 @@
 
         internal void Restart()
         {
-            //foreach (var letter in this.Word.Content)
-            //{
-            //    letter.IsFound = false;
-            //}
-
-            //TODO: change method to the right class
-            //var words = engine.GetWordsByCategory(); 
-            //this.Word = GenerateWordFromString(GetRandomWordByCategory(words, Categories.IT));
         }
 
         private void SetGameState(string command)

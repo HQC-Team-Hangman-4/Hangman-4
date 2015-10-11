@@ -57,12 +57,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DataSerializationTests.cs" />
     <Compile Include="GuessedUnitTests.cs" />
     <Compile Include="GameInfoTests.cs" />
     <Compile Include="ConsoleInputProviderTests.cs" />
     <Compile Include="ConsoleFancyRendererTests.cs" />
     <Compile Include="ConsoleRendererTests.cs" />
     <Compile Include="DefaultGameLogicTests.cs" />
+    <Compile Include="WordTests.cs" />
     <Compile Include="ScoreboardTests.cs" />
     <Compile Include="LetterTests.cs" />
     <Compile Include="Mocks\ConsoleInputProviderMock.cs" />
