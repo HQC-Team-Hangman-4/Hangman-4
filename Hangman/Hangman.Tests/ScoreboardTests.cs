@@ -18,27 +18,27 @@
             Assert.NotNull(scoreboard);
         }
 
-        [TestCase]
-        public void AddPlayerScoreShouldNotThrowWhenValidPlayer()
-        {
-            var playerMock = Mock.Create<IPlayer>();
-            playerMock.Name = "Johnny";
-            playerMock.Score = 10;
-            var scoreboard = Scoreboard.Instance;
+        //[TestCase]
+        //public void AddPlayerScoreShouldNotThrowWhenValidPlayer()
+        //{
+        //    var playerMock = Mock.Create<IPlayer>();
+        //    playerMock.Name = "Johnny";
+        //    playerMock.Score = 10;
+        //    var scoreboard = Scoreboard.Instance;
 
-            Assert.DoesNotThrow(() => scoreboard.AddPlayerScore(playerMock));
-        }
+        //    Assert.DoesNotThrow(() => scoreboard.AddPlayerScore(playerMock));
+        //}
 
-        [TestCase]
-        public void ViewScoreboardShouldNotThrowWhenValidData()
-        {
-            var playerMock = Mock.Create<IPlayer>();
-            playerMock.Name = "Johnny";
-            playerMock.Score = 10;
-            var scoreboard = Scoreboard.Instance;
-            scoreboard.AddPlayerScore(playerMock);
+        //[TestCase]
+        //public void ViewScoreboardShouldNotThrowWhenValidData()
+        //{
+        //    var playerMock = Mock.Create<IPlayer>();
+        //    playerMock.Name = "Johnny";
+        //    playerMock.Score = 10;
+        //    var scoreboard = Scoreboard.Instance;
+        //    scoreboard.AddPlayerScore(playerMock);
 
-            Assert.DoesNotThrow(() => scoreboard.ViewScoreboard());
-        }
+        //    Assert.DoesNotThrow(() => scoreboard.ViewScoreboard());
+        //}
     }
 }
