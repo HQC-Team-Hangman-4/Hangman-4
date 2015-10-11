@@ -57,7 +57,7 @@
 
         public string GetBody()
         {
-            return string.Format("{0} --> {1}", this.Name, this.Score);
+            return string.Format("{0} --> {1}", this.Name.PadLeft(20, ' '), this.Score);
         }
 
         public override IPlayer Clone()

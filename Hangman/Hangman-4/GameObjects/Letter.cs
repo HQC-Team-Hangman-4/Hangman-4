@@ -26,7 +26,6 @@
             set
             {
                 Validator.CheckIfNull(value, "Letter value");
-                //Validator.CheckIfInRangeIncluded(value.Length, "Letter value length", 1, 1);
                 Validator.CheckIfLetter(value, "Letter value");
                 this.value = char.ToLower(value);
             }
