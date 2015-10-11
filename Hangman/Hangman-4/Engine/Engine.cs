@@ -51,8 +51,8 @@
 
                 this.inputProvider.GetInput();
 
-                this.gameLogic.ParseCommand(this.inputProvider.Command);
-
+                this.gameLogic.ParseCommand(this.inputProvider.Command)
+                consoleRenderer.PrintInitialScreen();
                 switch (this.gameLogic.GameState)
                 {
                     case GameState.guessLetter:

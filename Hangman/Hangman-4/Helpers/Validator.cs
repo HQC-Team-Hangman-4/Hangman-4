@@ -47,7 +47,7 @@
 
         internal static void CheckIfLetter(char value, string name)
         {
-            if (!Regex.IsMatch(value.ToString(), @"^[a-zA-Z]+$"))
+            if (!Regex.IsMatch(value.ToString(), @"^[a-zA-Z]+"))
             {
                 throw new ArgumentException(string.Format(NotLetterMessage, name));
             }
