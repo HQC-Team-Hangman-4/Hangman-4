@@ -1,3 +1,0 @@
-Welcome to Hangman
-Use 'top' to view the top scoreboard,'restart' to start a new game, 
-'help' to cheat and 'exit' to quit the game.
