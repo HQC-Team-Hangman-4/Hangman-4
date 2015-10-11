@@ -1,0 +1,15 @@
+default 35
+VasaGancheva 34
+bob 30
+default 17
+erpoeiprowpreo 9
+default 7
+default 7
+bob 5
+bobo 5
+ggg 5
+gggg 5
+ggg 4
+default 3
+default 3
+default 2
