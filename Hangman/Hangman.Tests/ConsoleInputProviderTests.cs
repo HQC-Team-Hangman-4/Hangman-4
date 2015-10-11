@@ -8,10 +8,20 @@
     using NUnit.Framework;
     using HangMan.InputProviders;
     using Hangman.Tests.Mocks;
+    using System.IO;
 
     [TestFixture]
     public class ConsoleInputProviderTests
     {
+        private TextReader textReader;
+
+        [TestFixtureSetUp]
+        public void SetUpConsoleWrite()
+        {
+            textReader = File.OpenText("./consolereadtests.txt");
+            Console.SetIn(textReader);
+        }
+
         [TestCase]
         public void ConsoleInputProviderShouldNotBeNullWhenInstantiated()
         {
@@ -35,6 +45,15 @@
             consoleInputProviderMock.GetInput();
 
             Assert.That(consoleInputProviderMock.Command, Is.TypeOf(typeof(string)));
+        }
+
+        [TestCase]
+        public void GetInputMethodShouldReadFromConsole()
+        {
+            var consoleInputProvider = new ConsoleInputProvider();
+            consoleInputProvider.GetInput();
+
+            Assert.AreEqual(consoleInputProvider.Command, "this is a Test reading from console test.");
         }
     }
 }
