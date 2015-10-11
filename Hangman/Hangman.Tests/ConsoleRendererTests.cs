@@ -154,16 +154,16 @@
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase]
-        public void ClearScreenShouldReturnEmptyString()
-        {
-            var consoleRenderer = new ConsoleRenderer();
-            consoleRenderer.ClearScreen();
-            textWriter.Close();
+        //[TestCase]
+        //public void ClearScreenShouldReturnEmptyString()
+        //{
+        //    var consoleRenderer = new ConsoleRenderer();
+        //    consoleRenderer.ClearScreen();
+        //    textWriter.Close();
 
-            string actual = File.ReadAllText("./consolewritertests.txt");
+        //    string actual = File.ReadAllText("./consolewritertests.txt");
 
-            Assert.IsTrue(string.IsNullOrEmpty(actual));
-        }
+        //    Assert.IsTrue(string.IsNullOrEmpty(actual));
+        //}
     }
 }
