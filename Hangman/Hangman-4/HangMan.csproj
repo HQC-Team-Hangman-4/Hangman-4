@@ -46,6 +46,7 @@
     <Compile Include="GameLogic\DefaultGameLogic.cs" />
     <Compile Include="GameObjects\GameInfo.cs" />
     <Compile Include="GameObjects\Letter.cs" />
+    <Compile Include="GameObjects\LetterPrototype.cs" />
     <Compile Include="GameObjects\Player.cs" />
     <Compile Include="GameObjects\Scoreboard.cs" />
     <Compile Include="GameObjects\Word.cs" />

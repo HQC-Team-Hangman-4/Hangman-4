@@ -41,7 +41,7 @@
             }
         }
 
-        internal static void CheckIfLetter<T>(T value, string name)
+        internal static void CheckIfLetter(char value, string name)
         {
             if (!Regex.IsMatch(value.ToString(), @"^[a-zA-Z]+$"))
             {

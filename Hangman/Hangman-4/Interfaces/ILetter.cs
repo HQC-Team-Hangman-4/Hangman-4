@@ -4,7 +4,7 @@
 
     public interface ILetter : IRendarable
     {
-        string Value { get; }
+        char Value { get; set; }
 
         bool IsFound { get; set; }
     }

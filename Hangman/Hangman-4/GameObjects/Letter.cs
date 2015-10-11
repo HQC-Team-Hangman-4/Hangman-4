@@ -3,30 +3,29 @@
     using HangMan.Helpers;
     using HangMan.Interfaces;
 
-    public class Letter : ILetter, IRendarable
+    public class Letter : LetterPrototype, ILetter, IRendarable
     {
-        private string value;
+        private char value;
         private bool state;
 
-        public Letter(string value)
+        public Letter()
         {
-            this.Value = value;
             this.IsFound = false;
         }
 
-        public string Value
+        public char Value
         {
             get
             {
                 return this.value;
             }
 
-            private set
+            set
             {
                 Validator.CheckIfNull(value, "Letter value");
-                Validator.CheckIfInRangeIncluded(value.Length, "Letter value length", 1, 1);
+                //Validator.CheckIfInRangeIncluded(value.Length, "Letter value length", 1, 1);
                 Validator.CheckIfLetter(value, "Letter value");
-                this.value = value.ToLower();
+                this.value = char.ToLower(value);
             }
         }
 
@@ -61,7 +60,15 @@
 
         public string GetBody()
         {
-            return this.Value;
+            return this.Value.ToString();
+        }
+
+        public override ILetter Clone()
+        {
+            ILetter otherLetter = (ILetter)this.MemberwiseClone();
+            otherLetter.IsFound = this.IsFound;
+
+            return otherLetter;
         }
     }
 }

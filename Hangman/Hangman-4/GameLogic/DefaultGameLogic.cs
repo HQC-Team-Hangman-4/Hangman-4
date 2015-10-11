@@ -7,6 +7,8 @@
 
     public class DefaultGameLogic
     {
+        private Letter letterPrototype = new Letter();
+
         public DefaultGameLogic()
         {
             this.CurrentPlayerInfo = new GameInfo();
@@ -63,7 +65,9 @@
         {
             if (command.Length == 1)
             {
-                ILetter currentLetter = new Letter(command);
+
+                ILetter currentLetter = letterPrototype.Clone();
+                currentLetter.Value = command[0];
                 this.CurrentPlayerInfo.UsedLetters.Add(currentLetter);
 
                 bool isGuessLetter = this.IsLetterGuessed(currentLetter);

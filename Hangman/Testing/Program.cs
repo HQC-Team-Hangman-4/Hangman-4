@@ -16,12 +16,14 @@
 
         public static void Main()
         {
+            Letter letterPrototype = new Letter();
             var listOfLetters = new List<ILetter>();
 
             for (int i = 0; i < 10; i++)
             {
                 var l = (char)(47 + i);
-                var letter = new Letter(l.ToString());
+                var letter = letterPrototype.Clone();
+                letter.Value = l;
                 listOfLetters.Add(letter);
             }
 

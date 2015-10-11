@@ -7,6 +7,7 @@
 
     public class WordFactory
     {
+        private Letter letterPrototype = new Letter();
         private Random random = new Random();
         private IWordDatabase wordDataBase;
 
@@ -46,7 +47,9 @@
 
             foreach (var letter in word)
             {
-                allLetters.Add(new Letter(letter.ToString()));
+                var currentLetter = letterPrototype.Clone();
+                currentLetter.Value = letter;
+                allLetters.Add(currentLetter);
             }
 
             return allLetters;
