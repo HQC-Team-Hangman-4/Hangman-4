@@ -7,7 +7,7 @@
     public class Validator
     {
         private const string NullMessage = "{0} cannot be null.";
-        private const string OutOfRangeMessage = "{0} is out of range {1} -- {2}";
+        private const string OutOfRangeMessage = "{0} {1} is out of range {2} -- {3}";
         private const string NotLetterMessage = "{0} is not a letter.";
 
         //TODO: Put it in game logic to maintain reusability.
@@ -25,7 +25,7 @@
         {
             if (number <= min || max <= number)
             {
-                throw new ArgumentException(string.Format("{0} is out of scope {1}-{2}. Was {3}", name, min, max, number));
+                throw new ArgumentException(string.Format(OutOfRangeMessage, name, number, min, max) + ", exclusive.");
             }
         }
 
@@ -33,7 +33,7 @@
         {
             if (number < min || max < number)
             {
-                throw new ArgumentException(string.Format(OutOfRangeMessage, name, min, max) + ", inclusive.");
+                throw new ArgumentException(string.Format(OutOfRangeMessage, name, number, min, max) + ", inclusive.");
             }
         }
 
@@ -57,7 +57,7 @@
         {
             if (score < 0 || HighestPossibleScore < score)
             {
-                throw new ArgumentException(string.Format(OutOfRangeMessage, name, 0, HighestPossibleScore));
+                throw new ArgumentException(string.Format(OutOfRangeMessage, name, score, 0, HighestPossibleScore));
             }
         }
     }

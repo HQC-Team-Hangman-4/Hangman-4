@@ -50,7 +50,6 @@
                 this.consoleRenderer.PrintWord(this.gameLogic.Word);
 
                 this.inputProvider.GetInput();
-                this.consoleRenderer.ClearScreen();
 
                 this.gameLogic.ParseCommand(this.inputProvider.Command);
                 switch (this.gameLogic.GameState)
@@ -123,10 +122,12 @@
 
                             continue;
                         }
-                    }
 
-                    this.scoreBoard.AddPlayerScore(this.gameLogic.Player);
-                    consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
+                        this.scoreBoard.AddPlayerScore(this.gameLogic.Player);
+                        consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
+
+                        break;
+                    }
                 }
                 else
                 {
@@ -137,6 +138,8 @@
             {
                 this.consoleRenderer.PrintEndScreenIfYouPlayerCheated("You cheated!!!");
             }
+
+            Environment.Exit(1);
         }
     }
 }

@@ -57,15 +57,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Compile Include="DefaultGameLogicTests.cs" />
-=======
-=======
-    <Compile Include="GlobalTests.cs" />
->>>>>>> 83bb1e7a7b976e9ecd70b5eb9d454ed423279387
-    <Compile Include="GuessedTests.cs" />
->>>>>>> 593d947a565a4d458260ce701a50d27d273f7d7e
     <Compile Include="LetterTests.cs" />
     <Compile Include="Mocks\WordDataBaseMock.cs" />
     <Compile Include="Mocks\JustMockWordDatabase.cs" />

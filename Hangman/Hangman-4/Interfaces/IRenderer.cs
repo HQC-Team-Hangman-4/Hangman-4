@@ -21,7 +21,5 @@
         void InvalidCommand();
 
         void PrintMessage(string message);
-
-        void ClearScreen();
     }
 }

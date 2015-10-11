@@ -175,15 +175,14 @@
             Console.SetCursorPosition(CenterWidth - message.Length / 2, CenterHeight / 2 + 10);
             Console.Write(message);
 
+            ClearCommand();
+
             Console.ForegroundColor = BackgroundColor;
 
-            new System.Threading.Thread(() =>
-            {
-                System.Threading.Thread.CurrentThread.IsBackground = true;
-                System.Threading.Thread.Sleep(1000);
-                Console.SetCursorPosition(CenterWidth - message.Length / 2, CenterHeight / 2 + 10);
-                Console.Write(new string(' ', message.Length));
-            }).Start();
+            System.Threading.Thread.Sleep(1000);
+            Console.SetCursorPosition(CenterWidth - message.Length / 2, CenterHeight / 2 + 10);
+            Console.Write(new string(' ', message.Length + 10));
+            Console.SetCursorPosition(CenterWidth - 10, ConsoleHeight - 4);
         }
 
         public void PrintMessage(string message)
@@ -201,12 +200,6 @@
             Console.SetCursorPosition(CenterWidth - 10, ConsoleHeight - 4);
             Console.Write(new string(' ', 30));
             Console.SetCursorPosition(CenterWidth - 10, ConsoleHeight - 4);
-        }
-
-
-        public void ClearScreen()
-        {
-            Console.Clear();
         }
     }
 }

@@ -7,7 +7,7 @@
     {   
         public static void Start()
         {
-            IRenderer renderer = new Renderers.ConsoleFancyRenderer();
+            IRenderer renderer = new Renderers.ConsoleRenderer();
             IInputProvider provider = new ConsoleInputProvider();
 
             Engine engine = new Engine(renderer, provider);

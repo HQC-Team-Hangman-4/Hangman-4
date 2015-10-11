@@ -62,17 +62,12 @@
 
         public void InvalidCommand()
         {
-            Console.WriteLine("Invalid command");
+            Console.WriteLine("Invalid command!");
         }
 
         public void PrintMessage(string message)
         {
             Console.WriteLine(message);
-        }
-
-        public void ClearScreen()
-        {
-           Console.Clear();
         }
     }
 }
