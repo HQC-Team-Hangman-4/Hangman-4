@@ -6,6 +6,10 @@
 
     public class Validator
     {
+        private const string NullMessage = "{0} cannot be null.";
+        private const string OutOfRangeMessage = "{0} is out of range {1} -- {2}";
+        private const string NotLetterMessage = "{0} is not a letter.";
+
         //TODO: Put it in game logic to maintain reusability.
         private const int HighestPossibleScore = 1000;
 
@@ -13,7 +17,7 @@
         {
             if (item == null)
             {
-                throw new ArgumentNullException(name + " cannot be null.");
+                throw new ArgumentNullException(string.Format(NullMessage, name));
             }
         }
 
@@ -21,7 +25,7 @@
         {
             if (number <= min || max <= number)
             {
-                throw new ArgumentException(string.Format("{0} is out of scope ({0},{1}).", name, min, max));
+                throw new ArgumentException(string.Format(OutOfRangeMessage, name, min, max) + ", exclusive.");
             }
         }
 
@@ -29,7 +33,7 @@
         {
             if (number < min || max < number)
             {
-                throw new ArgumentException(string.Format("{0} is out of scope [{1},{2}].", name, min, max));
+                throw new ArgumentException(string.Format(OutOfRangeMessage, name, min, max) + ", inclusive.");
             }
         }
 
@@ -45,7 +49,7 @@
         {
             if (!Regex.IsMatch(value.ToString(), @"^[a-zA-Z]+$"))
             {
-                throw new ArgumentException(name + " is not a letter.");
+                throw new ArgumentException(string.Format(NotLetterMessage, name));
             }
         }
 
@@ -53,7 +57,7 @@
         {
             if (score < 0 || HighestPossibleScore < score)
             {
-                throw new ArgumentException(string.Format("{0} cannot be higher than {1} or lower than 0.", name, HighestPossibleScore));
+                throw new ArgumentException(string.Format(OutOfRangeMessage, name, 0, HighestPossibleScore));
             }
         }
     }
