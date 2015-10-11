@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-kollslsl 44
-Ippo 35
-ASDS 7
-Koleto 7
-asdg 3
-asdx 3
-asdf 2
-aaas 1
-=======
 default 1
 default 2
 default 3
@@ -27,4 +17,3 @@ default 153
 ggg 154
 ggg 154
 ggg 154
->>>>>>> fbda669b6b33f84cce083984d1fbac2e3fcff3ed
