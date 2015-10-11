@@ -25,7 +25,7 @@
         {
             if (number <= min || max <= number)
             {
-                throw new ArgumentException(string.Format(OutOfRangeMessage, name, min, max) + ", exclusive.");
+                throw new ArgumentException(string.Format("{0} is out of scope {1}-{2}. Was {3}", name, min, max, number));
             }
         }
 

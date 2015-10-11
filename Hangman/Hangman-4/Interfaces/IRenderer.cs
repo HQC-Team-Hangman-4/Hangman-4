@@ -6,13 +6,13 @@
     {
         void PrintInitialScreen();
 
-        void PrintWord(IRendarable word);
+        void PrintWord(IRenderable word);
 
-        void RenderScoreboard(IEnumerable<IRendarable> scoreBoardInfo);
+        void RenderScoreboard(IEnumerable<IRenderable> scoreBoardInfo);
 
         void PrintEndScreen();
 
-        void PrintUsedLetters(IEnumerable<IRendarable> usedLetters);
+        void PrintUsedLetters(IEnumerable<IRenderable> usedLetters);
 
         void PrintMistakes(int numberOfMistakes);
 

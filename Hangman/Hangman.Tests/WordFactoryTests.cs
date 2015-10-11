@@ -23,7 +23,7 @@
         }
 
         [TestFixtureSetUp]
-        public void CreateController()
+        public void CreateFactory()
         {
             this.wordFactory = new WordFactory(this.dbWordDatabase);
         }

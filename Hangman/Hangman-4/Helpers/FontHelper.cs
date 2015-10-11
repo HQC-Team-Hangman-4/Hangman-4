@@ -29,7 +29,7 @@
                     Console.Write(this.fontArray[(text[i] - 32) * this.symbolHeight + j]);
                 }
 
-                totalLength += this.fontArray[(text[i] - 32) * this.symbolHeight + symbolHeight].Length;
+                totalLength += this.fontArray[(text[i] - 32) * this.symbolHeight + this.symbolHeight].Length;
             }
         }
         

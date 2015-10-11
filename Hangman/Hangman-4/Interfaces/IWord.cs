@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
     
-    public interface IWord : IRendarable
+    public interface IWord : IRenderable
     {
         IEnumerable<ILetter> Content { get; }
 

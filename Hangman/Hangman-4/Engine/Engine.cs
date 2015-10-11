@@ -1,12 +1,18 @@
 ﻿namespace HangMan.Engine
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     using HangMan.GameLogic;
     using HangMan.GameObjects;
+    using HangMan.Interfaces;
+    using HangMan.Renderers;
     using HangMan.Helpers;
     using HangMan.Helpers.Data;
     using HangMan.InputProviders.Data;
-    using HangMan.Interfaces;
+
+    using InputProviders;
 
     public class Engine
     {
@@ -37,7 +43,7 @@
 
         public void StartGame()
         {
-            this.consoleRenderer.PrintInitialScreen();
+            consoleRenderer.PrintInitialScreen();
 
             while (this.inputProvider.Command != "exit")
             {
@@ -51,7 +57,7 @@
                 {
                     case GameState.guessLetter:
                         this.consoleRenderer.PrintUsedLetters(this.gameLogic.CurrentPlayerInfo.UsedLetters);
-                        this.consoleRenderer.PrintMistakes(this.gameLogic.CurrentPlayerInfo.Mistakes); 
+                        this.consoleRenderer.PrintMistakes(this.gameLogic.CurrentPlayerInfo.Mistakes);
                         break;
                     case GameState.top:
                         this.consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
@@ -89,7 +95,7 @@
 
             System.Threading.Thread.Sleep(2000);
         }
-        
+
         private void EndGame()
         {
             if (!this.gameLogic.IsCheated)

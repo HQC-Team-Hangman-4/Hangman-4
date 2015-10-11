@@ -47,7 +47,7 @@
 
         public bool IsLetterGuessed(ILetter letter)
         {
-            int guessed = this.GuessLetter(letter);
+             int guessed = this.GuessLetter(letter);
 
             if (guessed > 0)
             {
@@ -61,7 +61,7 @@
             
             return false;
         }
-
+            
         public void ParseCommand(string command)
         {
             if (command.Length == 1)

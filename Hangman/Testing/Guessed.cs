@@ -3,11 +3,11 @@
     using System.Text;
     using HangMan.Interfaces;
 
-    public class Guessed : IRendarable
+    public class Guessed : IRenderable
     {
-        private IRendarable renderable;
+        private IRenderable renderable;
 
-        public Guessed(IRendarable renderable)
+        public Guessed(IRenderable renderable)
         {
             this.renderable = renderable;
         }

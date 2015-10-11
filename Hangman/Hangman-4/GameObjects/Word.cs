@@ -6,8 +6,8 @@
     using System.Text;
     using HangMan.Helpers;
     using HangMan.Interfaces;
-    
-    public class Word : IWord, IRendarable, IEnumerable<ILetter>
+
+    public class Word : IWord, IRenderable, IEnumerable<ILetter>
     {
         private IEnumerable<ILetter> content;
 

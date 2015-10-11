@@ -3,7 +3,7 @@
     using HangMan.Helpers;
     using HangMan.Interfaces;
 
-    public class Letter : LetterPrototype, ILetter, IRendarable
+    public class Letter : LetterPrototype, ILetter, IRenderable
     {
         private const char DefaultValue = 'a';
         private const bool DefaultIsFound = false;

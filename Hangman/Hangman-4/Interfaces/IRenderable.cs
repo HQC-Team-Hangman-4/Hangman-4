@@ -1,6 +1,6 @@
 ﻿namespace HangMan.Interfaces
 {
-    public interface IRendarable
+    public interface IRenderable
     {
         string GetBody();
     }

@@ -8,8 +8,8 @@
     using HangMan.Helpers;
     using HangMan.Interfaces;
     using HangMan.Users;
-    
-    public class Player : PlayerPrototype, IPlayer, IRendarable
+
+    public class Player : PlayerPrototype, IPlayer, IRenderable
     {
         private const string DefaultName = "player";
         private const int DefaultScore = 0;

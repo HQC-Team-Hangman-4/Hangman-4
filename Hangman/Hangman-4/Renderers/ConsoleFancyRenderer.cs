@@ -51,7 +51,7 @@
             Console.Clear();
         }
 
-        public void PrintWord(IRendarable word)
+        public void PrintWord(IRenderable word)
         {
             Console.ForegroundColor = FontColor;
 
@@ -61,7 +61,7 @@
             ClearCommand();
         }
 
-        public void RenderScoreboard(IEnumerable<IRendarable> scoreBoardInfo)
+        public void RenderScoreboard(IEnumerable<IRenderable> scoreBoardInfo)
         {
             Console.ForegroundColor = FontColor;
             Console.Clear();
@@ -116,7 +116,7 @@
             Console.SetCursorPosition(CenterWidth - 9, 21);
         }
 
-        public void PrintUsedLetters(IEnumerable<IRendarable> usedLetters)
+        public void PrintUsedLetters(IEnumerable<IRenderable> usedLetters)
         {
             Console.ForegroundColor = FontColor;
 
