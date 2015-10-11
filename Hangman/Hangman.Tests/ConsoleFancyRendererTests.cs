@@ -21,13 +21,13 @@
         }
 
         //[TestCase]
-        //public void PrintInitialScreenShouldPrintToConsole() 
+        //public void PrintInitialScreenShouldPrintToConsole()
         //{
         //    var consolefancyRenderer = new ConsoleFancyRenderer();
         //    consolefancyRenderer.PrintInitialScreen();
         //    this.textWriter.Close();
 
-        //    string expected = "Used Letters --> " + Environment.NewLine;
+        //    string expected = "Welcome to";
         //    string actual = File.ReadAllText("./consolewritertests.txt");
 
         //    Assert.AreEqual(expected, actual);
