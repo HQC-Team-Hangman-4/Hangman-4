@@ -48,6 +48,7 @@
     <Compile Include="GameObjects\Letter.cs" />
     <Compile Include="GameObjects\LetterPrototype.cs" />
     <Compile Include="GameObjects\Player.cs" />
+    <Compile Include="GameObjects\PlayerPrototype.cs" />
     <Compile Include="GameObjects\Scoreboard.cs" />
     <Compile Include="GameObjects\Word.cs" />
     <Compile Include="GameObjects\WordFactory.cs" />

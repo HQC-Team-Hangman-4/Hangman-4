@@ -8,11 +8,12 @@
     public class DefaultGameLogic
     {
         private Letter letterPrototype = new Letter();
+        private Player playerPrototype = new Player();
 
         public DefaultGameLogic()
         {
             this.CurrentPlayerInfo = new GameInfo();
-            this.Player = new Player();
+            this.Player = playerPrototype.Clone();
 
             this.IsCheated = false;
         }

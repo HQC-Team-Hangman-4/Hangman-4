@@ -8,6 +8,8 @@
     
     public class ScoreBoardDatabase : Database
     {
+        private Player playerPrototype = new Player();
+
         public ScoreBoardDatabase(IDataSerialization dataSerialization)
             : base(dataSerialization)
         {
@@ -22,7 +24,7 @@
             {
                 string[] currentPlayerInfo = scorBoardPlayer.Trim().Split(' ');
 
-                IPlayer player = new Player();
+                IPlayer player = playerPrototype.Clone();
                 player.Name = currentPlayerInfo[0];
                 player.Score = Convert.ToInt32(currentPlayerInfo[1]);
 

@@ -5,12 +5,15 @@
 
     public class Letter : LetterPrototype, ILetter, IRendarable
     {
+        private const char DefaultValue = 'a';
+        private const bool DefaultIsFound = false;
         private char value;
         private bool state;
 
         public Letter()
         {
-            this.IsFound = false;
+            this.IsFound = DefaultIsFound;
+            this.Value = DefaultValue;
         }
 
         public char Value
@@ -67,6 +70,7 @@
         {
             ILetter otherLetter = (ILetter)this.MemberwiseClone();
             otherLetter.IsFound = this.IsFound;
+            otherLetter.Value = this.Value;
 
             return otherLetter;
         }
