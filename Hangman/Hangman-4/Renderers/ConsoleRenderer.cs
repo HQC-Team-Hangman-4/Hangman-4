@@ -64,5 +64,11 @@
         {
             Console.WriteLine("Invalid command");
         }
+
+
+        public void ClearScreen()
+        {
+           Console.Clear();
+        }
     }
 }

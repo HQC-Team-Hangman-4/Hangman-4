@@ -19,5 +19,7 @@
         void PrintEndScreenIfYouPlayerCheated(string message);
 
         void InvalidCommand();
+
+        void ClearScreen();
     }
 }

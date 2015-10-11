@@ -50,8 +50,9 @@
                 this.consoleRenderer.PrintWord(this.gameLogic.Word);
 
                 this.inputProvider.GetInput();
+                this.consoleRenderer.ClearScreen();
 
-                this.gameLogic.ParseCommand(this.inputProvider.Command)
+                this.gameLogic.ParseCommand(this.inputProvider.Command);
                 consoleRenderer.PrintInitialScreen();
                 switch (this.gameLogic.GameState)
                 {
@@ -98,50 +99,19 @@
         {
             if (!this.gameLogic.IsCheated)
             {
-                if (this.gameLogic.Player.Score > 0)
-                {
-                    this.consoleRenderer.PrintEndScreen();
+                this.consoleRenderer.PrintEndScreen();
 
-                    while (true)
-                    {
-                        try
-                        {
-                            this.inputProvider.GetInput();
-                            this.gameLogic.Player.Name = this.inputProvider.Command;
-                        }
-                        catch (ArgumentNullException ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                            Console.WriteLine("Try again.");
+                this.inputProvider.GetInput();
+                this.gameLogic.Player.Name = this.inputProvider.Command;
 
-                            continue;
-                        }
-                        catch (ArgumentException ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                            Console.WriteLine("Try again.");
+                this.scoreBoard.AddPlayerScore(this.gameLogic.Player);
+                consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
 
-                            continue;
-                        }
-
-                        break;
-                    }
-
-                    this.consoleRenderer.RenderScoreboard(this.scoreBoard.ViewScoreboard());
-
-                    this.scoreBoard.AddPlayerScore(this.gameLogic.Player);
-                }
-                else
-                {
-                    Console.WriteLine("Bye bye!");
-                }
             }
             else
             {
                 this.consoleRenderer.PrintEndScreenIfYouPlayerCheated("You cheated!!!");
             }
-
-            Environment.Exit(1);
         }
     }
 }
