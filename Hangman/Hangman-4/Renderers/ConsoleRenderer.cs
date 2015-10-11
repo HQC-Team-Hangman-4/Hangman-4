@@ -69,5 +69,10 @@
         {
             Console.WriteLine(message);
         }
+
+        public void ClearScreen()
+        {
+            Console.Clear();
+        }
     }
 }

@@ -201,5 +201,10 @@
             Console.Write(new string(' ', 30));
             Console.SetCursorPosition(CenterWidth - 10, ConsoleHeight - 4);
         }
+
+        public void ClearScreen()
+        {
+            Console.Clear();
+        }
     }
 }

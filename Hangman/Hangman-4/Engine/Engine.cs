@@ -93,6 +93,7 @@
             this.gameLogic.CurrentPlayerInfo.Mistakes += this.gameLogic.CurrentPlayerInfo.Mistakes;
 
             System.Threading.Thread.Sleep(2000);
+            consoleRenderer.ClearScreen();
         }
 
         private void EndGame()
