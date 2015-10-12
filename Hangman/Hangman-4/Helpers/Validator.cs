@@ -9,8 +9,6 @@
         private const string NullMessage = "{0} cannot be null.";
         private const string OutOfRangeMessage = "{0} {1} is out of range {2} -- {3}";
         private const string NotLetterMessage = "{0} is not a letter.";
-
-        //TODO: Put it in game logic to maintain reusability.
         private const int HighestPossibleScore = 1000;
 
         internal static void CheckIfNull<T>(T item, string name)

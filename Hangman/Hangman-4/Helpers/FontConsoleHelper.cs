@@ -1,10 +1,7 @@
 ﻿namespace HangMan.Helpers
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
-    using System.Linq;
-    using System.Text;
 
     public class FontConsoleHelper
     {
@@ -26,10 +23,10 @@
                 for (int j = 0; j < this.symbolHeight; j++)
                 {
                     Console.SetCursorPosition(left + totalLength, top + j);
-                    Console.Write(this.fontArray[(text[i] - 32) * this.symbolHeight + j]);
+                    Console.Write(this.fontArray[((text[i] - 32) * this.symbolHeight) + j]);
                 }
 
-                totalLength += this.fontArray[(text[i] - 32) * this.symbolHeight + this.symbolHeight].Length;
+                totalLength += this.fontArray[((text[i] - 32) * this.symbolHeight) + this.symbolHeight].Length;
             }
         }
         

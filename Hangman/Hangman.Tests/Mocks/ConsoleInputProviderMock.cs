@@ -12,6 +12,7 @@
              {
                  return this.command;
              }
+
              set 
              {
                  this.command = value;

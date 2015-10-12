@@ -1,14 +1,10 @@
 ﻿namespace Hangman.Tests
 {
     using System;
-    using System.IO;
+    using HangMan.GameObjects;
     using HangMan.Interfaces;
-    using HangMan.Renderers;
     using NUnit.Framework;
     using Telerik.JustMock;
-    using Hangman.Tests.Mocks;
-    using System.Collections.Generic;
-    using HangMan.GameObjects;
 
     [TestFixture]
     public class GuessedUnitTests

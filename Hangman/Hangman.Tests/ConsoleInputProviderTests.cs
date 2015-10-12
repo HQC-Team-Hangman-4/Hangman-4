@@ -1,14 +1,10 @@
 ﻿namespace Hangman.Tests
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using NUnit.Framework;
-    using HangMan.InputProviders;
-    using Hangman.Tests.Mocks;
     using System.IO;
+    using Hangman.Tests.Mocks;
+    using HangMan.InputProviders;
+    using NUnit.Framework;
 
     [TestFixture]
     public class ConsoleInputProviderTests
@@ -18,8 +14,8 @@
         [TestFixtureSetUp]
         public void SetUpConsoleWrite()
         {
-            textReader = File.OpenText("./consolereadtests.txt");
-            Console.SetIn(textReader);
+            this.textReader = File.OpenText("./consolereadtests.txt");
+            Console.SetIn(this.textReader);
         }
 
         [TestCase]

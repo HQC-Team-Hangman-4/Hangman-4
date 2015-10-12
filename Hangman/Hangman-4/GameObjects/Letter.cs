@@ -44,7 +44,6 @@
             }
         }
 
-        //Need to compare Letter, becauce GameInfo use HashSet
         public override bool Equals(object obj)
         {
             if (obj == null || !(obj is ILetter))

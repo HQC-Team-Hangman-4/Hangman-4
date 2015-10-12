@@ -56,7 +56,7 @@
             Console.ForegroundColor = FontColor;
 
             string secretWord = word.GetBody().ToUpper();
-            wordsFont.Print(secretWord, CenterWidth - secretWord.Length * 5 / 2, CenterHeight - 10);
+            wordsFont.Print(secretWord, CenterWidth - (secretWord.Length * 5 / 2), CenterHeight - 10);
 
             ClearCommand();
         }
@@ -160,7 +160,7 @@
             Console.ForegroundColor = FontColor;
             Console.Clear();
 
-            Console.SetCursorPosition(CenterWidth - message.Length / 2, CenterHeight / 2 + 10);
+            Console.SetCursorPosition(CenterWidth - (message.Length / 2), (CenterHeight / 2) + 10);
             Console.Write(message);
 
             Console.ForegroundColor = BackgroundColor;
@@ -172,7 +172,7 @@
 
             Console.ForegroundColor = FontColor;
 
-            Console.SetCursorPosition(CenterWidth - message.Length / 2, CenterHeight / 2 + 10);
+            Console.SetCursorPosition(CenterWidth - (message.Length / 2), (CenterHeight / 2) + 10);
             Console.Write(message);
 
             ClearCommand();
@@ -180,7 +180,7 @@
             Console.ForegroundColor = BackgroundColor;
 
             System.Threading.Thread.Sleep(1000);
-            Console.SetCursorPosition(CenterWidth - message.Length / 2, CenterHeight / 2 + 10);
+            Console.SetCursorPosition(CenterWidth - (message.Length / 2), (CenterHeight / 2) + 10);
             Console.Write(new string(' ', message.Length + 10));
             Console.SetCursorPosition(CenterWidth - 10, ConsoleHeight - 4);
         }
@@ -189,10 +189,15 @@
         {
             Console.ForegroundColor = FontColor;
 
-            Console.SetCursorPosition(CenterWidth - message.Length / 2, CenterHeight / 2 + 10);
+            Console.SetCursorPosition(CenterWidth - (message.Length / 2), (CenterHeight / 2) + 10);
             Console.Write(message);
 
             ClearCommand();
+        }
+
+        public void ClearScreen()
+        {
+            Console.Clear();
         }
 
         private static void ClearCommand()
@@ -200,11 +205,6 @@
             Console.SetCursorPosition(CenterWidth - 10, ConsoleHeight - 4);
             Console.Write(new string(' ', 30));
             Console.SetCursorPosition(CenterWidth - 10, ConsoleHeight - 4);
-        }
-
-        public void ClearScreen()
-        {
-            Console.Clear();
         }
     }
 }

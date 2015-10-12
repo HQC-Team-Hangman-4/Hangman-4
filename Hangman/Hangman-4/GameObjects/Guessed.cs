@@ -1,12 +1,8 @@
-﻿using HangMan.Helpers;
-
-namespace HangMan.GameObjects
+﻿namespace HangMan.GameObjects
 {
-    using System;
     using System.Text;
-
+    using HangMan.Helpers;
     using HangMan.Interfaces;
-
 
     public class Guessed : IRenderable
     {
@@ -21,7 +17,7 @@ namespace HangMan.GameObjects
         public string GetBody()
         {
             var strB = new StringBuilder();
-            var renderableBody = renderable.GetBody();
+            var renderableBody = this.renderable.GetBody();
             strB.AppendLine(new string('-', renderableBody.Length + 2));
             strB.AppendLine('|' + renderableBody + '|');
             strB.AppendLine(new string('-', renderableBody.Length + 2));
@@ -30,4 +26,3 @@ namespace HangMan.GameObjects
         }
     }
 }
-

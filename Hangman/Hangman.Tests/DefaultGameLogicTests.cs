@@ -1,15 +1,9 @@
 ﻿namespace Hangman.Tests
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using NUnit.Framework;
     using HangMan.GameLogic;
     using HangMan.GameObjects;
     using HangMan.Helpers;
-    using HangMan.Interfaces;
+    using NUnit.Framework;
 
     [TestFixture]
     public class DefaultGameLogicTests

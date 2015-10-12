@@ -1,13 +1,13 @@
 ﻿namespace Hangman.Tests
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
+    using Hangman.Tests.Mocks;
     using HangMan.Interfaces;
     using HangMan.Renderers;
     using NUnit.Framework;
     using Telerik.JustMock;
-    using Hangman.Tests.Mocks;
-    using System.Collections.Generic;
 
     [TestFixture]
     public class ConsoleRendererTests : ConsoleRendererTestsSetup
@@ -25,7 +25,7 @@
         {
             var consoleRenderer = new ConsoleRenderer();
             consoleRenderer.PrintInitialScreen();
-            this.textWriter.Close();
+            this.TextWriter.Close();
 
             string expected = "Welcome to Hangman" + Environment.NewLine + string.Format("Use 'top' to view the top scoreboard," +
             "'restart' to start a new game, \n'help' to cheat and 'exit' to quit the game.") + Environment.NewLine;
@@ -42,7 +42,7 @@
             var consoleRenderer = new ConsoleRenderer();
             Mock.Arrange(() => wordMock.GetBody()).DoNothing();
             consoleRenderer.PrintWord(wordMock);
-            textWriter.Close();
+            TextWriter.Close();
 
             string expected = Environment.NewLine + "The secret word is: " + Environment.NewLine + Environment.NewLine;
 
@@ -56,7 +56,7 @@
         {
             var consoleRenderer = new ConsoleRenderer();
             consoleRenderer.PrintEndScreen();
-            this.textWriter.Close();
+            this.TextWriter.Close();
 
             string expected = "Enter your name: ";
 
@@ -73,7 +73,7 @@
             var consoleRenderer = new ConsoleRenderer();
             Mock.Arrange(() => playerMock.GetBody()).DoNothing();
             consoleRenderer.RenderScoreboard(scoreBoardInfoMock);
-            this.textWriter.Close();
+            this.TextWriter.Close();
 
             string expected = new string('-', 40) + Environment.NewLine + "High Score - sorted by number of mistakes" + Environment.NewLine + new string('-', 40) + Environment.NewLine;
 
@@ -90,7 +90,7 @@
             var consoleRenderer = new ConsoleRenderer();
             Mock.Arrange(() => letterMock.GetBody()).DoNothing();
             consoleRenderer.PrintUsedLetters(usedLettersMock);
-            this.textWriter.Close();
+            this.TextWriter.Close();
 
             string expected = "Used Letters --> " + Environment.NewLine;
             string actual = File.ReadAllText("./consolewritertests.txt");
@@ -103,7 +103,7 @@
         {
             var consoleRenderer = new ConsoleRenderer();
             consoleRenderer.PrintMistakes(5);
-            textWriter.Close();
+            TextWriter.Close();
 
             string expected = "Mistakes: " + 5 + Environment.NewLine;
 
@@ -117,7 +117,7 @@
         {
             var consoleRenderer = new ConsoleRenderer();
             consoleRenderer.PrintEndScreenIfPlayerCheated("cheater");
-            textWriter.Close();
+            TextWriter.Close();
 
             string expected = "cheater" + Environment.NewLine;
 
@@ -131,7 +131,7 @@
         {
             var consoleRenderer = new ConsoleRenderer();
             consoleRenderer.InvalidCommand();
-            textWriter.Close();
+            TextWriter.Close();
 
             string expected = "Invalid command!" + Environment.NewLine;
 
@@ -145,7 +145,7 @@
         {
             var consoleRenderer = new ConsoleRenderer();
             consoleRenderer.PrintMessage("any message");
-            textWriter.Close();
+            TextWriter.Close();
 
             string expected = "any message" + Environment.NewLine;
 
@@ -153,17 +153,5 @@
 
             Assert.AreEqual(expected, actual);
         }
-
-        //[TestCase]
-        //public void ClearScreenShouldReturnEmptyString()
-        //{
-        //    var consoleRenderer = new ConsoleRenderer();
-        //    consoleRenderer.ClearScreen();
-        //    textWriter.Close();
-
-        //    string actual = File.ReadAllText("./consolewritertests.txt");
-
-        //    Assert.IsTrue(string.IsNullOrEmpty(actual));
-        //}
     }
 }

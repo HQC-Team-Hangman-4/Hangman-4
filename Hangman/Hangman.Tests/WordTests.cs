@@ -1,11 +1,11 @@
 ﻿namespace Hangman.Tests
 {
     using System;
+    using System.Collections.Generic;
     using HangMan.GameObjects;
+    using HangMan.Interfaces;
     using NUnit.Framework;
     using Telerik.JustMock;
-    using HangMan.Interfaces;
-    using System.Collections.Generic;
 
     [TestFixture]
     public class WordTests
@@ -13,7 +13,6 @@
         [TestCase]
         public void WordShouldNotBeNullOnCreation() 
         {
-
             var contentMock = Mock.Create<IEnumerable<ILetter>>();
 
             var wordMock = new Word(contentMock);

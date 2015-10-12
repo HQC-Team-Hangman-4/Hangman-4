@@ -44,7 +44,7 @@
         [TestCase]
         public void GetBodyShouldReturnString()
         {
-            Assert.That(letterPrototype.GetBody(), Is.TypeOf(typeof(string)));
+            Assert.That(this.letterPrototype.GetBody(), Is.TypeOf(typeof(string)));
         }
 
         [TestCase('a', Result = 'a')]
