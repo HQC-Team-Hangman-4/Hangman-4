@@ -57,7 +57,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DataSerializationTests.cs" />
     <Compile Include="GuessedUnitTests.cs" />
     <Compile Include="GameInfoTests.cs" />
     <Compile Include="ConsoleInputProviderTests.cs" />

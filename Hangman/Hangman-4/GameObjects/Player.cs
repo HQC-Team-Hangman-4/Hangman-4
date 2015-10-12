@@ -1,14 +1,12 @@
 ﻿namespace HangMan.GameObjects
 {
-    using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-
     using HangMan.Helpers;
     using HangMan.Interfaces;
-    using HangMan.Users;
 
+    /// <summary>
+    /// Represents a player.
+    /// </summary>
     public class Player : PlayerPrototype, IPlayer, IRenderable
     {
         private const string DefaultName = "player";
@@ -16,6 +14,9 @@
         private string name;
         private int score;
 
+        /// <summary>
+        /// Player constructor.
+        /// </summary>
         public Player()
         {
             this.Name = DefaultName;
@@ -23,6 +24,9 @@
             this.PlayerGameInformation = new List<GameInfo>();
         }
 
+        /// <summary>
+        /// Gets and sets player name.
+        /// </summary>
         public string Name
         {
             get 
@@ -39,6 +43,9 @@
             }
         }
 
+        /// <summary>
+        /// Gets and sets player score.
+        /// </summary>
         public int Score
         {
             get 
@@ -53,13 +60,26 @@
             }
         }
 
+        /// <summary>
+        /// Gets and sets player game information.
+        /// </summary>
         public List<GameInfo> PlayerGameInformation { get; set; }
 
+        /// <summary>
+        /// Returns string representation of player.
+        /// </summary>
+        /// <returns>String.</returns>
         public string GetBody()
         {
-            return string.Format("{0} --> {1}", this.Name.PadLeft(20, ' '), this.Score);
+            string playerBody = string.Format("{0} --> {1}", this.Name.PadLeft(20, ' '), this.Score);
+
+            return playerBody;
         }
 
+        /// <summary>
+        /// Clones the player.
+        /// </summary>
+        /// <returns>IPlayer object.</returns>
         public override IPlayer Clone()
         {
             IPlayer otherPlayer = (IPlayer)this.MemberwiseClone();

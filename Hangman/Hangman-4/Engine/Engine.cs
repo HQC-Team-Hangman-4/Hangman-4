@@ -1,7 +1,6 @@
 ﻿namespace HangMan.Engine
 {
     using System;
-
     using HangMan.GameLogic;
     using HangMan.GameObjects;
     using HangMan.Helpers;
@@ -9,6 +8,9 @@
     using HangMan.InputProviders.Data;
     using HangMan.Interfaces;
 
+    /// <summary>
+    /// Sets up the game.
+    /// </summary>
     public class Engine
     {
         private readonly DefaultGameLogic gameLogic;
@@ -19,10 +21,15 @@
         private WordDatabase wordDataBase;
         private WordFactory wordFactory;
 
-        public Engine(IRenderer consoleRenderer, IInputProvider inputProvider)
+        /// <summary>
+        /// Constructor for the Engine class. 
+        /// </summary>
+        /// <param name="renderer">IRenderer object</param>
+        /// <param name="inputProvider">IInputProvider object.</param>
+        public Engine(IRenderer renderer, IInputProvider inputProvider)
         {
             this.inputProvider = inputProvider;
-            this.renderer = consoleRenderer;
+            this.renderer = renderer;
             this.scoreBoard = Scoreboard.Instance;
             this.wordDataBase = new WordDatabase(this.dataSerialization);
             this.wordFactory = new WordFactory(this.wordDataBase);
@@ -30,6 +37,9 @@
             this.gameLogic.Word = this.wordFactory.GetWord(Categories.IT);
         }
 
+        /// <summary>
+        /// Starts the game.
+        /// </summary>
         public void StartGame()
         {
             this.renderer.PrintInitialScreen();
@@ -73,6 +83,10 @@
             }
         }
 
+
+        /// <summary>
+        /// Ends the game after each guessed word.
+        /// </summary>
         private void EndCurrentWordGame()
         {
             this.renderer.PrintWord(this.gameLogic.Word);
@@ -85,6 +99,9 @@
             this.renderer.ClearScreen();
         }
 
+        /// <summary>
+        /// Ends the game and shows highscore after user types 'exit'.
+        /// </summary>
         private void EndGame()
         {
             if (!this.gameLogic.IsCheated)

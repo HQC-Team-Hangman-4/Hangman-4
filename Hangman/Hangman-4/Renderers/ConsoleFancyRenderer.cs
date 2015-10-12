@@ -7,6 +7,9 @@
     using HangMan.Helpers;
     using HangMan.Interfaces;
 
+    /// <summary>
+    /// Renders game on the console.
+    /// </summary>
     public class ConsoleFancyRenderer : IRenderer
     {
         private const int ConsoleHeight = 50;
@@ -24,6 +27,9 @@
         private static FontConsoleHelper wordsFont = new FontConsoleHelper("../../Files/calvin.txt");
         private static FontConsoleHelper smallFont = new FontConsoleHelper("../../Files/straight.txt");
 
+        /// <summary>
+        /// Prints the game initial screen.
+        /// </summary>
         public void PrintInitialScreen()
         {
             Console.CursorVisible = false;
@@ -51,6 +57,10 @@
             Console.Clear();
         }
 
+        /// <summary>
+        /// Prints the word to be guessed on the console.
+        /// </summary>
+        /// <param name="word">IRenderable word to be guessed.</param>
         public void PrintWord(IRenderable word)
         {
             Console.ForegroundColor = FontColor;
@@ -61,6 +71,10 @@
             ClearCommand();
         }
 
+        /// <summary>
+        /// Renders scoreboard on the console.
+        /// </summary>
+        /// <param name="scoreBoardInfo">Collection of renderable elements of the scoreboard.</param>
         public void RenderScoreboard(IEnumerable<IRenderable> scoreBoardInfo)
         {
             Console.ForegroundColor = FontColor;
@@ -93,6 +107,9 @@
             Console.Clear();
         }
 
+        /// <summary>
+        /// Prints the end screen where user is asked for name.
+        /// </summary>
         public void PrintEndScreen()
         {
             Console.ForegroundColor = FontColor;
@@ -116,6 +133,10 @@
             Console.SetCursorPosition(CenterWidth - 9, 21);
         }
 
+        /// <summary>
+        /// Prints the letter the user has already used.
+        /// </summary>
+        /// <param name="usedLetters">Collection of renderabla letters the user has used.</param>
         public void PrintUsedLetters(IEnumerable<IRenderable> usedLetters)
         {
             Console.ForegroundColor = FontColor;
@@ -139,6 +160,10 @@
             ClearCommand();
         }
 
+        /// <summary>
+        /// Prints the number of mistakes the user has made.
+        /// </summary>
+        /// <param name="numberOfMistakes">Integer number of mistakes.</param>
         public void PrintMistakes(int numberOfMistakes)
         {
             Console.ForegroundColor = FontColor;
@@ -155,6 +180,10 @@
             ClearCommand();
         }
 
+        /// <summary>
+        /// Prints the end screen if player has cheated.
+        /// </summary>
+        /// <param name="message">String message for player.</param>
         public void PrintEndScreenIfPlayerCheated(string message)
         {
             Console.ForegroundColor = FontColor;
@@ -166,6 +195,9 @@
             Console.ForegroundColor = BackgroundColor;
         }
 
+        /// <summary>
+        /// Prints an invalid command message for the player.
+        /// </summary>
         public void InvalidCommand()
         {
             string message = "Invalid command!";
@@ -185,6 +217,10 @@
             Console.SetCursorPosition(CenterWidth - 10, ConsoleHeight - 4);
         }
 
+        /// <summary>
+        /// Prints a message for the player.
+        /// </summary>
+        /// <param name="message">String message to printed.</param>
         public void PrintMessage(string message)
         {
             Console.ForegroundColor = FontColor;
@@ -195,6 +231,9 @@
             ClearCommand();
         }
 
+        /// <summary>
+        /// Clears the entire screen of the console.
+        /// </summary>
         public void ClearScreen()
         {
             Console.Clear();

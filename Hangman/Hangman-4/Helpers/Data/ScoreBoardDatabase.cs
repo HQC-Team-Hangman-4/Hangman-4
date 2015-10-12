@@ -6,15 +6,26 @@
     using GameObjects;
     using HangMan.Interfaces;
     
+    /// <summary>
+    /// Defines information and functionality for the scoreboard database.
+    /// </summary>
     public class ScoreBoardDatabase : Database
     {
         private Player playerPrototype = new Player();
 
+        /// <summary>
+        /// Constructor for ScoreBoardDatabase.
+        /// </summary>
+        /// <param name="dataSerialization">IDataSerialization object.</param>
         public ScoreBoardDatabase(IDataSerialization dataSerialization)
             : base(dataSerialization)
         {
         }
         
+        /// <summary>
+        /// Reads the scoreboard into a collection of players.
+        /// </summary>
+        /// <returns>Collection of players.</returns>
         public ICollection<IPlayer> ReadScoreboard()
         {
             IList<IPlayer> result = new List<IPlayer>();
@@ -34,6 +45,10 @@
             return result;
         }
         
+        /// <summary>
+        /// Writes a player to the scoreboard database.
+        /// </summary>
+        /// <param name="player">PLayer to be written.</param>
         public void WriteToScoreBoard(IPlayer player)
         {
             ICollection<IPlayer> currentScoreBoard = new HashSet<IPlayer>();

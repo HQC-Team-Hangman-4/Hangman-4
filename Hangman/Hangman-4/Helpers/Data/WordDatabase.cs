@@ -4,15 +4,27 @@
     using System.Linq;
     using HangMan.Interfaces;
 
+    /// <summary>
+    /// Defines information and functionality for the word database.
+    /// </summary>
     public class WordDatabase : Database, IWordDatabase
     {
         private Random random = new Random();
 
+        /// <summary>
+        /// WordDatabase constructor.
+        /// </summary>
+        /// <param name="dataSerialization">IDataSerialization object.</param>
         public WordDatabase(IDataSerialization dataSerialization)
             : base(dataSerialization)
         {
         }
 
+        /// <summary>
+        /// Gets a random word by a category.
+        /// </summary>
+        /// <param name="category">Category of words.</param>
+        /// <returns>String representation of word.</returns>
         public string GetRandomWordByCategory(Categories category)
         {
             var allWords = this.DataSerialization.ReadFromFile(FileNames.words)

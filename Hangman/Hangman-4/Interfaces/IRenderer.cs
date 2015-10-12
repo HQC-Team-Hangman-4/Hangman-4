@@ -2,6 +2,9 @@
 {
     using System.Collections.Generic;
 
+    /// <summary>
+    /// Provides a common interface for renderes.
+    /// </summary>
     public interface IRenderer
     {
         void PrintInitialScreen();

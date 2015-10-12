@@ -7,15 +7,25 @@
     using HangMan.Helpers;
     using HangMan.Interfaces;
 
+    /// <summary>
+    /// Defines word information and functionality.
+    /// </summary>
     public class Word : IWord, IRenderable, IEnumerable<ILetter>
     {
         private IEnumerable<ILetter> content;
 
+        /// <summary>
+        /// Word constructor.
+        /// </summary>
+        /// <param name="content">IEnumerable<ILetter> collection.</param>
         public Word(IEnumerable<ILetter> content)
         {
             this.Content = new List<ILetter>(content);
         }
 
+        /// <summary>
+        /// Gets the content of a word.
+        /// </summary>
         public IEnumerable<ILetter> Content
         {
             get
@@ -31,6 +41,9 @@
             }
         }
 
+        /// <summary>
+        /// Gets whether a word is revealed or not.
+        /// </summary>
         public bool IsRevealed
         {
             get
@@ -39,6 +52,10 @@
             }
         }
 
+        /// <summary>
+        /// Gives a string representation of a word.
+        /// </summary>
+        /// <returns></returns>
         public string GetBody()
         {
             StringBuilder wordContent = new StringBuilder();
@@ -58,6 +75,10 @@
             return wordContent.ToString();
         }
 
+        /// <summary>
+        /// Allows words to be looped through.
+        /// </summary>
+        /// <returns>IEnumerator<ILetter> collection.</returns>
         public IEnumerator<ILetter> GetEnumerator()
         {
             foreach (var letter in this.Content)

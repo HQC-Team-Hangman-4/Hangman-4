@@ -5,11 +5,17 @@
     using HangMan.Helpers;
     using HangMan.Interfaces;
 
+    /// <summary>
+    /// Default gameplay logic.
+    /// </summary>
     public class DefaultGameLogic
     {
         private Letter letterPrototype = new Letter();
         private Player playerPrototype = new Player();
 
+        /// <summary>
+        /// Constructor for default gameplay. 
+        /// </summary>
         public DefaultGameLogic()
         {
             this.CurrentPlayerInfo = new GameInfo();
@@ -18,18 +24,41 @@
             this.IsCheated = false;
         }
 
+        /// <summary>
+        /// Gets the game state.
+        /// </summary>
         public GameState GameState { get; private set; }
 
+        /// <summary>
+        /// Gets and sets the current play info.
+        /// </summary>
         public GameInfo CurrentPlayerInfo { get; set; }
 
+        /// <summary>
+        /// Gets and sets the player.
+        /// </summary>
         public IPlayer Player { get; set; }
 
+        /// <summary>
+        /// Gets and sets the current word.
+        /// </summary>
         public IWord Word { get; set; }
 
+        /// <summary>
+        /// Gets and sets whether player cheated.
+        /// </summary>
         public bool IsCheated { get; set; }
 
+        /// <summary>
+        /// Gets and sets the letters user used.
+        /// </summary>
         public IEnumerable<ILetter> UsedLetters { get; set; }
 
+        /// <summary>
+        /// Counts the number of times a letter is guessed.
+        /// </summary>
+        /// <param name="letter">Letter to be guessed.</param>
+        /// <returns>Integer value.</returns>
         public int GuessLetter(ILetter letter)
         {
             int guessedLetter = 0;
@@ -45,6 +74,11 @@
             return guessedLetter;
         }
 
+        /// <summary>
+        /// Sets the state of the letter if it is guessed or not.
+        /// </summary>
+        /// <param name="letter">Letter to be guessed.</param>
+        /// <returns>Boolean is letter guessed.</returns>
         public bool IsLetterGuessed(ILetter letter)
         {
              int guessed = this.GuessLetter(letter);
@@ -61,7 +95,11 @@
             
             return false;
         }
-            
+
+        /// <summary>
+        /// Parses a command and changes the game state accordingly.
+        /// </summary>
+        /// <param name="command">String command to be parsed.</param>
         public void ParseCommand(string command)
         {
             if (command.Length == 1)
@@ -88,6 +126,10 @@
             }
         }
 
+        /// <summary>
+        /// Returns tru if word is revealed, falsre otherwise.
+        /// </summary>
+        /// <returns>Boolean whether the word is revealed.</returns>
         public bool IsWordRevealed()
         {
             if (this.Word.IsRevealed)
@@ -98,6 +140,9 @@
             return false;
         }
 
+        /// <summary>
+        /// Reveals one letter.
+        /// </summary>
         internal void Help()
         {
             foreach (var letter in this.Word.Content)
@@ -111,10 +156,17 @@
             }
         }
 
+        /// <summary>
+        /// Restarts the game.
+        /// </summary>
         internal void Restart()
         {
         }
 
+        /// <summary>
+        /// Sets te game state according to a command.
+        /// </summary>
+        /// <param name="command">String command that determines state to be set.</param>
         private void SetGameState(string command)
         {
             switch (command)
@@ -164,6 +216,11 @@
             }
         }
 
+        /// <summary>
+        /// Counts the number of letters still not guessed. 
+        /// </summary>
+        /// <param name="word">IWord word object.</param>
+        /// <returns></returns>
         private int LettersLeft(IWord word)
         {
             int countLeftLetters = 0;
