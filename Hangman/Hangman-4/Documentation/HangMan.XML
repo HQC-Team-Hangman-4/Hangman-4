@@ -1,0 +1,673 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HangMan</name>
+    </assembly>
+    <members>
+        <member name="T:HangMan.Engine.Engine">
+            <summary>
+            Sets up the game.
+            </summary>
+        </member>
+        <member name="M:HangMan.Engine.Engine.#ctor(HangMan.Interfaces.IRenderer,HangMan.Interfaces.IInputProvider)">
+            <summary>
+            Constructor for the Engine class. 
+            </summary>
+            <param name="renderer">IRenderer object</param>
+            <param name="inputProvider">IInputProvider object.</param>
+        </member>
+        <member name="M:HangMan.Engine.Engine.StartGame">
+            <summary>
+            Starts the game.
+            </summary>
+        </member>
+        <member name="M:HangMan.Engine.Engine.EndCurrentWordGame">
+            <summary>
+            Ends the game after each guessed word.
+            </summary>
+        </member>
+        <member name="M:HangMan.Engine.Engine.EndGame">
+            <summary>
+            Ends the game and shows highscore after user types 'exit'.
+            </summary>
+        </member>
+        <member name="T:HangMan.Engine.HangmanFacade">
+            <summary>
+            A facade for game setup.
+            </summary>
+        </member>
+        <member name="M:HangMan.Engine.HangmanFacade.Start">
+            <summary>
+            Start method which hides game setup.
+            </summary>
+        </member>
+        <member name="T:HangMan.GameLogic.DefaultGameLogic">
+            <summary>
+            Default gameplay logic.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameLogic.DefaultGameLogic.#ctor">
+            <summary>
+            Constructor for default gameplay. 
+            </summary>
+        </member>
+        <member name="M:HangMan.GameLogic.DefaultGameLogic.GuessLetter(HangMan.Interfaces.ILetter)">
+            <summary>
+            Counts the number of times a letter is guessed.
+            </summary>
+            <param name="letter">Letter to be guessed.</param>
+            <returns>Integer value.</returns>
+        </member>
+        <member name="M:HangMan.GameLogic.DefaultGameLogic.IsLetterGuessed(HangMan.Interfaces.ILetter)">
+            <summary>
+            Sets the state of the letter if it is guessed or not.
+            </summary>
+            <param name="letter">Letter to be guessed.</param>
+            <returns>Boolean is letter guessed.</returns>
+        </member>
+        <member name="M:HangMan.GameLogic.DefaultGameLogic.ParseCommand(System.String)">
+            <summary>
+            Parses a command and changes the game state accordingly.
+            </summary>
+            <param name="command">String command to be parsed.</param>
+        </member>
+        <member name="M:HangMan.GameLogic.DefaultGameLogic.IsWordRevealed">
+            <summary>
+            Returns tru if word is revealed, falsre otherwise.
+            </summary>
+            <returns>Boolean whether the word is revealed.</returns>
+        </member>
+        <member name="M:HangMan.GameLogic.DefaultGameLogic.Help">
+            <summary>
+            Reveals one letter.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameLogic.DefaultGameLogic.Restart">
+            <summary>
+            Restarts the game.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameLogic.DefaultGameLogic.SetGameState(System.String)">
+            <summary>
+            Sets te game state according to a command.
+            </summary>
+            <param name="command">String command that determines state to be set.</param>
+        </member>
+        <member name="M:HangMan.GameLogic.DefaultGameLogic.LettersLeft(HangMan.Interfaces.IWord)">
+            <summary>
+            Counts the number of letters still not guessed. 
+            </summary>
+            <param name="word">IWord word object.</param>
+            <returns></returns>
+        </member>
+        <member name="P:HangMan.GameLogic.DefaultGameLogic.GameState">
+            <summary>
+            Gets the game state.
+            </summary>
+        </member>
+        <member name="P:HangMan.GameLogic.DefaultGameLogic.CurrentPlayerInfo">
+            <summary>
+            Gets and sets the current play info.
+            </summary>
+        </member>
+        <member name="P:HangMan.GameLogic.DefaultGameLogic.Player">
+            <summary>
+            Gets and sets the player.
+            </summary>
+        </member>
+        <member name="P:HangMan.GameLogic.DefaultGameLogic.Word">
+            <summary>
+            Gets and sets the current word.
+            </summary>
+        </member>
+        <member name="P:HangMan.GameLogic.DefaultGameLogic.IsCheated">
+            <summary>
+            Gets and sets whether player cheated.
+            </summary>
+        </member>
+        <member name="P:HangMan.GameLogic.DefaultGameLogic.UsedLetters">
+            <summary>
+            Gets and sets the letters user used.
+            </summary>
+        </member>
+        <member name="T:HangMan.GameObjects.GameInfo">
+            <summary>
+            Holds info for the game.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameObjects.GameInfo.#ctor">
+            <summary>
+            GameInfo constructor.
+            </summary>
+        </member>
+        <member name="P:HangMan.GameObjects.GameInfo.Mistakes">
+            <summary>
+            Gets and sets the number of mistakes the player has made.
+            </summary>
+        </member>
+        <member name="P:HangMan.GameObjects.GameInfo.UsedLetters">
+            <summary>
+            Gets and sets a collection of the letters the player has used already.
+            </summary>
+        </member>
+        <member name="T:HangMan.GameObjects.Guessed">
+            <summary>
+            Extends IRenderable functionality. 
+            </summary>
+        </member>
+        <member name="T:HangMan.Interfaces.IRenderable">
+            <summary>
+            Provides a common interface for renderable objects.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameObjects.Guessed.#ctor(HangMan.Interfaces.IRenderable)">
+            <summary>
+            Guessed constructor.
+            </summary>
+            <param name="renderable">IRenderable object.</param>
+        </member>
+        <member name="M:HangMan.GameObjects.Guessed.GetBody">
+            <summary>
+            Gets the body of a renderable object.
+            </summary>
+            <returns>String representation.</returns>
+        </member>
+        <member name="T:HangMan.GameObjects.Letter">
+            <summary>
+            Holds information for a letter.
+            </summary>
+        </member>
+        <member name="T:HangMan.GameObjects.LetterPrototype">
+            <summary>
+            Defines common functionality for all letter.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameObjects.LetterPrototype.Clone">
+            <summary>
+            Cloning is common functionality for all letters.
+            </summary>
+            <returns>ILetter object.</returns>
+        </member>
+        <member name="T:HangMan.Interfaces.ILetter">
+            <summary>
+            Provides a common interface for letters.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameObjects.Letter.#ctor">
+            <summary>
+            Letter constructor.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameObjects.Letter.Equals(System.Object)">
+            <summary>
+            Determines if a letter is equal to another.
+            </summary>
+            <param name="obj">Another letter.</param>
+            <returns>Boolean.</returns>
+        </member>
+        <member name="M:HangMan.GameObjects.Letter.GetHashCode">
+            <summary>
+            Gets the hascode of a letter.
+            </summary>
+            <returns>Integer value.</returns>
+        </member>
+        <member name="M:HangMan.GameObjects.Letter.GetBody">
+            <summary>
+            Gets the body of a letter.
+            </summary>
+            <returns>String representation.</returns>
+        </member>
+        <member name="M:HangMan.GameObjects.Letter.Clone">
+            <summary>
+            Clones the letter.
+            </summary>
+            <returns>ILetter object.</returns>
+        </member>
+        <member name="P:HangMan.GameObjects.Letter.Value">
+            <summary>
+            Gets and sets the value of a letter.
+            </summary>
+        </member>
+        <member name="P:HangMan.GameObjects.Letter.IsFound">
+            <summary>
+            Gets and sets whether a letter is found.
+            </summary>
+        </member>
+        <member name="T:HangMan.GameObjects.Player">
+            <summary>
+            Represents a player.
+            </summary>
+        </member>
+        <member name="T:HangMan.GameObjects.PlayerPrototype">
+            <summary>
+            Defines common functionality for all players.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameObjects.PlayerPrototype.Clone">
+            <summary>
+            Cloning is common functionality for all players.
+            </summary>
+            <returns>IPlayer object.</returns>
+        </member>
+        <member name="T:HangMan.Interfaces.IPlayer">
+            <summary>
+            Provides a common interface for players.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameObjects.Player.#ctor">
+            <summary>
+            Player constructor.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameObjects.Player.GetBody">
+            <summary>
+            Returns string representation of player.
+            </summary>
+            <returns>String.</returns>
+        </member>
+        <member name="M:HangMan.GameObjects.Player.Clone">
+            <summary>
+            Clones the player.
+            </summary>
+            <returns>IPlayer object.</returns>
+        </member>
+        <member name="P:HangMan.GameObjects.Player.Name">
+            <summary>
+            Gets and sets player name.
+            </summary>
+        </member>
+        <member name="P:HangMan.GameObjects.Player.Score">
+            <summary>
+            Gets and sets player score.
+            </summary>
+        </member>
+        <member name="P:HangMan.GameObjects.Player.PlayerGameInformation">
+            <summary>
+            Gets and sets player game information.
+            </summary>
+        </member>
+        <member name="T:HangMan.GameObjects.Scoreboard">
+            <summary>
+            Defines scoreboard information and functionality.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameObjects.Scoreboard.AddPlayerScore(HangMan.Interfaces.IPlayer)">
+            <summary>
+            Adds a player to the scoreboard.
+            </summary>
+            <param name="player">IPlayer object.</param>
+        </member>
+        <member name="M:HangMan.GameObjects.Scoreboard.ViewScoreboard">
+            <summary>
+            Reads and returns the scoreboard.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HangMan.GameObjects.Scoreboard.Instance">
+            <summary>
+            Returns an instance of Scoreboard.
+            </summary>
+        </member>
+        <member name="T:HangMan.GameObjects.Word">
+            <summary>
+            Defines word information and functionality.
+            </summary>
+        </member>
+        <member name="T:HangMan.Interfaces.IWord">
+            <summary>
+            Provides a commmon interface for word objects.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:HangMan.GameObjects.Word.#ctor(System.Collections.Generic.IEnumerable{HangMan.Interfaces.ILetter})" -->
+        <member name="M:HangMan.GameObjects.Word.GetBody">
+            <summary>
+            Gives a string representation of a word.
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:HangMan.GameObjects.Word.GetEnumerator" -->
+        <member name="P:HangMan.GameObjects.Word.Content">
+            <summary>
+            Gets the content of a word.
+            </summary>
+        </member>
+        <member name="P:HangMan.GameObjects.Word.IsRevealed">
+            <summary>
+            Gets whether a word is revealed or not.
+            </summary>
+        </member>
+        <member name="T:HangMan.GameObjects.WordFactory">
+            <summary>
+            Creates words.
+            </summary>
+        </member>
+        <member name="M:HangMan.GameObjects.WordFactory.#ctor(HangMan.Interfaces.IWordDatabase)">
+            <summary>
+            WordFactory constructor.
+            </summary>
+            <param name="wordDataBase"></param>
+        </member>
+        <member name="M:HangMan.GameObjects.WordFactory.GetWord(Categories)">
+            <summary>
+            Returns a word.
+            </summary>
+            <param name="category">Category of the word.</param>
+            <returns>IWord object.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:HangMan.GameObjects.WordFactory.WordAsLetters(Categories)" -->
+        <member name="T:HangMan.EntryPoint">
+            <summary>
+            An entry point from where the game can be launched.
+            </summary>
+        </member>
+        <member name="T:HangMan.Helpers.Data.Database">
+            <summary>
+            Defines common functionalities for databases.
+            </summary>
+        </member>
+        <member name="M:HangMan.Helpers.Data.Database.#ctor(HangMan.Interfaces.IDataSerialization)">
+            <summary>
+            Database constructor.
+            </summary>
+            <param name="dataSerialization">IDataSerialization object to be turned into database.</param>
+        </member>
+        <member name="P:HangMan.Helpers.Data.Database.DataSerialization">
+            <summary>
+            Gets the serialized data.
+            </summary>
+        </member>
+        <member name="T:HangMan.Helpers.FontConsoleHelper">
+            <summary>
+            Fascilitates writing to the console with different fonts.
+            </summary>
+        </member>
+        <member name="M:HangMan.Helpers.FontConsoleHelper.#ctor(System.String)">
+            <summary>
+            FontConsoleHelper constructor.
+            </summary>
+            <param name="fontFile">File defining a font.</param>
+        </member>
+        <member name="M:HangMan.Helpers.FontConsoleHelper.Print(System.String,System.Int32,System.Int32)">
+            <summary>
+            Prints a string to the console at some position with the current font.
+            </summary>
+            <param name="text">String text to be written to console.</param>
+            <param name="left">Column index of top left corner position.</param>
+            <param name="top">Row index of top left corner position.</param>
+        </member>
+        <member name="T:HangMan.Interfaces.IWordDatabase">
+            <summary>
+            Provides a common interface for word database implementations.
+            </summary>
+        </member>
+        <member name="T:HangMan.Helpers.Data.ScoreBoardDatabase">
+            <summary>
+            Defines information and functionality for the scoreboard database.
+            </summary>
+        </member>
+        <member name="M:HangMan.Helpers.Data.ScoreBoardDatabase.#ctor(HangMan.Interfaces.IDataSerialization)">
+            <summary>
+            Constructor for ScoreBoardDatabase.
+            </summary>
+            <param name="dataSerialization">IDataSerialization object.</param>
+        </member>
+        <member name="M:HangMan.Helpers.Data.ScoreBoardDatabase.ReadScoreboard">
+            <summary>
+            Reads the scoreboard into a collection of players.
+            </summary>
+            <returns>Collection of players.</returns>
+        </member>
+        <member name="M:HangMan.Helpers.Data.ScoreBoardDatabase.WriteToScoreBoard(HangMan.Interfaces.IPlayer)">
+            <summary>
+            Writes a player to the scoreboard database.
+            </summary>
+            <param name="player">PLayer to be written.</param>
+        </member>
+        <member name="T:HangMan.Helpers.Data.WordDatabase">
+            <summary>
+            Defines information and functionality for the word database.
+            </summary>
+        </member>
+        <member name="M:HangMan.Helpers.Data.WordDatabase.#ctor(HangMan.Interfaces.IDataSerialization)">
+            <summary>
+            WordDatabase constructor.
+            </summary>
+            <param name="dataSerialization">IDataSerialization object.</param>
+        </member>
+        <member name="M:HangMan.Helpers.Data.WordDatabase.GetRandomWordByCategory(Categories)">
+            <summary>
+            Gets a random word by a category.
+            </summary>
+            <param name="category">Category of words.</param>
+            <returns>String representation of word.</returns>
+        </member>
+        <member name="T:HangMan.Helpers.Validator">
+            <summary>
+            Holds methods for validation of data.
+            </summary>
+        </member>
+        <member name="M:HangMan.Helpers.Validator.CheckIfNull``1(``0,System.String)">
+            <summary>
+            Checks if an item is null.
+            </summary>
+            <typeparam name="T">Type of item.</typeparam>
+            <param name="item">Item.</param>
+            <param name="name">Name of the parameter.</param>
+        </member>
+        <member name="M:HangMan.Helpers.Validator.CheckIfInRangeExcluded(System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Checks if a number is in an open interval of values.
+            </summary>
+            <param name="number">Integer number.</param>
+            <param name="name">Name of parameter.</param>
+            <param name="min">Min value of interval.</param>
+            <param name="max">Max value of interval.</param>
+        </member>
+        <member name="M:HangMan.Helpers.Validator.CheckIfInRangeIncluded(System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Checks if a number is in a closed interval of values.
+            </summary>
+            <param name="number">Integer number.</param>
+            <param name="name">Name of parameter.</param>
+            <param name="min">Min value of interval.</param>
+            <param name="max">Max value of interval.</param>
+        </member>
+        <member name="M:HangMan.Helpers.Validator.CheckAllElementsInCollection``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Validates elements in collection are not null.
+            </summary>
+            <typeparam name="T">Type of elements.</typeparam>
+            <param name="collection">Collection.</param>
+            <param name="name">Name of parameter.</param>
+        </member>
+        <member name="M:HangMan.Helpers.Validator.CheckIfLetter(System.Char,System.String)">
+            <summary>
+            Check if a character is a letter.
+            </summary>
+            <param name="value">Character value.</param>
+            <param name="name">Name of parameter.</param>
+        </member>
+        <member name="M:HangMan.Helpers.Validator.CheckIfValidScore(System.Int32,System.String)">
+            <summary>
+            Checks if score is valid.
+            </summary>
+            <param name="score">Integer score.</param>
+            <param name="name">String parameter name.</param>
+        </member>
+        <member name="T:HangMan.InputProviders.ConsoleInputProvider">
+            <summary>
+            Provides input functionality through the console.
+            </summary>
+        </member>
+        <member name="T:HangMan.Interfaces.IInputProvider">
+            <summary>
+            Provides common iterface for input providers.
+            </summary>
+        </member>
+        <member name="M:HangMan.InputProviders.ConsoleInputProvider.#ctor">
+            <summary>
+            Console input provider constructor.
+            </summary>
+        </member>
+        <member name="M:HangMan.InputProviders.ConsoleInputProvider.GetInput">
+            <summary>
+            Reads a command from the console.
+            </summary>
+        </member>
+        <member name="P:HangMan.InputProviders.ConsoleInputProvider.Command">
+            <summary>
+            Gets and sets the command read from the console.
+            </summary>
+        </member>
+        <member name="T:HangMan.InputProviders.Data.DataSerialization">
+            <summary>
+            Serializes and deserializes data from the file system.
+            </summary>
+        </member>
+        <member name="T:HangMan.Interfaces.IDataSerialization">
+            <summary>
+            Provides an interface for data serializers.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:HangMan.InputProviders.Data.DataSerialization.ReadFromFile(FileNames)" -->
+        <member name="M:HangMan.InputProviders.Data.DataSerialization.WriteToFile(System.Collections.Generic.IEnumerable{HangMan.Interfaces.IPlayer},FileNames)">
+            <summary>
+            Writes data to file.
+            </summary>
+            <param name="scoreBoardPlayers">Collection of players.</param>
+            <param name="fileName">File name in the file system to write in.</param>
+        </member>
+        <member name="T:HangMan.Interfaces.IRenderer">
+            <summary>
+            Provides a common interface for all renderes.
+            </summary>
+        </member>
+        <member name="T:HangMan.Interfaces.IScoreBoard">
+            <summary>
+            Provides a common interface for different scoreboard implementations.
+            </summary>
+        </member>
+        <member name="T:HangMan.Renderers.ConsoleFancyRenderer">
+            <summary>
+            Renders game on the console.
+            </summary>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleFancyRenderer.PrintInitialScreen">
+            <summary>
+            Prints the game initial screen.
+            </summary>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleFancyRenderer.PrintWord(HangMan.Interfaces.IRenderable)">
+            <summary>
+            Prints the word to be guessed on the console.
+            </summary>
+            <param name="word">IRenderable word to be guessed.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleFancyRenderer.RenderScoreboard(System.Collections.Generic.IEnumerable{HangMan.Interfaces.IRenderable})">
+            <summary>
+            Renders scoreboard on the console.
+            </summary>
+            <param name="scoreBoardInfo">Collection of renderable elements of the scoreboard.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleFancyRenderer.PrintEndScreen">
+            <summary>
+            Prints the end screen where user is asked for name.
+            </summary>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleFancyRenderer.PrintUsedLetters(System.Collections.Generic.IEnumerable{HangMan.Interfaces.IRenderable})">
+            <summary>
+            Prints the letter the user has already used.
+            </summary>
+            <param name="usedLetters">Collection of renderabla letters the user has used.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleFancyRenderer.PrintMistakes(System.Int32)">
+            <summary>
+            Prints the number of mistakes the user has made.
+            </summary>
+            <param name="numberOfMistakes">Integer number of mistakes.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleFancyRenderer.PrintEndScreenIfPlayerCheated(System.String)">
+            <summary>
+            Prints the end screen if player has cheated.
+            </summary>
+            <param name="message">String message for player.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleFancyRenderer.InvalidCommand">
+            <summary>
+            Prints an invalid command message for the player.
+            </summary>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleFancyRenderer.PrintMessage(System.String)">
+            <summary>
+            Prints a message for the player.
+            </summary>
+            <param name="message">String message to printed.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleFancyRenderer.ClearScreen">
+            <summary>
+            Clears the entire screen of the console.
+            </summary>
+        </member>
+        <member name="T:HangMan.Renderers.ConsoleRenderer">
+            <summary>
+            Renders game on the console in a text mode.
+            </summary>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleRenderer.PrintInitialScreen">
+            <summary>
+            Prints the game initial screen.
+            </summary>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleRenderer.PrintWord(HangMan.Interfaces.IRenderable)">
+            <summary>
+            Prints the word to be guessed on the console.
+            </summary>
+            <param name="word">IRenderable word to be guessed.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleRenderer.PrintEndScreen">
+            <summary>
+            Prints the end screen where user is asked for name.
+            </summary>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleRenderer.RenderScoreboard(System.Collections.Generic.IEnumerable{HangMan.Interfaces.IRenderable})">
+            <summary>
+            Renders scoreboard on the console.
+            </summary>
+            <param name="scoreBoardInfo">Collection of renderable elements of the scoreboard.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleRenderer.PrintUsedLetters(System.Collections.Generic.IEnumerable{HangMan.Interfaces.IRenderable})">
+            <summary>
+            Prints the letter the user has already used.
+            </summary>
+            <param name="usedLetters">Collection of renderabla letters the user has used.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleRenderer.PrintMistakes(System.Int32)">
+            <summary>
+            Prints the number of mistakes the user has made.
+            </summary>
+            <param name="numberOfMistakes">Integer number of mistakes.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleRenderer.PrintEndScreenIfPlayerCheated(System.String)">
+            <summary>
+            Prints the end screen if player has cheated.
+            </summary>
+            <param name="message">String message for player.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleRenderer.InvalidCommand">
+            <summary>
+            Prints an invalid command message for the player.
+            </summary>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleRenderer.PrintMessage(System.String)">
+            <summary>
+            Prints a message for the player.
+            </summary>
+            <param name="message">String message to printed.</param>
+        </member>
+        <member name="M:HangMan.Renderers.ConsoleRenderer.ClearScreen">
+            <summary>
+            Clears the entire screen of the console.
+            </summary>
+        </member>
+    </members>
+</doc>

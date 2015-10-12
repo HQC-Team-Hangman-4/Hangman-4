@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="113bf2e4-73e3-4029-915d-1fd019fcd7a9" Title="HangMan" Url="html/a06f8cca-d6f1-3499-4814-4f5efcc56729.htm">
+    <HelpTOCNode Id="a7386f15-1681-48e4-a295-ed50ed8e91cd" Title="EntryPoint Class" Url="html/55828251-779c-ef1b-9d29-e6438791187c.htm">
+      <HelpTOCNode Title="EntryPoint Constructor " Url="html/c1cc15b7-9bb9-996a-9a28-82a2fd0615f2.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="7be919f4-442a-4903-b020-02ce1e820d8a" Title="HangMan.Engine" Url="html/c2833c08-2268-a4cd-9d0e-d6b31b63cb46.htm">
+    <HelpTOCNode Id="22c2c09c-b244-4a43-a083-c3a7dc453c19" Title="Engine Class" Url="html/20c1f704-dc9f-eebf-3297-856c33af2d1e.htm">
+      <HelpTOCNode Title="Engine Constructor " Url="html/bbca1b61-4ac1-6655-722c-68cdfc7ce854.htm" />
+      <HelpTOCNode Id="af1986d0-1d7a-49f2-9935-96c54d512576" Title="Engine Methods" Url="html/a131f232-30a6-4198-8a1d-cfcf886ee9e3.htm">
+        <HelpTOCNode Title="StartGame Method " Url="html/d783e2d7-2e15-26bf-e83c-39961db6c092.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3867b2a7-5d19-446a-84fc-0702df391d0d" Title="HangmanFacade Class" Url="html/9029ac90-c54f-a519-c782-0dd6077c2e5f.htm">
+      <HelpTOCNode Id="c0b1b550-f920-4073-ad76-393f98ea6fb3" Title="HangmanFacade Methods" Url="html/76c1ea2e-e153-1fcd-4631-97bc25b7da0a.htm">
+        <HelpTOCNode Title="Start Method " Url="html/f3f43b61-1647-d9e2-7c7a-06048b0dfb09.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="35de8d88-50da-4ce9-9f6f-8ebecef4f21f" Title="HangMan.GameLogic" Url="html/28e670a9-74cc-7862-da6a-8c0a622f52b5.htm">
+    <HelpTOCNode Id="e656c9a1-306b-4df9-9d94-4ad8eaed8b50" Title="DefaultGameLogic Class" Url="html/ace7ce3f-a14b-82da-8ca2-eb0a89a3dff7.htm">
+      <HelpTOCNode Title="DefaultGameLogic Constructor " Url="html/3d4a6882-0d59-3731-42e5-73f1ab205698.htm" />
+      <HelpTOCNode Id="a7315b4f-4cbf-44dc-96d5-e64a92c6f9c6" Title="DefaultGameLogic Methods" Url="html/6da3cac1-f71d-d871-4790-41b7c6652e62.htm">
+        <HelpTOCNode Title="GuessLetter Method " Url="html/6acef670-4f0c-9c61-8d3a-193d54145f3b.htm" />
+        <HelpTOCNode Title="IsLetterGuessed Method " Url="html/743923bc-f178-5e17-a6bc-1fbeec4b637d.htm" />
+        <HelpTOCNode Title="IsWordRevealed Method " Url="html/5879b856-b702-bdd8-5c69-d8c28a4da8bd.htm" />
+        <HelpTOCNode Title="ParseCommand Method " Url="html/abd11d8f-c368-96a5-78aa-4f78dcb69efa.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a1ab01d9-8951-492e-a201-105185f79513" Title="DefaultGameLogic Properties" Url="html/b9bf4052-59de-0b91-845b-72811d5aa528.htm">
+        <HelpTOCNode Title="CurrentPlayerInfo Property " Url="html/0b97fa79-e937-0a5f-69a4-cc8449f001a0.htm" />
+        <HelpTOCNode Title="GameState Property " Url="html/77a0ce0e-9533-5cf6-49bb-f58d4bf05e3d.htm" />
+        <HelpTOCNode Title="IsCheated Property " Url="html/16bb68ae-2ffc-cb80-1c89-785686e114c9.htm" />
+        <HelpTOCNode Title="Player Property " Url="html/54eeed46-0202-11c5-2944-fb44330c870d.htm" />
+        <HelpTOCNode Title="UsedLetters Property " Url="html/5b9de1aa-e99d-bf26-f202-6c22f7ef7651.htm" />
+        <HelpTOCNode Title="Word Property " Url="html/eb0ce5c5-be2d-77d8-4927-d1e386100027.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="f8a1d622-9e8e-4288-bef9-10b46a009b78" Title="HangMan.GameObjects" Url="html/35d3ec76-f4a6-e56a-5c05-6b5379efd941.htm">
+    <HelpTOCNode Id="35543c28-fe4d-4036-b9c0-1f581738907c" Title="GameInfo Class" Url="html/5d254b00-8433-f403-221e-defcc490785c.htm">
+      <HelpTOCNode Title="GameInfo Constructor " Url="html/e33aea7a-d032-6250-4b5e-823009360045.htm" />
+      <HelpTOCNode Id="4eac4911-27a6-4213-966c-4fb81aee564e" Title="GameInfo Properties" Url="html/1397c55e-1fa0-b3ba-d676-cd94d7065826.htm">
+        <HelpTOCNode Title="Mistakes Property " Url="html/cee30c66-5e4f-e564-fec2-0013001d85aa.htm" />
+        <HelpTOCNode Title="UsedLetters Property " Url="html/5eccf659-35a7-dacf-e9fe-4f999598a566.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ea4226d3-8439-45a5-851b-326e73babcda" Title="Guessed Class" Url="html/38d8c226-62ac-a88c-79d0-206433728ec4.htm">
+      <HelpTOCNode Title="Guessed Constructor " Url="html/3ebede60-0728-c67f-ba9e-369ee365b613.htm" />
+      <HelpTOCNode Id="987c3c8b-8284-4608-85c8-d96adb0b22a3" Title="Guessed Methods" Url="html/bd3dd943-98f2-691e-6aad-7f7e3bff8662.htm">
+        <HelpTOCNode Title="GetBody Method " Url="html/cc53d1fa-e960-c0c6-d603-26dde3239b0b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="69b37c76-c1a0-4035-b596-a67184e9a4ee" Title="Letter Class" Url="html/a4e378cb-6029-5e65-2997-1da56c0051ef.htm">
+      <HelpTOCNode Title="Letter Constructor " Url="html/d0a42aec-7d5a-c466-20ca-da9f3d3c512e.htm" />
+      <HelpTOCNode Id="4b504068-b4ed-4cb4-8294-bc6435892382" Title="Letter Methods" Url="html/7905a613-f7cf-c874-e5c5-74ec0a24cf7a.htm">
+        <HelpTOCNode Title="Clone Method " Url="html/e3ae0ef5-0b91-bd3f-28cb-8bd1a40881b2.htm" />
+        <HelpTOCNode Title="Equals Method " Url="html/0c269251-fc26-f9fc-b856-37ef8fe8693d.htm" />
+        <HelpTOCNode Title="GetBody Method " Url="html/12f5697c-ce64-dfc3-59ab-a492a05cc96b.htm" />
+        <HelpTOCNode Title="GetHashCode Method " Url="html/70905573-5809-046c-0b33-44571b5f242f.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="57ef750f-bba3-4cf1-97a6-f86b74302e17" Title="Letter Properties" Url="html/74eb9466-d739-6ce1-4dcc-e0f2dd9dab0e.htm">
+        <HelpTOCNode Title="IsFound Property " Url="html/e40cbfdb-1502-9a8e-f6f6-dc4578742cc5.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/d8519bcb-069d-13b5-1b8d-c39df084b1fa.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="661b7ae9-4140-476c-9f8e-5a59c9eaeba7" Title="LetterPrototype Class" Url="html/0b68ede8-17ce-789f-e2cb-27496211440f.htm">
+      <HelpTOCNode Title="LetterPrototype Constructor " Url="html/c6ea8b6d-6b47-8734-0ece-ea62c3cf7947.htm" />
+      <HelpTOCNode Id="2d6ac536-44d7-42f2-9ec3-abce1f528abf" Title="LetterPrototype Methods" Url="html/a0f74b8e-0e12-c341-df23-e8e0c32e9d8c.htm">
+        <HelpTOCNode Title="Clone Method " Url="html/acba9b5f-a885-038c-96bb-eff6c67156cf.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e0ad5550-de52-4c98-931c-28850bf73064" Title="Player Class" Url="html/ba874f3f-cde5-f5c4-edcf-d5a17461e45a.htm">
+      <HelpTOCNode Title="Player Constructor " Url="html/ca1583a2-2ab5-3617-c141-106fb11fc93c.htm" />
+      <HelpTOCNode Id="7d0878d9-2dac-4857-be24-94e9c4eb4aa4" Title="Player Methods" Url="html/23ce23ef-f249-7079-b562-1e22a0a8e6f9.htm">
+        <HelpTOCNode Title="Clone Method " Url="html/7b8442da-447e-58ff-6938-5c862b5bd525.htm" />
+        <HelpTOCNode Title="GetBody Method " Url="html/cddf34d1-7ec1-ccde-f071-6a7133b7221c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e2a46f2e-29a9-44eb-8617-4f0c925dc881" Title="Player Properties" Url="html/e2f9b650-1051-5bbb-2712-510a8292ed52.htm">
+        <HelpTOCNode Title="Name Property " Url="html/1026c157-fd1d-8d88-6fd0-2bc19febecd6.htm" />
+        <HelpTOCNode Title="PlayerGameInformation Property " Url="html/c7c16ff0-7045-5732-5418-90c20bbd4e6b.htm" />
+        <HelpTOCNode Title="Score Property " Url="html/21ff7b32-40bc-dc14-d3cc-23893c4438fc.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8aa78729-f2d1-4458-9ccf-80eb1a89d0b7" Title="PlayerPrototype Class" Url="html/17f69773-c9a2-1497-a2c3-c50171ce11b9.htm">
+      <HelpTOCNode Title="PlayerPrototype Constructor " Url="html/bec06973-2c06-ccc1-ea6d-807aa68b75be.htm" />
+      <HelpTOCNode Id="f748134a-bf1e-4cce-9040-5d27938d6464" Title="PlayerPrototype Methods" Url="html/00f45a68-faf6-1d56-5aca-be51b1e2109d.htm">
+        <HelpTOCNode Title="Clone Method " Url="html/be18b24c-84ee-c8b8-abc3-be5bb6778fd7.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="58893e3d-2842-486f-bff3-5dd470be2f19" Title="Scoreboard Class" Url="html/20005121-9f82-fefc-0fa7-fce9e9a5cead.htm">
+      <HelpTOCNode Id="84f2a6e6-61e8-41e6-8ab2-16c8abc6381a" Title="Scoreboard Methods" Url="html/483cd22e-8b7a-d536-90af-c62f4ab024b2.htm">
+        <HelpTOCNode Title="AddPlayerScore Method " Url="html/84a1ef66-56ed-ec0b-cea1-f8d585de4b93.htm" />
+        <HelpTOCNode Title="ViewScoreboard Method " Url="html/c68c75c1-1c61-9723-040e-8c04b6dc8f0f.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="708d6516-640d-4fc4-9801-9a58fdb95420" Title="Scoreboard Properties" Url="html/2624deb6-2f38-e1e3-2dbf-f414528fd3b4.htm">
+        <HelpTOCNode Title="Instance Property " Url="html/aa6a34c6-554c-6557-f1a5-271f4077d510.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e07007ac-fa2b-4f8e-b7e2-3d908797fc01" Title="Word Class" Url="html/7cebc912-4a25-c79d-69a0-4683e404701d.htm">
+      <HelpTOCNode Title="Word Constructor " Url="html/0b9dd79e-b640-e0bd-a38d-af89082b3b22.htm" />
+      <HelpTOCNode Id="623cb0ae-09e2-435d-8623-1a3380e18a71" Title="Word Methods" Url="html/3628781d-ef18-ceaf-53fc-5fb89bbb6eba.htm">
+        <HelpTOCNode Title="GetBody Method " Url="html/99346e71-ae75-3653-784b-3beb925e919d.htm" />
+        <HelpTOCNode Title="GetEnumerator Method " Url="html/c20b05ad-ea70-bee2-5205-5bdfed2ae968.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="990dff87-7bb4-48dd-a169-e7c3f3bda393" Title="Word Properties" Url="html/ad4f5732-90a9-ccdb-7249-6d85ce202ad6.htm">
+        <HelpTOCNode Title="Content Property " Url="html/e23a2ec0-4f23-1e7b-cb59-3d89cfd25970.htm" />
+        <HelpTOCNode Title="IsRevealed Property " Url="html/8a1786b7-3691-7347-6053-166a2ef79e4b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="88994100-bd9e-4a72-bf8b-d5291e3e06c3" Title="WordFactory Class" Url="html/32c05898-b520-9aa7-a19c-dc6d27036367.htm">
+      <HelpTOCNode Title="WordFactory Constructor " Url="html/66ac8248-89fa-28c1-7fa7-fae988242729.htm" />
+      <HelpTOCNode Id="109b0aea-66e0-456a-a40c-616db0511627" Title="WordFactory Methods" Url="html/4c412934-eae5-4bc3-d9a8-d9886ed4bfa9.htm">
+        <HelpTOCNode Title="GetWord Method " Url="html/02873474-b34f-5fc9-72a4-96070733c732.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="4385f3e0-5c5a-41c0-8d19-ed39c7466f24" Title="HangMan.Helpers" Url="html/ed3fa025-0ece-f221-847e-2912dc9dedb9.htm">
+    <HelpTOCNode Id="8ba8d3a9-5bef-45bb-a850-dd6e0f3c7476" Title="FontConsoleHelper Class" Url="html/ba5fe8be-2c8d-fc49-548d-a48483ce65b8.htm">
+      <HelpTOCNode Title="FontConsoleHelper Constructor " Url="html/273191e0-ca3a-9a47-45f1-e7345b91e050.htm" />
+      <HelpTOCNode Id="85eafbe1-2219-488a-80dd-7761e2f925d4" Title="FontConsoleHelper Methods" Url="html/7d513f69-6fe0-9766-f2ff-625bbc4ca2b4.htm">
+        <HelpTOCNode Title="Print Method " Url="html/f584fa7c-54ce-bdf7-8982-ba9c8c3d0529.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="GameState Enumeration" Url="html/f5b7c71d-c34f-d6eb-8a6b-7b8a33a59544.htm" />
+    <HelpTOCNode Id="2ba7a2cc-6c1b-49ec-a685-eb4740415e04" Title="Validator Class" Url="html/c9258e22-754c-0771-a695-598ba1ed2a5e.htm">
+      <HelpTOCNode Title="Validator Constructor " Url="html/b936ba23-b6c6-5ee1-33e3-41d59f83789f.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="332bfa1f-3847-4c97-a3d7-67dc0afd4eb3" Title="HangMan.Helpers.Data" Url="html/3764afa5-6106-95cb-b4d0-9868521d2380.htm">
+    <HelpTOCNode Id="3f5df90b-1e8d-42ca-bf2d-3c8ce8c2c208" Title="Database Class" Url="html/a0ff4870-0c07-4845-07aa-b4a648032bf7.htm">
+      <HelpTOCNode Id="6ff1954e-628e-47ab-bf0e-e0658ecb9191" Title="Database Properties" Url="html/3f0a7b42-c900-7e05-1e7f-cf0d788ecff8.htm">
+        <HelpTOCNode Title="DataSerialization Property " Url="html/6218bcf6-2006-c7ff-7d70-cceda3df35a7.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="28a0ecd3-8459-4cdf-8948-45837cad6f7e" Title="ScoreBoardDatabase Class" Url="html/0951bc59-bedb-3a80-98ac-6fd12d5bd7bb.htm">
+      <HelpTOCNode Title="ScoreBoardDatabase Constructor " Url="html/f90f81c9-1bb3-1a92-910f-f32630a7ee3c.htm" />
+      <HelpTOCNode Id="66cff49f-9e4e-46da-a092-0171af4bcac4" Title="ScoreBoardDatabase Methods" Url="html/13960fcb-3eae-9337-9817-92350f6880d1.htm">
+        <HelpTOCNode Title="ReadScoreboard Method " Url="html/e2dbf387-cfac-892d-dfae-44459c719db9.htm" />
+        <HelpTOCNode Title="WriteToScoreBoard Method " Url="html/49e38cf4-47eb-ec99-5a70-98789ee3ed7f.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="fd13be6c-4c6a-4d1a-ae21-a483756d9b03" Title="WordDatabase Class" Url="html/5e4fe038-e216-12bb-9251-606e2be6de6d.htm">
+      <HelpTOCNode Title="WordDatabase Constructor " Url="html/ad74e5ec-c4ad-6fc3-942e-9332425ade5b.htm" />
+      <HelpTOCNode Id="57392d89-d4a2-4706-b345-9b0fca70857c" Title="WordDatabase Methods" Url="html/97ae2891-d407-e8d0-9a7d-be1e784bb809.htm">
+        <HelpTOCNode Title="GetRandomWordByCategory Method " Url="html/b73562b3-b2b8-51d8-222f-6f480adaa206.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="0a72b442-4ebb-45a4-9f00-3d0106fc9681" Title="HangMan.InputProviders" Url="html/46d80e94-0f15-2013-cad6-8370d2429b49.htm">
+    <HelpTOCNode Id="e0bc1e41-8f43-4667-a989-cdcffe21aac9" Title="ConsoleInputProvider Class" Url="html/8918f547-b17c-0ef0-d588-d0ab70728177.htm">
+      <HelpTOCNode Title="ConsoleInputProvider Constructor " Url="html/c2d9f918-dfb2-0636-4594-cba64bf47ee6.htm" />
+      <HelpTOCNode Id="5ae3f5d4-0e71-40f1-9953-eb135e6a9ee8" Title="ConsoleInputProvider Methods" Url="html/dd98fd64-2c0f-a5b9-74bd-1a7dc182bef9.htm">
+        <HelpTOCNode Title="GetInput Method " Url="html/16992542-d447-e391-a8cc-2e027aaec2bc.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a100f8ac-8d0f-4e92-ba67-c25cd564ac74" Title="ConsoleInputProvider Properties" Url="html/531c7565-0970-04df-88a2-a5691b031595.htm">
+        <HelpTOCNode Title="Command Property " Url="html/09faf62d-a270-ef58-bace-be61e8170286.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="c01823d7-b97e-4062-885b-01f723fca87a" Title="HangMan.InputProviders.Data" Url="html/5420ce4f-88aa-b328-a2a7-925bd321816a.htm">
+    <HelpTOCNode Id="b271ce00-6b93-4846-aeed-899b0b7f6c2b" Title="DataSerialization Class" Url="html/eabe33c1-ecd1-29c1-deb8-dbfe566b5269.htm">
+      <HelpTOCNode Title="DataSerialization Constructor " Url="html/f6b4d2fe-9d88-7941-6d96-1a72ff3ba887.htm" />
+      <HelpTOCNode Id="e715af3b-e1e2-4761-9f83-e5d96fc0962f" Title="DataSerialization Methods" Url="html/4a313161-8fe4-115b-823f-3ffe41102a7b.htm">
+        <HelpTOCNode Title="ReadFromFile Method " Url="html/28d110e9-0a1a-912a-cb72-d5fc26814abe.htm" />
+        <HelpTOCNode Title="WriteToFile Method " Url="html/edfdffa3-c2f2-4739-daca-6ca7a005af28.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="320d5513-0315-4981-9e97-cfefc3678d53" Title="HangMan.Interfaces" Url="html/a57446b4-bce1-09e2-e976-c3dbcc710a3a.htm">
+    <HelpTOCNode Id="0ddc1af9-9dbf-40e0-ab14-9449be37e6a9" Title="IDataSerialization Interface" Url="html/2a88187d-0971-7dff-b05e-4ca0376179ba.htm">
+      <HelpTOCNode Id="94bf43bb-827d-4371-9f7d-222809639e34" Title="IDataSerialization Methods" Url="html/8359ca49-986f-695d-62b4-5bdad36ea0eb.htm">
+        <HelpTOCNode Title="ReadFromFile Method " Url="html/b561664d-f301-7844-c5ff-7ce839dce687.htm" />
+        <HelpTOCNode Title="WriteToFile Method " Url="html/b2e780d9-0544-3963-2ae7-09fd25b9f9ac.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="36efb795-014d-4ede-bb32-464e5856943b" Title="IInputProvider Interface" Url="html/1062078c-22e2-491a-d51e-a648315f3709.htm">
+      <HelpTOCNode Id="88afb300-e1a8-4295-9a7c-dfeb502bfc6c" Title="IInputProvider Methods" Url="html/e6da3d0b-846d-ec74-1ccd-7ef15129ea28.htm">
+        <HelpTOCNode Title="GetInput Method " Url="html/1f2243e4-f2a5-0241-a434-113cd3ab1149.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="85d2b76c-29b8-4444-8f14-58e136f79181" Title="IInputProvider Properties" Url="html/877f06f8-4779-965e-dad0-62e6f051211f.htm">
+        <HelpTOCNode Title="Command Property " Url="html/6f90d1d8-1825-641c-3b08-f67657fcf451.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ba9e69c2-a368-4069-abe1-ae230ce1ad92" Title="ILetter Interface" Url="html/b3282924-20bf-cc46-6c62-2aa1544d730b.htm">
+      <HelpTOCNode Id="1be936e9-b5f5-4f07-be6d-501da553e998" Title="ILetter Properties" Url="html/a29ce105-71da-628b-0d34-f931477e10f6.htm">
+        <HelpTOCNode Title="IsFound Property " Url="html/2b3625e9-b76b-b9cb-d4ee-e70f17d2b6cb.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/65fd0a00-7e5e-b93b-0715-54441cf3dd8b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="43255435-fb54-4c19-bc0c-5678d5227ccd" Title="IPlayer Interface" Url="html/c397c2c8-e19c-a7f1-4964-3e8762645dd4.htm">
+      <HelpTOCNode Id="470cdf41-14a9-441b-81a4-51fc89cf5258" Title="IPlayer Properties" Url="html/a7f0a7dc-1dcc-c0d5-50ec-bce1d7f5ef5a.htm">
+        <HelpTOCNode Title="Name Property " Url="html/412eb1bf-46e4-c161-6c68-a1ee73d31df8.htm" />
+        <HelpTOCNode Title="PlayerGameInformation Property " Url="html/f2f9b5cc-670b-a6a5-945c-b19b2b10ceae.htm" />
+        <HelpTOCNode Title="Score Property " Url="html/3772bada-d3b3-2c1c-0b30-287a1389ab56.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9d24d16c-93a8-4696-bb45-9aac83830fb1" Title="IRenderable Interface" Url="html/4fb10274-64b6-0c6e-2a20-ea07d1d42188.htm">
+      <HelpTOCNode Id="bf9108ff-3364-40fe-9b6b-b4326a46d6dc" Title="IRenderable Methods" Url="html/f9a78e7f-4b8e-ceae-4434-c91ca1484310.htm">
+        <HelpTOCNode Title="GetBody Method " Url="html/9720cfe7-55e5-e8b9-d9ca-b09d58d06101.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e6a45601-e5dd-42ef-b10e-7f850e93b022" Title="IRenderer Interface" Url="html/aa2ad982-6311-5513-2f0e-7c0b6b5f642c.htm">
+      <HelpTOCNode Id="857fd053-d840-484e-ae72-079ee9a89a3c" Title="IRenderer Methods" Url="html/d16075e5-51be-ee60-42f0-6b56ce1e5516.htm">
+        <HelpTOCNode Title="ClearScreen Method " Url="html/417f0688-1916-73b6-9dbb-66a2c822c6a4.htm" />
+        <HelpTOCNode Title="InvalidCommand Method " Url="html/1b6327fd-17d2-6d6c-da94-abe452b297bf.htm" />
+        <HelpTOCNode Title="PrintEndScreen Method " Url="html/46e31ae9-cb65-ef93-3b6f-34395f3bb0bf.htm" />
+        <HelpTOCNode Title="PrintEndScreenIfPlayerCheated Method " Url="html/411c05ec-0ab5-7863-0059-c2ec02d6742b.htm" />
+        <HelpTOCNode Title="PrintInitialScreen Method " Url="html/e04e66d5-c892-703b-a0c0-7d48d1f84389.htm" />
+        <HelpTOCNode Title="PrintMessage Method " Url="html/d277c725-3868-d128-4485-e853c6f3dece.htm" />
+        <HelpTOCNode Title="PrintMistakes Method " Url="html/157cb2ed-3a3b-8925-1644-c8aa3fe053a5.htm" />
+        <HelpTOCNode Title="PrintUsedLetters Method " Url="html/821a310b-d839-ab37-331f-bf87ffc74c07.htm" />
+        <HelpTOCNode Title="PrintWord Method " Url="html/5f876452-a6a6-c5be-8891-807f8e826fc8.htm" />
+        <HelpTOCNode Title="RenderScoreboard Method " Url="html/4ef23bff-a233-4867-e39d-871204882b34.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="10fd8fbc-6b02-4ede-87e0-c65d2f689a22" Title="IScoreBoard Interface" Url="html/a2b9fb7b-6a48-5d40-8dc6-a2df8c05f3f8.htm">
+      <HelpTOCNode Id="858d8e70-72e6-4842-830b-d61b8c3d8f74" Title="IScoreBoard Methods" Url="html/6244e082-999f-de6b-6ee9-f47250d538cb.htm">
+        <HelpTOCNode Title="AddPlayerToScoreBoard Method " Url="html/79579456-3866-464f-7878-814883444ccc.htm" />
+        <HelpTOCNode Title="GetScoreBoard Method " Url="html/50858f2a-847c-27fb-d1d0-7f4f54591e81.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0a57bbe1-faac-44a3-a29c-1a68cda3d04c" Title="IWord Interface" Url="html/9baa52c9-3273-f5ef-44d8-a336b09d2d04.htm">
+      <HelpTOCNode Id="774bb2df-3873-4e1f-8a68-ed92ef5c9506" Title="IWord Properties" Url="html/a434fee0-9ed8-cead-7c92-8833b4c9ba69.htm">
+        <HelpTOCNode Title="Content Property " Url="html/9cd04049-6ad9-f8bd-892f-e593968c9f66.htm" />
+        <HelpTOCNode Title="IsRevealed Property " Url="html/56fe0cb5-91d4-bca8-2fe4-491554c3dda5.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="cc26a71c-80c0-44cf-b50a-51a4c29f5c77" Title="IWordDatabase Interface" Url="html/2f21b3f8-0a7e-7a87-1b05-3244f41f9040.htm">
+      <HelpTOCNode Id="8f75a931-f424-439b-81e8-1252089ff885" Title="IWordDatabase Methods" Url="html/cedcfa44-f02d-8968-1cde-5cd6847b8905.htm">
+        <HelpTOCNode Title="GetRandomWordByCategory Method " Url="html/abba6c7d-98ce-cf3a-980c-4599701c8981.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="0db12258-47bb-4ea3-8ecb-d9f6841dc100" Title="HangMan.Renderers" Url="html/754240cb-b2c1-2f44-4858-11dfcddef4a3.htm">
+    <HelpTOCNode Id="5027081e-7b8b-4a34-9dc4-5f6c5a8f5f21" Title="ConsoleFancyRenderer Class" Url="html/e0c95dbe-531c-3699-611e-be534d1e8c52.htm">
+      <HelpTOCNode Title="ConsoleFancyRenderer Constructor " Url="html/926bc6d6-d7c8-fdff-1ac7-d98a12bf3faf.htm" />
+      <HelpTOCNode Id="8b22762f-a54b-4f6d-843f-8ba3aeac5605" Title="ConsoleFancyRenderer Methods" Url="html/285d7965-c2bb-3db9-cff7-fbce5acb11d9.htm">
+        <HelpTOCNode Title="ClearScreen Method " Url="html/f188fe53-9fd0-9874-d1c8-ba0f02331071.htm" />
+        <HelpTOCNode Title="InvalidCommand Method " Url="html/ae0b2f97-724e-4b97-8e58-a52872657b2b.htm" />
+        <HelpTOCNode Title="PrintEndScreen Method " Url="html/c1be7ad4-9e5f-0733-ae22-cadb9047bef9.htm" />
+        <HelpTOCNode Title="PrintEndScreenIfPlayerCheated Method " Url="html/3c40301c-984b-8348-0361-28afc1e4bace.htm" />
+        <HelpTOCNode Title="PrintInitialScreen Method " Url="html/05b8925c-0e36-3a29-8104-2c22ff66ad51.htm" />
+        <HelpTOCNode Title="PrintMessage Method " Url="html/230b19f2-0e81-23d0-b5c7-b2f80980117f.htm" />
+        <HelpTOCNode Title="PrintMistakes Method " Url="html/3ab069fc-d2dc-5f68-54ae-9a0aa8895dd7.htm" />
+        <HelpTOCNode Title="PrintUsedLetters Method " Url="html/a876ce3e-0569-4529-9533-af72d6181ea8.htm" />
+        <HelpTOCNode Title="PrintWord Method " Url="html/049b5046-0cea-1e6a-2783-f4e08966057e.htm" />
+        <HelpTOCNode Title="RenderScoreboard Method " Url="html/c0c4e749-4547-e882-76e6-436e99523f9e.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ef5b4e9e-db43-418e-bbdb-570e6cd06e0c" Title="ConsoleRenderer Class" Url="html/1eb723d7-cf4b-fda4-8447-66504d78e26d.htm">
+      <HelpTOCNode Title="ConsoleRenderer Constructor " Url="html/8531f51b-8288-1ce9-d881-f836597e6872.htm" />
+      <HelpTOCNode Id="b4b17098-6001-48d0-82a3-7c8691d33b89" Title="ConsoleRenderer Methods" Url="html/ec052e71-e066-5e7b-5c7f-8e59b8b5c91c.htm">
+        <HelpTOCNode Title="ClearScreen Method " Url="html/610c9196-097c-5e4f-194f-82df2ea77cd7.htm" />
+        <HelpTOCNode Title="InvalidCommand Method " Url="html/66adb097-c9d2-41a9-fb23-fbfce1529fa8.htm" />
+        <HelpTOCNode Title="PrintEndScreen Method " Url="html/3174091e-f7e2-4727-925a-be27f09cbb5a.htm" />
+        <HelpTOCNode Title="PrintEndScreenIfPlayerCheated Method " Url="html/590b7463-3f5f-a104-9812-d51da1a748a2.htm" />
+        <HelpTOCNode Title="PrintInitialScreen Method " Url="html/fcbfce51-d7a8-54e6-ea8c-68be40c2f7ab.htm" />
+        <HelpTOCNode Title="PrintMessage Method " Url="html/a9d5bd37-061a-eb67-f5fe-690bef162833.htm" />
+        <HelpTOCNode Title="PrintMistakes Method " Url="html/1700d99e-0893-5433-3ce6-53adada08894.htm" />
+        <HelpTOCNode Title="PrintUsedLetters Method " Url="html/be71fc44-ca5a-c3c0-48ed-4c5888f84365.htm" />
+        <HelpTOCNode Title="PrintWord Method " Url="html/a97721c2-39e7-1af2-4ee4-a9ed5de2e971.htm" />
+        <HelpTOCNode Title="RenderScoreboard Method " Url="html/c4d79eb8-53bb-b6c8-1ceb-9817ea31959b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="ca38a44a-9479-409c-ba3b-441f253d909b" Title="HangMan.Users" Url="html/ffcda069-6397-4ee1-bb5e-142449e8e2b7.htm">
+    <HelpTOCNode Id="c1d7bebd-64b4-4e85-9697-a28d43e1e887" Title="User Class" Url="html/74978d2c-b2ef-90a0-de53-e516f7cdd88f.htm">
+      <HelpTOCNode Title="User Constructor " Url="html/12f68175-93bf-7a77-30ee-1726963c8c9c.htm" />
+      <HelpTOCNode Id="ba4d7d87-d2f1-4e7b-a3e0-c63e20fefb94" Title="User Properties" Url="html/2da9a346-7a29-decf-8113-27919d442098.htm">
+        <HelpTOCNode Title="ID Property " Url="html/1d5b32a8-6d79-c16c-16d4-763bd726a655.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/87f337bd-3815-9fe6-14b5-a8227c25c15c.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

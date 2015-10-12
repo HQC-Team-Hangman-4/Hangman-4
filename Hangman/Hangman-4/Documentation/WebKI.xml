@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AddPlayerScore method" Url="html/84a1ef66-56ed-ec0b-cea1-f8d585de4b93.htm" />
+  <HelpKINode Title="AddPlayerToScoreBoard method" Url="html/79579456-3866-464f-7878-814883444ccc.htm" />
+  <HelpKINode Title="ClearScreen method">
+    <HelpKINode Title="ConsoleFancyRenderer.ClearScreen Method " Url="html/f188fe53-9fd0-9874-d1c8-ba0f02331071.htm" />
+    <HelpKINode Title="ConsoleRenderer.ClearScreen Method " Url="html/610c9196-097c-5e4f-194f-82df2ea77cd7.htm" />
+    <HelpKINode Title="IRenderer.ClearScreen Method " Url="html/417f0688-1916-73b6-9dbb-66a2c822c6a4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Clone method">
+    <HelpKINode Title="Letter.Clone Method " Url="html/e3ae0ef5-0b91-bd3f-28cb-8bd1a40881b2.htm" />
+    <HelpKINode Title="LetterPrototype.Clone Method " Url="html/acba9b5f-a885-038c-96bb-eff6c67156cf.htm" />
+    <HelpKINode Title="Player.Clone Method " Url="html/7b8442da-447e-58ff-6938-5c862b5bd525.htm" />
+    <HelpKINode Title="PlayerPrototype.Clone Method " Url="html/be18b24c-84ee-c8b8-abc3-be5bb6778fd7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Command property">
+    <HelpKINode Title="ConsoleInputProvider.Command Property " Url="html/09faf62d-a270-ef58-bace-be61e8170286.htm" />
+    <HelpKINode Title="IInputProvider.Command Property " Url="html/6f90d1d8-1825-641c-3b08-f67657fcf451.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConsoleFancyRenderer class">
+    <HelpKINode Title="ConsoleFancyRenderer Class" Url="html/e0c95dbe-531c-3699-611e-be534d1e8c52.htm" />
+    <HelpKINode Title="about ConsoleFancyRenderer class" Url="html/e0c95dbe-531c-3699-611e-be534d1e8c52.htm" />
+    <HelpKINode Title="constructor" Url="html/926bc6d6-d7c8-fdff-1ac7-d98a12bf3faf.htm" />
+    <HelpKINode Title="methods" Url="html/285d7965-c2bb-3db9-cff7-fbce5acb11d9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConsoleFancyRenderer.ClearScreen method" Url="html/f188fe53-9fd0-9874-d1c8-ba0f02331071.htm" />
+  <HelpKINode Title="ConsoleFancyRenderer.ConsoleFancyRenderer constructor" Url="html/926bc6d6-d7c8-fdff-1ac7-d98a12bf3faf.htm" />
+  <HelpKINode Title="ConsoleFancyRenderer.InvalidCommand method" Url="html/ae0b2f97-724e-4b97-8e58-a52872657b2b.htm" />
+  <HelpKINode Title="ConsoleFancyRenderer.PrintEndScreen method" Url="html/c1be7ad4-9e5f-0733-ae22-cadb9047bef9.htm" />
+  <HelpKINode Title="ConsoleFancyRenderer.PrintEndScreenIfPlayerCheated method" Url="html/3c40301c-984b-8348-0361-28afc1e4bace.htm" />
+  <HelpKINode Title="ConsoleFancyRenderer.PrintInitialScreen method" Url="html/05b8925c-0e36-3a29-8104-2c22ff66ad51.htm" />
+  <HelpKINode Title="ConsoleFancyRenderer.PrintMessage method" Url="html/230b19f2-0e81-23d0-b5c7-b2f80980117f.htm" />
+  <HelpKINode Title="ConsoleFancyRenderer.PrintMistakes method" Url="html/3ab069fc-d2dc-5f68-54ae-9a0aa8895dd7.htm" />
+  <HelpKINode Title="ConsoleFancyRenderer.PrintUsedLetters method" Url="html/a876ce3e-0569-4529-9533-af72d6181ea8.htm" />
+  <HelpKINode Title="ConsoleFancyRenderer.PrintWord method" Url="html/049b5046-0cea-1e6a-2783-f4e08966057e.htm" />
+  <HelpKINode Title="ConsoleFancyRenderer.RenderScoreboard method" Url="html/c0c4e749-4547-e882-76e6-436e99523f9e.htm" />
+  <HelpKINode Title="ConsoleInputProvider class">
+    <HelpKINode Title="ConsoleInputProvider Class" Url="html/8918f547-b17c-0ef0-d588-d0ab70728177.htm" />
+    <HelpKINode Title="about ConsoleInputProvider class" Url="html/8918f547-b17c-0ef0-d588-d0ab70728177.htm" />
+    <HelpKINode Title="constructor" Url="html/c2d9f918-dfb2-0636-4594-cba64bf47ee6.htm" />
+    <HelpKINode Title="methods" Url="html/dd98fd64-2c0f-a5b9-74bd-1a7dc182bef9.htm" />
+    <HelpKINode Title="properties" Url="html/531c7565-0970-04df-88a2-a5691b031595.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConsoleInputProvider.Command property" Url="html/09faf62d-a270-ef58-bace-be61e8170286.htm" />
+  <HelpKINode Title="ConsoleInputProvider.ConsoleInputProvider constructor" Url="html/c2d9f918-dfb2-0636-4594-cba64bf47ee6.htm" />
+  <HelpKINode Title="ConsoleInputProvider.GetInput method" Url="html/16992542-d447-e391-a8cc-2e027aaec2bc.htm" />
+  <HelpKINode Title="ConsoleRenderer class">
+    <HelpKINode Title="ConsoleRenderer Class" Url="html/1eb723d7-cf4b-fda4-8447-66504d78e26d.htm" />
+    <HelpKINode Title="about ConsoleRenderer class" Url="html/1eb723d7-cf4b-fda4-8447-66504d78e26d.htm" />
+    <HelpKINode Title="constructor" Url="html/8531f51b-8288-1ce9-d881-f836597e6872.htm" />
+    <HelpKINode Title="methods" Url="html/ec052e71-e066-5e7b-5c7f-8e59b8b5c91c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConsoleRenderer.ClearScreen method" Url="html/610c9196-097c-5e4f-194f-82df2ea77cd7.htm" />
+  <HelpKINode Title="ConsoleRenderer.ConsoleRenderer constructor" Url="html/8531f51b-8288-1ce9-d881-f836597e6872.htm" />
+  <HelpKINode Title="ConsoleRenderer.InvalidCommand method" Url="html/66adb097-c9d2-41a9-fb23-fbfce1529fa8.htm" />
+  <HelpKINode Title="ConsoleRenderer.PrintEndScreen method" Url="html/3174091e-f7e2-4727-925a-be27f09cbb5a.htm" />
+  <HelpKINode Title="ConsoleRenderer.PrintEndScreenIfPlayerCheated method" Url="html/590b7463-3f5f-a104-9812-d51da1a748a2.htm" />
+  <HelpKINode Title="ConsoleRenderer.PrintInitialScreen method" Url="html/fcbfce51-d7a8-54e6-ea8c-68be40c2f7ab.htm" />
+  <HelpKINode Title="ConsoleRenderer.PrintMessage method" Url="html/a9d5bd37-061a-eb67-f5fe-690bef162833.htm" />
+  <HelpKINode Title="ConsoleRenderer.PrintMistakes method" Url="html/1700d99e-0893-5433-3ce6-53adada08894.htm" />
+  <HelpKINode Title="ConsoleRenderer.PrintUsedLetters method" Url="html/be71fc44-ca5a-c3c0-48ed-4c5888f84365.htm" />
+  <HelpKINode Title="ConsoleRenderer.PrintWord method" Url="html/a97721c2-39e7-1af2-4ee4-a9ed5de2e971.htm" />
+  <HelpKINode Title="ConsoleRenderer.RenderScoreboard method" Url="html/c4d79eb8-53bb-b6c8-1ceb-9817ea31959b.htm" />
+  <HelpKINode Title="Content property">
+    <HelpKINode Title="IWord.Content Property " Url="html/9cd04049-6ad9-f8bd-892f-e593968c9f66.htm" />
+    <HelpKINode Title="Word.Content Property " Url="html/e23a2ec0-4f23-1e7b-cb59-3d89cfd25970.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CurrentPlayerInfo property" Url="html/0b97fa79-e937-0a5f-69a4-cc8449f001a0.htm" />
+  <HelpKINode Title="Database class">
+    <HelpKINode Title="Database Class" Url="html/a0ff4870-0c07-4845-07aa-b4a648032bf7.htm" />
+    <HelpKINode Title="about Database class" Url="html/a0ff4870-0c07-4845-07aa-b4a648032bf7.htm" />
+    <HelpKINode Title="properties" Url="html/3f0a7b42-c900-7e05-1e7f-cf0d788ecff8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Database.DataSerialization property" Url="html/6218bcf6-2006-c7ff-7d70-cceda3df35a7.htm" />
+  <HelpKINode Title="DataSerialization class">
+    <HelpKINode Title="DataSerialization Class" Url="html/eabe33c1-ecd1-29c1-deb8-dbfe566b5269.htm" />
+    <HelpKINode Title="about DataSerialization class" Url="html/eabe33c1-ecd1-29c1-deb8-dbfe566b5269.htm" />
+    <HelpKINode Title="constructor" Url="html/f6b4d2fe-9d88-7941-6d96-1a72ff3ba887.htm" />
+    <HelpKINode Title="methods" Url="html/4a313161-8fe4-115b-823f-3ffe41102a7b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DataSerialization property" Url="html/6218bcf6-2006-c7ff-7d70-cceda3df35a7.htm" />
+  <HelpKINode Title="DataSerialization.DataSerialization constructor" Url="html/f6b4d2fe-9d88-7941-6d96-1a72ff3ba887.htm" />
+  <HelpKINode Title="DataSerialization.ReadFromFile method" Url="html/28d110e9-0a1a-912a-cb72-d5fc26814abe.htm" />
+  <HelpKINode Title="DataSerialization.WriteToFile method" Url="html/edfdffa3-c2f2-4739-daca-6ca7a005af28.htm" />
+  <HelpKINode Title="DefaultGameLogic class">
+    <HelpKINode Title="DefaultGameLogic Class" Url="html/ace7ce3f-a14b-82da-8ca2-eb0a89a3dff7.htm" />
+    <HelpKINode Title="about DefaultGameLogic class" Url="html/ace7ce3f-a14b-82da-8ca2-eb0a89a3dff7.htm" />
+    <HelpKINode Title="constructor" Url="html/3d4a6882-0d59-3731-42e5-73f1ab205698.htm" />
+    <HelpKINode Title="methods" Url="html/6da3cac1-f71d-d871-4790-41b7c6652e62.htm" />
+    <HelpKINode Title="properties" Url="html/b9bf4052-59de-0b91-845b-72811d5aa528.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DefaultGameLogic.CurrentPlayerInfo property" Url="html/0b97fa79-e937-0a5f-69a4-cc8449f001a0.htm" />
+  <HelpKINode Title="DefaultGameLogic.DefaultGameLogic constructor" Url="html/3d4a6882-0d59-3731-42e5-73f1ab205698.htm" />
+  <HelpKINode Title="DefaultGameLogic.GameState property" Url="html/77a0ce0e-9533-5cf6-49bb-f58d4bf05e3d.htm" />
+  <HelpKINode Title="DefaultGameLogic.GuessLetter method" Url="html/6acef670-4f0c-9c61-8d3a-193d54145f3b.htm" />
+  <HelpKINode Title="DefaultGameLogic.IsCheated property" Url="html/16bb68ae-2ffc-cb80-1c89-785686e114c9.htm" />
+  <HelpKINode Title="DefaultGameLogic.IsLetterGuessed method" Url="html/743923bc-f178-5e17-a6bc-1fbeec4b637d.htm" />
+  <HelpKINode Title="DefaultGameLogic.IsWordRevealed method" Url="html/5879b856-b702-bdd8-5c69-d8c28a4da8bd.htm" />
+  <HelpKINode Title="DefaultGameLogic.ParseCommand method" Url="html/abd11d8f-c368-96a5-78aa-4f78dcb69efa.htm" />
+  <HelpKINode Title="DefaultGameLogic.Player property" Url="html/54eeed46-0202-11c5-2944-fb44330c870d.htm" />
+  <HelpKINode Title="DefaultGameLogic.UsedLetters property" Url="html/5b9de1aa-e99d-bf26-f202-6c22f7ef7651.htm" />
+  <HelpKINode Title="DefaultGameLogic.Word property" Url="html/eb0ce5c5-be2d-77d8-4927-d1e386100027.htm" />
+  <HelpKINode Title="Engine class">
+    <HelpKINode Title="Engine Class" Url="html/20c1f704-dc9f-eebf-3297-856c33af2d1e.htm" />
+    <HelpKINode Title="about Engine class" Url="html/20c1f704-dc9f-eebf-3297-856c33af2d1e.htm" />
+    <HelpKINode Title="constructor" Url="html/bbca1b61-4ac1-6655-722c-68cdfc7ce854.htm" />
+    <HelpKINode Title="methods" Url="html/a131f232-30a6-4198-8a1d-cfcf886ee9e3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Engine.Engine constructor" Url="html/bbca1b61-4ac1-6655-722c-68cdfc7ce854.htm" />
+  <HelpKINode Title="Engine.StartGame method" Url="html/d783e2d7-2e15-26bf-e83c-39961db6c092.htm" />
+  <HelpKINode Title="EntryPoint class">
+    <HelpKINode Title="EntryPoint Class" Url="html/55828251-779c-ef1b-9d29-e6438791187c.htm" />
+    <HelpKINode Title="about EntryPoint class" Url="html/55828251-779c-ef1b-9d29-e6438791187c.htm" />
+    <HelpKINode Title="constructor" Url="html/c1cc15b7-9bb9-996a-9a28-82a2fd0615f2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EntryPoint.EntryPoint constructor" Url="html/c1cc15b7-9bb9-996a-9a28-82a2fd0615f2.htm" />
+  <HelpKINode Title="Equals method" Url="html/0c269251-fc26-f9fc-b856-37ef8fe8693d.htm" />
+  <HelpKINode Title="exit enumeration member" Url="html/f5b7c71d-c34f-d6eb-8a6b-7b8a33a59544.htm" />
+  <HelpKINode Title="FontConsoleHelper class">
+    <HelpKINode Title="FontConsoleHelper Class" Url="html/ba5fe8be-2c8d-fc49-548d-a48483ce65b8.htm" />
+    <HelpKINode Title="about FontConsoleHelper class" Url="html/ba5fe8be-2c8d-fc49-548d-a48483ce65b8.htm" />
+    <HelpKINode Title="constructor" Url="html/273191e0-ca3a-9a47-45f1-e7345b91e050.htm" />
+    <HelpKINode Title="methods" Url="html/7d513f69-6fe0-9766-f2ff-625bbc4ca2b4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FontConsoleHelper.FontConsoleHelper constructor" Url="html/273191e0-ca3a-9a47-45f1-e7345b91e050.htm" />
+  <HelpKINode Title="FontConsoleHelper.Print method" Url="html/f584fa7c-54ce-bdf7-8982-ba9c8c3d0529.htm" />
+  <HelpKINode Title="GameInfo class">
+    <HelpKINode Title="GameInfo Class" Url="html/5d254b00-8433-f403-221e-defcc490785c.htm" />
+    <HelpKINode Title="about GameInfo class" Url="html/5d254b00-8433-f403-221e-defcc490785c.htm" />
+    <HelpKINode Title="constructor" Url="html/e33aea7a-d032-6250-4b5e-823009360045.htm" />
+    <HelpKINode Title="properties" Url="html/1397c55e-1fa0-b3ba-d676-cd94d7065826.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GameInfo.GameInfo constructor" Url="html/e33aea7a-d032-6250-4b5e-823009360045.htm" />
+  <HelpKINode Title="GameInfo.Mistakes property" Url="html/cee30c66-5e4f-e564-fec2-0013001d85aa.htm" />
+  <HelpKINode Title="GameInfo.UsedLetters property" Url="html/5eccf659-35a7-dacf-e9fe-4f999598a566.htm" />
+  <HelpKINode Title="GameState enumeration" Url="html/f5b7c71d-c34f-d6eb-8a6b-7b8a33a59544.htm" />
+  <HelpKINode Title="GameState property" Url="html/77a0ce0e-9533-5cf6-49bb-f58d4bf05e3d.htm" />
+  <HelpKINode Title="GetBody method">
+    <HelpKINode Title="Guessed.GetBody Method " Url="html/cc53d1fa-e960-c0c6-d603-26dde3239b0b.htm" />
+    <HelpKINode Title="IRenderable.GetBody Method " Url="html/9720cfe7-55e5-e8b9-d9ca-b09d58d06101.htm" />
+    <HelpKINode Title="Letter.GetBody Method " Url="html/12f5697c-ce64-dfc3-59ab-a492a05cc96b.htm" />
+    <HelpKINode Title="Player.GetBody Method " Url="html/cddf34d1-7ec1-ccde-f071-6a7133b7221c.htm" />
+    <HelpKINode Title="Word.GetBody Method " Url="html/99346e71-ae75-3653-784b-3beb925e919d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetEnumerator method" Url="html/c20b05ad-ea70-bee2-5205-5bdfed2ae968.htm" />
+  <HelpKINode Title="GetHashCode method" Url="html/70905573-5809-046c-0b33-44571b5f242f.htm" />
+  <HelpKINode Title="GetInput method">
+    <HelpKINode Title="ConsoleInputProvider.GetInput Method " Url="html/16992542-d447-e391-a8cc-2e027aaec2bc.htm" />
+    <HelpKINode Title="IInputProvider.GetInput Method " Url="html/1f2243e4-f2a5-0241-a434-113cd3ab1149.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetRandomWordByCategory method">
+    <HelpKINode Title="IWordDatabase.GetRandomWordByCategory Method " Url="html/abba6c7d-98ce-cf3a-980c-4599701c8981.htm" />
+    <HelpKINode Title="WordDatabase.GetRandomWordByCategory Method " Url="html/b73562b3-b2b8-51d8-222f-6f480adaa206.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetScoreBoard method" Url="html/50858f2a-847c-27fb-d1d0-7f4f54591e81.htm" />
+  <HelpKINode Title="GetWord method" Url="html/02873474-b34f-5fc9-72a4-96070733c732.htm" />
+  <HelpKINode Title="Guessed class">
+    <HelpKINode Title="Guessed Class" Url="html/38d8c226-62ac-a88c-79d0-206433728ec4.htm" />
+    <HelpKINode Title="about Guessed class" Url="html/38d8c226-62ac-a88c-79d0-206433728ec4.htm" />
+    <HelpKINode Title="constructor" Url="html/3ebede60-0728-c67f-ba9e-369ee365b613.htm" />
+    <HelpKINode Title="methods" Url="html/bd3dd943-98f2-691e-6aad-7f7e3bff8662.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Guessed.GetBody method" Url="html/cc53d1fa-e960-c0c6-d603-26dde3239b0b.htm" />
+  <HelpKINode Title="Guessed.Guessed constructor" Url="html/3ebede60-0728-c67f-ba9e-369ee365b613.htm" />
+  <HelpKINode Title="guessLetter enumeration member" Url="html/f5b7c71d-c34f-d6eb-8a6b-7b8a33a59544.htm" />
+  <HelpKINode Title="GuessLetter method" Url="html/6acef670-4f0c-9c61-8d3a-193d54145f3b.htm" />
+  <HelpKINode Title="HangMan namespace" Url="html/a06f8cca-d6f1-3499-4814-4f5efcc56729.htm" />
+  <HelpKINode Title="HangMan.Engine namespace" Url="html/c2833c08-2268-a4cd-9d0e-d6b31b63cb46.htm" />
+  <HelpKINode Title="HangMan.Engine.Engine class" Url="html/20c1f704-dc9f-eebf-3297-856c33af2d1e.htm" />
+  <HelpKINode Title="HangMan.Engine.HangmanFacade class" Url="html/9029ac90-c54f-a519-c782-0dd6077c2e5f.htm" />
+  <HelpKINode Title="HangMan.EntryPoint class" Url="html/55828251-779c-ef1b-9d29-e6438791187c.htm" />
+  <HelpKINode Title="HangMan.GameLogic namespace" Url="html/28e670a9-74cc-7862-da6a-8c0a622f52b5.htm" />
+  <HelpKINode Title="HangMan.GameLogic.DefaultGameLogic class" Url="html/ace7ce3f-a14b-82da-8ca2-eb0a89a3dff7.htm" />
+  <HelpKINode Title="HangMan.GameObjects namespace" Url="html/35d3ec76-f4a6-e56a-5c05-6b5379efd941.htm" />
+  <HelpKINode Title="HangMan.GameObjects.GameInfo class" Url="html/5d254b00-8433-f403-221e-defcc490785c.htm" />
+  <HelpKINode Title="HangMan.GameObjects.Guessed class" Url="html/38d8c226-62ac-a88c-79d0-206433728ec4.htm" />
+  <HelpKINode Title="HangMan.GameObjects.Letter class" Url="html/a4e378cb-6029-5e65-2997-1da56c0051ef.htm" />
+  <HelpKINode Title="HangMan.GameObjects.LetterPrototype class" Url="html/0b68ede8-17ce-789f-e2cb-27496211440f.htm" />
+  <HelpKINode Title="HangMan.GameObjects.Player class" Url="html/ba874f3f-cde5-f5c4-edcf-d5a17461e45a.htm" />
+  <HelpKINode Title="HangMan.GameObjects.PlayerPrototype class" Url="html/17f69773-c9a2-1497-a2c3-c50171ce11b9.htm" />
+  <HelpKINode Title="HangMan.GameObjects.Scoreboard class" Url="html/20005121-9f82-fefc-0fa7-fce9e9a5cead.htm" />
+  <HelpKINode Title="HangMan.GameObjects.Word class" Url="html/7cebc912-4a25-c79d-69a0-4683e404701d.htm" />
+  <HelpKINode Title="HangMan.GameObjects.WordFactory class" Url="html/32c05898-b520-9aa7-a19c-dc6d27036367.htm" />
+  <HelpKINode Title="HangMan.Helpers namespace" Url="html/ed3fa025-0ece-f221-847e-2912dc9dedb9.htm" />
+  <HelpKINode Title="HangMan.Helpers.Data namespace" Url="html/3764afa5-6106-95cb-b4d0-9868521d2380.htm" />
+  <HelpKINode Title="HangMan.Helpers.Data.Database class" Url="html/a0ff4870-0c07-4845-07aa-b4a648032bf7.htm" />
+  <HelpKINode Title="HangMan.Helpers.Data.ScoreBoardDatabase class" Url="html/0951bc59-bedb-3a80-98ac-6fd12d5bd7bb.htm" />
+  <HelpKINode Title="HangMan.Helpers.Data.WordDatabase class" Url="html/5e4fe038-e216-12bb-9251-606e2be6de6d.htm" />
+  <HelpKINode Title="HangMan.Helpers.FontConsoleHelper class" Url="html/ba5fe8be-2c8d-fc49-548d-a48483ce65b8.htm" />
+  <HelpKINode Title="HangMan.Helpers.GameState enumeration" Url="html/f5b7c71d-c34f-d6eb-8a6b-7b8a33a59544.htm" />
+  <HelpKINode Title="HangMan.Helpers.Validator class" Url="html/c9258e22-754c-0771-a695-598ba1ed2a5e.htm" />
+  <HelpKINode Title="HangMan.InputProviders namespace" Url="html/46d80e94-0f15-2013-cad6-8370d2429b49.htm" />
+  <HelpKINode Title="HangMan.InputProviders.ConsoleInputProvider class" Url="html/8918f547-b17c-0ef0-d588-d0ab70728177.htm" />
+  <HelpKINode Title="HangMan.InputProviders.Data namespace" Url="html/5420ce4f-88aa-b328-a2a7-925bd321816a.htm" />
+  <HelpKINode Title="HangMan.InputProviders.Data.DataSerialization class" Url="html/eabe33c1-ecd1-29c1-deb8-dbfe566b5269.htm" />
+  <HelpKINode Title="HangMan.Interfaces namespace" Url="html/a57446b4-bce1-09e2-e976-c3dbcc710a3a.htm" />
+  <HelpKINode Title="HangMan.Interfaces.IDataSerialization interface" Url="html/2a88187d-0971-7dff-b05e-4ca0376179ba.htm" />
+  <HelpKINode Title="HangMan.Interfaces.IInputProvider interface" Url="html/1062078c-22e2-491a-d51e-a648315f3709.htm" />
+  <HelpKINode Title="HangMan.Interfaces.ILetter interface" Url="html/b3282924-20bf-cc46-6c62-2aa1544d730b.htm" />
+  <HelpKINode Title="HangMan.Interfaces.IPlayer interface" Url="html/c397c2c8-e19c-a7f1-4964-3e8762645dd4.htm" />
+  <HelpKINode Title="HangMan.Interfaces.IRenderable interface" Url="html/4fb10274-64b6-0c6e-2a20-ea07d1d42188.htm" />
+  <HelpKINode Title="HangMan.Interfaces.IRenderer interface" Url="html/aa2ad982-6311-5513-2f0e-7c0b6b5f642c.htm" />
+  <HelpKINode Title="HangMan.Interfaces.IScoreBoard interface" Url="html/a2b9fb7b-6a48-5d40-8dc6-a2df8c05f3f8.htm" />
+  <HelpKINode Title="HangMan.Interfaces.IWord interface" Url="html/9baa52c9-3273-f5ef-44d8-a336b09d2d04.htm" />
+  <HelpKINode Title="HangMan.Interfaces.IWordDatabase interface" Url="html/2f21b3f8-0a7e-7a87-1b05-3244f41f9040.htm" />
+  <HelpKINode Title="HangMan.Renderers namespace" Url="html/754240cb-b2c1-2f44-4858-11dfcddef4a3.htm" />
+  <HelpKINode Title="HangMan.Renderers.ConsoleFancyRenderer class" Url="html/e0c95dbe-531c-3699-611e-be534d1e8c52.htm" />
+  <HelpKINode Title="HangMan.Renderers.ConsoleRenderer class" Url="html/1eb723d7-cf4b-fda4-8447-66504d78e26d.htm" />
+  <HelpKINode Title="HangMan.Users namespace" Url="html/ffcda069-6397-4ee1-bb5e-142449e8e2b7.htm" />
+  <HelpKINode Title="HangMan.Users.User class" Url="html/74978d2c-b2ef-90a0-de53-e516f7cdd88f.htm" />
+  <HelpKINode Title="HangmanFacade class">
+    <HelpKINode Title="HangmanFacade Class" Url="html/9029ac90-c54f-a519-c782-0dd6077c2e5f.htm" />
+    <HelpKINode Title="about HangmanFacade class" Url="html/9029ac90-c54f-a519-c782-0dd6077c2e5f.htm" />
+    <HelpKINode Title="methods" Url="html/76c1ea2e-e153-1fcd-4631-97bc25b7da0a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HangmanFacade.Start method" Url="html/f3f43b61-1647-d9e2-7c7a-06048b0dfb09.htm" />
+  <HelpKINode Title="help enumeration member" Url="html/f5b7c71d-c34f-d6eb-8a6b-7b8a33a59544.htm" />
+  <HelpKINode Title="ID property" Url="html/1d5b32a8-6d79-c16c-16d4-763bd726a655.htm" />
+  <HelpKINode Title="IDataSerialization interface">
+    <HelpKINode Title="IDataSerialization Interface" Url="html/2a88187d-0971-7dff-b05e-4ca0376179ba.htm" />
+    <HelpKINode Title="about IDataSerialization interface" Url="html/2a88187d-0971-7dff-b05e-4ca0376179ba.htm" />
+    <HelpKINode Title="methods" Url="html/8359ca49-986f-695d-62b4-5bdad36ea0eb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IDataSerialization.ReadFromFile method" Url="html/b561664d-f301-7844-c5ff-7ce839dce687.htm" />
+  <HelpKINode Title="IDataSerialization.WriteToFile method" Url="html/b2e780d9-0544-3963-2ae7-09fd25b9f9ac.htm" />
+  <HelpKINode Title="IInputProvider interface">
+    <HelpKINode Title="IInputProvider Interface" Url="html/1062078c-22e2-491a-d51e-a648315f3709.htm" />
+    <HelpKINode Title="about IInputProvider interface" Url="html/1062078c-22e2-491a-d51e-a648315f3709.htm" />
+    <HelpKINode Title="methods" Url="html/e6da3d0b-846d-ec74-1ccd-7ef15129ea28.htm" />
+    <HelpKINode Title="properties" Url="html/877f06f8-4779-965e-dad0-62e6f051211f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IInputProvider.Command property" Url="html/6f90d1d8-1825-641c-3b08-f67657fcf451.htm" />
+  <HelpKINode Title="IInputProvider.GetInput method" Url="html/1f2243e4-f2a5-0241-a434-113cd3ab1149.htm" />
+  <HelpKINode Title="ILetter interface">
+    <HelpKINode Title="ILetter Interface" Url="html/b3282924-20bf-cc46-6c62-2aa1544d730b.htm" />
+    <HelpKINode Title="about ILetter interface" Url="html/b3282924-20bf-cc46-6c62-2aa1544d730b.htm" />
+    <HelpKINode Title="properties" Url="html/a29ce105-71da-628b-0d34-f931477e10f6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ILetter.IsFound property" Url="html/2b3625e9-b76b-b9cb-d4ee-e70f17d2b6cb.htm" />
+  <HelpKINode Title="ILetter.Value property" Url="html/65fd0a00-7e5e-b93b-0715-54441cf3dd8b.htm" />
+  <HelpKINode Title="Instance property" Url="html/aa6a34c6-554c-6557-f1a5-271f4077d510.htm" />
+  <HelpKINode Title="invalidCommand enumeration member" Url="html/f5b7c71d-c34f-d6eb-8a6b-7b8a33a59544.htm" />
+  <HelpKINode Title="InvalidCommand method">
+    <HelpKINode Title="ConsoleFancyRenderer.InvalidCommand Method " Url="html/ae0b2f97-724e-4b97-8e58-a52872657b2b.htm" />
+    <HelpKINode Title="ConsoleRenderer.InvalidCommand Method " Url="html/66adb097-c9d2-41a9-fb23-fbfce1529fa8.htm" />
+    <HelpKINode Title="IRenderer.InvalidCommand Method " Url="html/1b6327fd-17d2-6d6c-da94-abe452b297bf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IPlayer interface">
+    <HelpKINode Title="IPlayer Interface" Url="html/c397c2c8-e19c-a7f1-4964-3e8762645dd4.htm" />
+    <HelpKINode Title="about IPlayer interface" Url="html/c397c2c8-e19c-a7f1-4964-3e8762645dd4.htm" />
+    <HelpKINode Title="properties" Url="html/a7f0a7dc-1dcc-c0d5-50ec-bce1d7f5ef5a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IPlayer.Name property" Url="html/412eb1bf-46e4-c161-6c68-a1ee73d31df8.htm" />
+  <HelpKINode Title="IPlayer.PlayerGameInformation property" Url="html/f2f9b5cc-670b-a6a5-945c-b19b2b10ceae.htm" />
+  <HelpKINode Title="IPlayer.Score property" Url="html/3772bada-d3b3-2c1c-0b30-287a1389ab56.htm" />
+  <HelpKINode Title="IRenderable interface">
+    <HelpKINode Title="IRenderable Interface" Url="html/4fb10274-64b6-0c6e-2a20-ea07d1d42188.htm" />
+    <HelpKINode Title="about IRenderable interface" Url="html/4fb10274-64b6-0c6e-2a20-ea07d1d42188.htm" />
+    <HelpKINode Title="methods" Url="html/f9a78e7f-4b8e-ceae-4434-c91ca1484310.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IRenderable.GetBody method" Url="html/9720cfe7-55e5-e8b9-d9ca-b09d58d06101.htm" />
+  <HelpKINode Title="IRenderer interface">
+    <HelpKINode Title="IRenderer Interface" Url="html/aa2ad982-6311-5513-2f0e-7c0b6b5f642c.htm" />
+    <HelpKINode Title="about IRenderer interface" Url="html/aa2ad982-6311-5513-2f0e-7c0b6b5f642c.htm" />
+    <HelpKINode Title="methods" Url="html/d16075e5-51be-ee60-42f0-6b56ce1e5516.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IRenderer.ClearScreen method" Url="html/417f0688-1916-73b6-9dbb-66a2c822c6a4.htm" />
+  <HelpKINode Title="IRenderer.InvalidCommand method" Url="html/1b6327fd-17d2-6d6c-da94-abe452b297bf.htm" />
+  <HelpKINode Title="IRenderer.PrintEndScreen method" Url="html/46e31ae9-cb65-ef93-3b6f-34395f3bb0bf.htm" />
+  <HelpKINode Title="IRenderer.PrintEndScreenIfPlayerCheated method" Url="html/411c05ec-0ab5-7863-0059-c2ec02d6742b.htm" />
+  <HelpKINode Title="IRenderer.PrintInitialScreen method" Url="html/e04e66d5-c892-703b-a0c0-7d48d1f84389.htm" />
+  <HelpKINode Title="IRenderer.PrintMessage method" Url="html/d277c725-3868-d128-4485-e853c6f3dece.htm" />
+  <HelpKINode Title="IRenderer.PrintMistakes method" Url="html/157cb2ed-3a3b-8925-1644-c8aa3fe053a5.htm" />
+  <HelpKINode Title="IRenderer.PrintUsedLetters method" Url="html/821a310b-d839-ab37-331f-bf87ffc74c07.htm" />
+  <HelpKINode Title="IRenderer.PrintWord method" Url="html/5f876452-a6a6-c5be-8891-807f8e826fc8.htm" />
+  <HelpKINode Title="IRenderer.RenderScoreboard method" Url="html/4ef23bff-a233-4867-e39d-871204882b34.htm" />
+  <HelpKINode Title="IsCheated property" Url="html/16bb68ae-2ffc-cb80-1c89-785686e114c9.htm" />
+  <HelpKINode Title="IScoreBoard interface">
+    <HelpKINode Title="IScoreBoard Interface" Url="html/a2b9fb7b-6a48-5d40-8dc6-a2df8c05f3f8.htm" />
+    <HelpKINode Title="about IScoreBoard interface" Url="html/a2b9fb7b-6a48-5d40-8dc6-a2df8c05f3f8.htm" />
+    <HelpKINode Title="methods" Url="html/6244e082-999f-de6b-6ee9-f47250d538cb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IScoreBoard.AddPlayerToScoreBoard method" Url="html/79579456-3866-464f-7878-814883444ccc.htm" />
+  <HelpKINode Title="IScoreBoard.GetScoreBoard method" Url="html/50858f2a-847c-27fb-d1d0-7f4f54591e81.htm" />
+  <HelpKINode Title="IsFound property">
+    <HelpKINode Title="ILetter.IsFound Property " Url="html/2b3625e9-b76b-b9cb-d4ee-e70f17d2b6cb.htm" />
+    <HelpKINode Title="Letter.IsFound Property " Url="html/e40cbfdb-1502-9a8e-f6f6-dc4578742cc5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsLetterGuessed method" Url="html/743923bc-f178-5e17-a6bc-1fbeec4b637d.htm" />
+  <HelpKINode Title="IsRevealed property">
+    <HelpKINode Title="IWord.IsRevealed Property " Url="html/56fe0cb5-91d4-bca8-2fe4-491554c3dda5.htm" />
+    <HelpKINode Title="Word.IsRevealed Property " Url="html/8a1786b7-3691-7347-6053-166a2ef79e4b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsWordRevealed method" Url="html/5879b856-b702-bdd8-5c69-d8c28a4da8bd.htm" />
+  <HelpKINode Title="IWord interface">
+    <HelpKINode Title="IWord Interface" Url="html/9baa52c9-3273-f5ef-44d8-a336b09d2d04.htm" />
+    <HelpKINode Title="about IWord interface" Url="html/9baa52c9-3273-f5ef-44d8-a336b09d2d04.htm" />
+    <HelpKINode Title="properties" Url="html/a434fee0-9ed8-cead-7c92-8833b4c9ba69.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IWord.Content property" Url="html/9cd04049-6ad9-f8bd-892f-e593968c9f66.htm" />
+  <HelpKINode Title="IWord.IsRevealed property" Url="html/56fe0cb5-91d4-bca8-2fe4-491554c3dda5.htm" />
+  <HelpKINode Title="IWordDatabase interface">
+    <HelpKINode Title="IWordDatabase Interface" Url="html/2f21b3f8-0a7e-7a87-1b05-3244f41f9040.htm" />
+    <HelpKINode Title="about IWordDatabase interface" Url="html/2f21b3f8-0a7e-7a87-1b05-3244f41f9040.htm" />
+    <HelpKINode Title="methods" Url="html/cedcfa44-f02d-8968-1cde-5cd6847b8905.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IWordDatabase.GetRandomWordByCategory method" Url="html/abba6c7d-98ce-cf3a-980c-4599701c8981.htm" />
+  <HelpKINode Title="Letter class">
+    <HelpKINode Title="Letter Class" Url="html/a4e378cb-6029-5e65-2997-1da56c0051ef.htm" />
+    <HelpKINode Title="about Letter class" Url="html/a4e378cb-6029-5e65-2997-1da56c0051ef.htm" />
+    <HelpKINode Title="constructor" Url="html/d0a42aec-7d5a-c466-20ca-da9f3d3c512e.htm" />
+    <HelpKINode Title="methods" Url="html/7905a613-f7cf-c874-e5c5-74ec0a24cf7a.htm" />
+    <HelpKINode Title="properties" Url="html/74eb9466-d739-6ce1-4dcc-e0f2dd9dab0e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Letter.Clone method" Url="html/e3ae0ef5-0b91-bd3f-28cb-8bd1a40881b2.htm" />
+  <HelpKINode Title="Letter.Equals method" Url="html/0c269251-fc26-f9fc-b856-37ef8fe8693d.htm" />
+  <HelpKINode Title="Letter.GetBody method" Url="html/12f5697c-ce64-dfc3-59ab-a492a05cc96b.htm" />
+  <HelpKINode Title="Letter.GetHashCode method" Url="html/70905573-5809-046c-0b33-44571b5f242f.htm" />
+  <HelpKINode Title="Letter.IsFound property" Url="html/e40cbfdb-1502-9a8e-f6f6-dc4578742cc5.htm" />
+  <HelpKINode Title="Letter.Letter constructor" Url="html/d0a42aec-7d5a-c466-20ca-da9f3d3c512e.htm" />
+  <HelpKINode Title="Letter.Value property" Url="html/d8519bcb-069d-13b5-1b8d-c39df084b1fa.htm" />
+  <HelpKINode Title="LetterPrototype class">
+    <HelpKINode Title="LetterPrototype Class" Url="html/0b68ede8-17ce-789f-e2cb-27496211440f.htm" />
+    <HelpKINode Title="about LetterPrototype class" Url="html/0b68ede8-17ce-789f-e2cb-27496211440f.htm" />
+    <HelpKINode Title="constructor" Url="html/c6ea8b6d-6b47-8734-0ece-ea62c3cf7947.htm" />
+    <HelpKINode Title="methods" Url="html/a0f74b8e-0e12-c341-df23-e8e0c32e9d8c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LetterPrototype.Clone method" Url="html/acba9b5f-a885-038c-96bb-eff6c67156cf.htm" />
+  <HelpKINode Title="LetterPrototype.LetterPrototype constructor" Url="html/c6ea8b6d-6b47-8734-0ece-ea62c3cf7947.htm" />
+  <HelpKINode Title="Mistakes property" Url="html/cee30c66-5e4f-e564-fec2-0013001d85aa.htm" />
+  <HelpKINode Title="Name property">
+    <HelpKINode Title="IPlayer.Name Property " Url="html/412eb1bf-46e4-c161-6c68-a1ee73d31df8.htm" />
+    <HelpKINode Title="Player.Name Property " Url="html/1026c157-fd1d-8d88-6fd0-2bc19febecd6.htm" />
+    <HelpKINode Title="User.Name Property " Url="html/87f337bd-3815-9fe6-14b5-a8227c25c15c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ParseCommand method" Url="html/abd11d8f-c368-96a5-78aa-4f78dcb69efa.htm" />
+  <HelpKINode Title="Player class">
+    <HelpKINode Title="Player Class" Url="html/ba874f3f-cde5-f5c4-edcf-d5a17461e45a.htm" />
+    <HelpKINode Title="about Player class" Url="html/ba874f3f-cde5-f5c4-edcf-d5a17461e45a.htm" />
+    <HelpKINode Title="constructor" Url="html/ca1583a2-2ab5-3617-c141-106fb11fc93c.htm" />
+    <HelpKINode Title="methods" Url="html/23ce23ef-f249-7079-b562-1e22a0a8e6f9.htm" />
+    <HelpKINode Title="properties" Url="html/e2f9b650-1051-5bbb-2712-510a8292ed52.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Player property" Url="html/54eeed46-0202-11c5-2944-fb44330c870d.htm" />
+  <HelpKINode Title="Player.Clone method" Url="html/7b8442da-447e-58ff-6938-5c862b5bd525.htm" />
+  <HelpKINode Title="Player.GetBody method" Url="html/cddf34d1-7ec1-ccde-f071-6a7133b7221c.htm" />
+  <HelpKINode Title="Player.Name property" Url="html/1026c157-fd1d-8d88-6fd0-2bc19febecd6.htm" />
+  <HelpKINode Title="Player.Player constructor" Url="html/ca1583a2-2ab5-3617-c141-106fb11fc93c.htm" />
+  <HelpKINode Title="Player.PlayerGameInformation property" Url="html/c7c16ff0-7045-5732-5418-90c20bbd4e6b.htm" />
+  <HelpKINode Title="Player.Score property" Url="html/21ff7b32-40bc-dc14-d3cc-23893c4438fc.htm" />
+  <HelpKINode Title="PlayerGameInformation property">
+    <HelpKINode Title="IPlayer.PlayerGameInformation Property " Url="html/f2f9b5cc-670b-a6a5-945c-b19b2b10ceae.htm" />
+    <HelpKINode Title="Player.PlayerGameInformation Property " Url="html/c7c16ff0-7045-5732-5418-90c20bbd4e6b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PlayerPrototype class">
+    <HelpKINode Title="PlayerPrototype Class" Url="html/17f69773-c9a2-1497-a2c3-c50171ce11b9.htm" />
+    <HelpKINode Title="about PlayerPrototype class" Url="html/17f69773-c9a2-1497-a2c3-c50171ce11b9.htm" />
+    <HelpKINode Title="constructor" Url="html/bec06973-2c06-ccc1-ea6d-807aa68b75be.htm" />
+    <HelpKINode Title="methods" Url="html/00f45a68-faf6-1d56-5aca-be51b1e2109d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PlayerPrototype.Clone method" Url="html/be18b24c-84ee-c8b8-abc3-be5bb6778fd7.htm" />
+  <HelpKINode Title="PlayerPrototype.PlayerPrototype constructor" Url="html/bec06973-2c06-ccc1-ea6d-807aa68b75be.htm" />
+  <HelpKINode Title="Print method" Url="html/f584fa7c-54ce-bdf7-8982-ba9c8c3d0529.htm" />
+  <HelpKINode Title="PrintEndScreen method">
+    <HelpKINode Title="ConsoleFancyRenderer.PrintEndScreen Method " Url="html/c1be7ad4-9e5f-0733-ae22-cadb9047bef9.htm" />
+    <HelpKINode Title="ConsoleRenderer.PrintEndScreen Method " Url="html/3174091e-f7e2-4727-925a-be27f09cbb5a.htm" />
+    <HelpKINode Title="IRenderer.PrintEndScreen Method " Url="html/46e31ae9-cb65-ef93-3b6f-34395f3bb0bf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PrintEndScreenIfPlayerCheated method">
+    <HelpKINode Title="ConsoleFancyRenderer.PrintEndScreenIfPlayerCheated Method " Url="html/3c40301c-984b-8348-0361-28afc1e4bace.htm" />
+    <HelpKINode Title="ConsoleRenderer.PrintEndScreenIfPlayerCheated Method " Url="html/590b7463-3f5f-a104-9812-d51da1a748a2.htm" />
+    <HelpKINode Title="IRenderer.PrintEndScreenIfPlayerCheated Method " Url="html/411c05ec-0ab5-7863-0059-c2ec02d6742b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PrintInitialScreen method">
+    <HelpKINode Title="ConsoleFancyRenderer.PrintInitialScreen Method " Url="html/05b8925c-0e36-3a29-8104-2c22ff66ad51.htm" />
+    <HelpKINode Title="ConsoleRenderer.PrintInitialScreen Method " Url="html/fcbfce51-d7a8-54e6-ea8c-68be40c2f7ab.htm" />
+    <HelpKINode Title="IRenderer.PrintInitialScreen Method " Url="html/e04e66d5-c892-703b-a0c0-7d48d1f84389.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PrintMessage method">
+    <HelpKINode Title="ConsoleFancyRenderer.PrintMessage Method " Url="html/230b19f2-0e81-23d0-b5c7-b2f80980117f.htm" />
+    <HelpKINode Title="ConsoleRenderer.PrintMessage Method " Url="html/a9d5bd37-061a-eb67-f5fe-690bef162833.htm" />
+    <HelpKINode Title="IRenderer.PrintMessage Method " Url="html/d277c725-3868-d128-4485-e853c6f3dece.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PrintMistakes method">
+    <HelpKINode Title="ConsoleFancyRenderer.PrintMistakes Method " Url="html/3ab069fc-d2dc-5f68-54ae-9a0aa8895dd7.htm" />
+    <HelpKINode Title="ConsoleRenderer.PrintMistakes Method " Url="html/1700d99e-0893-5433-3ce6-53adada08894.htm" />
+    <HelpKINode Title="IRenderer.PrintMistakes Method " Url="html/157cb2ed-3a3b-8925-1644-c8aa3fe053a5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PrintUsedLetters method">
+    <HelpKINode Title="ConsoleFancyRenderer.PrintUsedLetters Method " Url="html/a876ce3e-0569-4529-9533-af72d6181ea8.htm" />
+    <HelpKINode Title="ConsoleRenderer.PrintUsedLetters Method " Url="html/be71fc44-ca5a-c3c0-48ed-4c5888f84365.htm" />
+    <HelpKINode Title="IRenderer.PrintUsedLetters Method " Url="html/821a310b-d839-ab37-331f-bf87ffc74c07.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PrintWord method">
+    <HelpKINode Title="ConsoleFancyRenderer.PrintWord Method " Url="html/049b5046-0cea-1e6a-2783-f4e08966057e.htm" />
+    <HelpKINode Title="ConsoleRenderer.PrintWord Method " Url="html/a97721c2-39e7-1af2-4ee4-a9ed5de2e971.htm" />
+    <HelpKINode Title="IRenderer.PrintWord Method " Url="html/5f876452-a6a6-c5be-8891-807f8e826fc8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReadFromFile method">
+    <HelpKINode Title="DataSerialization.ReadFromFile Method " Url="html/28d110e9-0a1a-912a-cb72-d5fc26814abe.htm" />
+    <HelpKINode Title="IDataSerialization.ReadFromFile Method " Url="html/b561664d-f301-7844-c5ff-7ce839dce687.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReadScoreboard method" Url="html/e2dbf387-cfac-892d-dfae-44459c719db9.htm" />
+  <HelpKINode Title="RenderScoreboard method">
+    <HelpKINode Title="ConsoleFancyRenderer.RenderScoreboard Method " Url="html/c0c4e749-4547-e882-76e6-436e99523f9e.htm" />
+    <HelpKINode Title="ConsoleRenderer.RenderScoreboard Method " Url="html/c4d79eb8-53bb-b6c8-1ceb-9817ea31959b.htm" />
+    <HelpKINode Title="IRenderer.RenderScoreboard Method " Url="html/4ef23bff-a233-4867-e39d-871204882b34.htm" />
+  </HelpKINode>
+  <HelpKINode Title="restart enumeration member" Url="html/f5b7c71d-c34f-d6eb-8a6b-7b8a33a59544.htm" />
+  <HelpKINode Title="Score property">
+    <HelpKINode Title="IPlayer.Score Property " Url="html/3772bada-d3b3-2c1c-0b30-287a1389ab56.htm" />
+    <HelpKINode Title="Player.Score Property " Url="html/21ff7b32-40bc-dc14-d3cc-23893c4438fc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Scoreboard class">
+    <HelpKINode Title="Scoreboard Class" Url="html/20005121-9f82-fefc-0fa7-fce9e9a5cead.htm" />
+    <HelpKINode Title="about Scoreboard class" Url="html/20005121-9f82-fefc-0fa7-fce9e9a5cead.htm" />
+    <HelpKINode Title="methods" Url="html/483cd22e-8b7a-d536-90af-c62f4ab024b2.htm" />
+    <HelpKINode Title="properties" Url="html/2624deb6-2f38-e1e3-2dbf-f414528fd3b4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Scoreboard.AddPlayerScore method" Url="html/84a1ef66-56ed-ec0b-cea1-f8d585de4b93.htm" />
+  <HelpKINode Title="Scoreboard.Instance property" Url="html/aa6a34c6-554c-6557-f1a5-271f4077d510.htm" />
+  <HelpKINode Title="Scoreboard.ViewScoreboard method" Url="html/c68c75c1-1c61-9723-040e-8c04b6dc8f0f.htm" />
+  <HelpKINode Title="ScoreBoardDatabase class">
+    <HelpKINode Title="ScoreBoardDatabase Class" Url="html/0951bc59-bedb-3a80-98ac-6fd12d5bd7bb.htm" />
+    <HelpKINode Title="about ScoreBoardDatabase class" Url="html/0951bc59-bedb-3a80-98ac-6fd12d5bd7bb.htm" />
+    <HelpKINode Title="constructor" Url="html/f90f81c9-1bb3-1a92-910f-f32630a7ee3c.htm" />
+    <HelpKINode Title="methods" Url="html/13960fcb-3eae-9337-9817-92350f6880d1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ScoreBoardDatabase.ReadScoreboard method" Url="html/e2dbf387-cfac-892d-dfae-44459c719db9.htm" />
+  <HelpKINode Title="ScoreBoardDatabase.ScoreBoardDatabase constructor" Url="html/f90f81c9-1bb3-1a92-910f-f32630a7ee3c.htm" />
+  <HelpKINode Title="ScoreBoardDatabase.WriteToScoreBoard method" Url="html/49e38cf4-47eb-ec99-5a70-98789ee3ed7f.htm" />
+  <HelpKINode Title="Start method" Url="html/f3f43b61-1647-d9e2-7c7a-06048b0dfb09.htm" />
+  <HelpKINode Title="StartGame method" Url="html/d783e2d7-2e15-26bf-e83c-39961db6c092.htm" />
+  <HelpKINode Title="top enumeration member" Url="html/f5b7c71d-c34f-d6eb-8a6b-7b8a33a59544.htm" />
+  <HelpKINode Title="UsedLetters property">
+    <HelpKINode Title="DefaultGameLogic.UsedLetters Property " Url="html/5b9de1aa-e99d-bf26-f202-6c22f7ef7651.htm" />
+    <HelpKINode Title="GameInfo.UsedLetters Property " Url="html/5eccf659-35a7-dacf-e9fe-4f999598a566.htm" />
+  </HelpKINode>
+  <HelpKINode Title="User class">
+    <HelpKINode Title="User Class" Url="html/74978d2c-b2ef-90a0-de53-e516f7cdd88f.htm" />
+    <HelpKINode Title="about User class" Url="html/74978d2c-b2ef-90a0-de53-e516f7cdd88f.htm" />
+    <HelpKINode Title="constructor" Url="html/12f68175-93bf-7a77-30ee-1726963c8c9c.htm" />
+    <HelpKINode Title="properties" Url="html/2da9a346-7a29-decf-8113-27919d442098.htm" />
+  </HelpKINode>
+  <HelpKINode Title="User.ID property" Url="html/1d5b32a8-6d79-c16c-16d4-763bd726a655.htm" />
+  <HelpKINode Title="User.Name property" Url="html/87f337bd-3815-9fe6-14b5-a8227c25c15c.htm" />
+  <HelpKINode Title="User.User constructor" Url="html/12f68175-93bf-7a77-30ee-1726963c8c9c.htm" />
+  <HelpKINode Title="Validator class">
+    <HelpKINode Title="Validator Class" Url="html/c9258e22-754c-0771-a695-598ba1ed2a5e.htm" />
+    <HelpKINode Title="about Validator class" Url="html/c9258e22-754c-0771-a695-598ba1ed2a5e.htm" />
+    <HelpKINode Title="constructor" Url="html/b936ba23-b6c6-5ee1-33e3-41d59f83789f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Validator.Validator constructor" Url="html/b936ba23-b6c6-5ee1-33e3-41d59f83789f.htm" />
+  <HelpKINode Title="Value property">
+    <HelpKINode Title="ILetter.Value Property " Url="html/65fd0a00-7e5e-b93b-0715-54441cf3dd8b.htm" />
+    <HelpKINode Title="Letter.Value Property " Url="html/d8519bcb-069d-13b5-1b8d-c39df084b1fa.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ViewScoreboard method" Url="html/c68c75c1-1c61-9723-040e-8c04b6dc8f0f.htm" />
+  <HelpKINode Title="Word class">
+    <HelpKINode Title="Word Class" Url="html/7cebc912-4a25-c79d-69a0-4683e404701d.htm" />
+    <HelpKINode Title="about Word class" Url="html/7cebc912-4a25-c79d-69a0-4683e404701d.htm" />
+    <HelpKINode Title="constructor" Url="html/0b9dd79e-b640-e0bd-a38d-af89082b3b22.htm" />
+    <HelpKINode Title="methods" Url="html/3628781d-ef18-ceaf-53fc-5fb89bbb6eba.htm" />
+    <HelpKINode Title="properties" Url="html/ad4f5732-90a9-ccdb-7249-6d85ce202ad6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Word property" Url="html/eb0ce5c5-be2d-77d8-4927-d1e386100027.htm" />
+  <HelpKINode Title="Word.Content property" Url="html/e23a2ec0-4f23-1e7b-cb59-3d89cfd25970.htm" />
+  <HelpKINode Title="Word.GetBody method" Url="html/99346e71-ae75-3653-784b-3beb925e919d.htm" />
+  <HelpKINode Title="Word.GetEnumerator method" Url="html/c20b05ad-ea70-bee2-5205-5bdfed2ae968.htm" />
+  <HelpKINode Title="Word.IsRevealed property" Url="html/8a1786b7-3691-7347-6053-166a2ef79e4b.htm" />
+  <HelpKINode Title="Word.Word constructor" Url="html/0b9dd79e-b640-e0bd-a38d-af89082b3b22.htm" />
+  <HelpKINode Title="WordDatabase class">
+    <HelpKINode Title="WordDatabase Class" Url="html/5e4fe038-e216-12bb-9251-606e2be6de6d.htm" />
+    <HelpKINode Title="about WordDatabase class" Url="html/5e4fe038-e216-12bb-9251-606e2be6de6d.htm" />
+    <HelpKINode Title="constructor" Url="html/ad74e5ec-c4ad-6fc3-942e-9332425ade5b.htm" />
+    <HelpKINode Title="methods" Url="html/97ae2891-d407-e8d0-9a7d-be1e784bb809.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WordDatabase.GetRandomWordByCategory method" Url="html/b73562b3-b2b8-51d8-222f-6f480adaa206.htm" />
+  <HelpKINode Title="WordDatabase.WordDatabase constructor" Url="html/ad74e5ec-c4ad-6fc3-942e-9332425ade5b.htm" />
+  <HelpKINode Title="WordFactory class">
+    <HelpKINode Title="WordFactory Class" Url="html/32c05898-b520-9aa7-a19c-dc6d27036367.htm" />
+    <HelpKINode Title="about WordFactory class" Url="html/32c05898-b520-9aa7-a19c-dc6d27036367.htm" />
+    <HelpKINode Title="constructor" Url="html/66ac8248-89fa-28c1-7fa7-fae988242729.htm" />
+    <HelpKINode Title="methods" Url="html/4c412934-eae5-4bc3-d9a8-d9886ed4bfa9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WordFactory.GetWord method" Url="html/02873474-b34f-5fc9-72a4-96070733c732.htm" />
+  <HelpKINode Title="WordFactory.WordFactory constructor" Url="html/66ac8248-89fa-28c1-7fa7-fae988242729.htm" />
+  <HelpKINode Title="WriteToFile method">
+    <HelpKINode Title="DataSerialization.WriteToFile Method " Url="html/edfdffa3-c2f2-4739-daca-6ca7a005af28.htm" />
+    <HelpKINode Title="IDataSerialization.WriteToFile Method " Url="html/b2e780d9-0544-3963-2ae7-09fd25b9f9ac.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WriteToScoreBoard method" Url="html/49e38cf4-47eb-ec99-5a70-98789ee3ed7f.htm" />
+</HelpKI>
