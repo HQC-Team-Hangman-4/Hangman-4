@@ -1,4 +1,7 @@
-﻿public enum Categories
+﻿/// <summary>
+/// Word categories.
+/// </summary>
+public enum Categories
 {
     IT,
     Biology,

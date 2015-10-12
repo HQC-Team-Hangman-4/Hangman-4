@@ -83,7 +83,6 @@
             }
         }
 
-
         /// <summary>
         /// Ends the game after each guessed word.
         /// </summary>
