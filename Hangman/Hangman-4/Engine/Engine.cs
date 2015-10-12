@@ -50,7 +50,15 @@
 
                 this.inputProvider.GetInput();
 
-                this.gameLogic.ParseCommand(this.inputProvider.Command);
+                try
+                {
+                    this.gameLogic.ParseCommand(this.inputProvider.Command);
+                }
+                catch (ArgumentException)
+                {
+                    this.renderer.InvalidCommand();
+                    continue;
+                }
                 switch (this.gameLogic.GameState)
                 {
                     case GameState.guessLetter:
@@ -99,7 +107,7 @@
         }
 
         /// <summary>
-        /// Ends the game and shows highscore after user types 'exit'.
+        /// Ends the game and shows high score after user types 'exit'.
         /// </summary>
         private void EndGame()
         {
