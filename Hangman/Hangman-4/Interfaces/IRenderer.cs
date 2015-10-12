@@ -3,7 +3,7 @@
     using System.Collections.Generic;
 
     /// <summary>
-    /// Provides a common interface for renderes.
+    /// Provides a common interface for all renderes.
     /// </summary>
     public interface IRenderer
     {

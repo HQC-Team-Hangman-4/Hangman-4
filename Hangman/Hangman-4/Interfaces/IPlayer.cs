@@ -3,6 +3,9 @@
     using System.Collections.Generic;
     using HangMan.GameObjects;
 
+    /// <summary>
+    /// Provides a common interface for players.
+    /// </summary>
     public interface IPlayer : IRenderable
     {
         string Name { get; set; }
